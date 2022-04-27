@@ -2,12 +2,15 @@
 @import "../../../scss/settings/mixins";
 
 .nav__list {
+  background-color: $colorBackgroundPrimary;
   position: absolute;
   top: 50px;
   width: 100%;
   @include mediumScreen {
     display: flex;
     justify-content: flex-end;
+    position: none;
+    background-color: $colorBackgroundPrimary;
   }
   .nav__list-link {
     text-align: center;
