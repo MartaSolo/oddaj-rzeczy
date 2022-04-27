@@ -1,3 +1,16 @@
 .nav__mobile {
   background-color: paleturquoise;
+  position: relative;
+  .nav__mobile-icon {
+    position: absolute;
+    right: 5%;
+    display: block;
+    height: 50px;
+
+    // top: 50px;
+    // display: inline-flex;
+    // flex-direction: row-reverse;
+    // align-self: flex-end;
+    cursor: pointer;
+  }
 }

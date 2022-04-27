@@ -4,20 +4,30 @@ import "./NavLinks.scss";
 export const NavLinks = () => {
   return (
     <ul className="nav__list">
-      <li className="nav__list--item">
-        <a href="/">Start</a>
+      <li className="nav__list-item">
+        <a href="/" className="nav__list-link">
+          Start
+        </a>
       </li>
-      <li>
-        <a href="/">O co chodzi?</a>
+      <li className="nav__list-item">
+        <a href="/" className="nav__list-link">
+          O co chodzi?
+        </a>
       </li>
-      <li>
-        <a href="/">O nas</a>
+      <li className="nav__list-item">
+        <a href="/" className="nav__list-link">
+          O nas
+        </a>
       </li>
-      <li>
-        <a href="/">Fundacja i organizacje</a>
+      <li className="nav__list-item">
+        <a href="/" className="nav__list-link">
+          Fundacja i organizacje
+        </a>
       </li>
-      <li>
-        <a href="/">Kontakt</a>
+      <li className="nav__list-item">
+        <a href="/" className="nav__list-link">
+          Kontakt
+        </a>
       </li>
     </ul>
   );

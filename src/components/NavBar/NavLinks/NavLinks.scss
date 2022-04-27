@@ -1,0 +1,28 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/mixins";
+
+.nav__list {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  @include mediumScreen {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .nav__list-link {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: $colorFontPrimary;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid $colorAccent;
+    @include mediumScreen {
+      border: none;
+      font-size: 1rem;
+      &:hover {
+        border: 1px solid $colorAccent;
+      }
+    }
+  }
+}
