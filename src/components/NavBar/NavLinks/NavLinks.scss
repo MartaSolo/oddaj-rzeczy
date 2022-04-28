@@ -9,8 +9,8 @@
   @include mediumScreen {
     display: flex;
     justify-content: flex-end;
-    position: none;
-    background-color: $colorBackgroundPrimary;
+    // position: none;
+    background-color: transparent;
   }
   .nav__list-link {
     border: 1px solid green;
@@ -18,14 +18,15 @@
     display: block;
     text-decoration: none;
     color: $colorFontPrimary;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 1rem;
     border-bottom: 1px solid $colorAccent;
     @include mediumScreen {
       border: none;
       font-size: 1.2rem;
       &:hover {
-        border: 1px solid $colorAccent;
+        border: 1px solid $colorFontPrimary;
+        border-radius: 2px;
       }
     }
   }

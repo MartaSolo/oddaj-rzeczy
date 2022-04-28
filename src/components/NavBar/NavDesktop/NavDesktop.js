@@ -5,7 +5,6 @@ import { NavLinks } from "../NavLinks/NavLinks";
 export const NavDesktop = () => {
   return (
     <nav className="nav__desktop">
-      Nav desktop
       <NavLinks />
     </nav>
   );
