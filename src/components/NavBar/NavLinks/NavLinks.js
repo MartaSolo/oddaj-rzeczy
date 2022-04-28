@@ -3,9 +3,8 @@ import "./NavLinks.scss";
 import { Link } from "react-scroll";
 
 export const NavLinks = ({ isMobile, closeMobileMenu }) => {
-  const clickHandler = () => {
+  const closeMenuHandler = () => {
     if (typeof closeMobileMenu === "function" && isMobile === true) {
-      console.log("clickhandler");
       closeMobileMenu();
     }
   };
@@ -18,7 +17,7 @@ export const NavLinks = ({ isMobile, closeMobileMenu }) => {
           spy={true}
           smooth={true}
           className="nav__list-link"
-          onClick={clickHandler}
+          onClick={closeMenuHandler}
         >
           Start
         </Link>
@@ -30,7 +29,7 @@ export const NavLinks = ({ isMobile, closeMobileMenu }) => {
           spy={true}
           smooth={true}
           className="nav__list-link"
-          onClick={clickHandler}
+          onClick={closeMenuHandler}
         >
           O co chodzi?
         </Link>
@@ -42,7 +41,7 @@ export const NavLinks = ({ isMobile, closeMobileMenu }) => {
           spy={true}
           smooth={true}
           className="nav__list-link"
-          onClick={clickHandler}
+          onClick={closeMenuHandler}
         >
           O nas
         </Link>
@@ -54,7 +53,7 @@ export const NavLinks = ({ isMobile, closeMobileMenu }) => {
           spy={true}
           smooth={true}
           className="nav__list-link"
-          onClick={clickHandler}
+          onClick={closeMenuHandler}
         >
           Fundacja i organizacje
         </Link>
@@ -66,7 +65,7 @@ export const NavLinks = ({ isMobile, closeMobileMenu }) => {
           spy={true}
           smooth={true}
           className="nav__list-link"
-          onClick={clickHandler}
+          onClick={closeMenuHandler}
         >
           Kontakt
         </Link>

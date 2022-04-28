@@ -10,7 +10,6 @@ import { Footer } from "../Footer/Footer";
 export const Home = () => {
   return (
     <>
-      <div>Home component content</div>
       <Header />
       <Start />
       <Steps />

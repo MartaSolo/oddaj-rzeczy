@@ -5,24 +5,23 @@
   background-color: $colorBackgroundPrimary;
   position: absolute;
   top: 60px;
-  width: 100%;
+  @include container;
   @include mediumScreen {
     display: flex;
     justify-content: flex-end;
-    // position: none;
     background-color: transparent;
   }
   .nav__list-link {
     border: 1px solid green;
     text-align: center;
     display: block;
-    text-decoration: none;
     color: $colorFontPrimary;
     font-size: 1.2rem;
     padding: 1rem;
     border-bottom: 1px solid $colorAccent;
     cursor: pointer;
     @include mediumScreen {
+      margin: 0 0.5rem;
       border: none;
       font-size: 1.2rem;
       &:hover {
@@ -30,5 +29,9 @@
         border-radius: 2px;
       }
     }
+  }
+  .nav__list-link.active {
+    border: 1px solid $colorFontPrimary;
+    border-radius: 2px;
   }
 }
