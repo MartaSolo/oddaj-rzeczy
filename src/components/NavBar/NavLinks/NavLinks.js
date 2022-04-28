@@ -1,5 +1,6 @@
 import React from "react";
 import "./NavLinks.scss";
+import { Link } from "react-scroll";
 
 export const NavLinks = ({ isMobile, closeMobileMenu }) => {
   const clickHandler = () => {
@@ -10,29 +11,59 @@ export const NavLinks = ({ isMobile, closeMobileMenu }) => {
   return (
     <ul className="nav__list">
       <li className="nav__list-item" onClick={clickHandler}>
-        <a href="/" className="nav__list-link">
+        <Link
+          to="start"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          className="nav__list-link"
+        >
           Start
-        </a>
+        </Link>
       </li>
       <li className="nav__list-item" onClick={clickHandler}>
-        <a href="/" className="nav__list-link">
+        <Link
+          to="steps"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          className="nav__list-link"
+        >
           O co chodzi?
-        </a>
+        </Link>
       </li>
       <li className="nav__list-item" onClick={clickHandler}>
-        <a href="/" className="nav__list-link">
+        <Link
+          to="about"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          className="nav__list-link"
+        >
           O nas
-        </a>
+        </Link>
       </li>
       <li className="nav__list-item" onClick={clickHandler}>
-        <a href="/" className="nav__list-link">
+        <Link
+          to="organizations"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          className="nav__list-link"
+        >
           Fundacja i organizacje
-        </a>
+        </Link>
       </li>
       <li className="nav__list-item" onClick={clickHandler}>
-        <a href="/" className="nav__list-link">
+        <Link
+          to="contact"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          className="nav__list-link"
+        >
           Kontakt
-        </a>
+        </Link>
       </li>
     </ul>
   );
