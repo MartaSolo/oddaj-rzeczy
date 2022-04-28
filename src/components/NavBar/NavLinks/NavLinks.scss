@@ -4,7 +4,7 @@
 .nav__list {
   background-color: $colorBackgroundPrimary;
   position: absolute;
-  top: 50px;
+  top: 60px;
   width: 100%;
   @include mediumScreen {
     display: flex;
@@ -13,6 +13,7 @@
     background-color: $colorBackgroundPrimary;
   }
   .nav__list-link {
+    border: 1px solid green;
     text-align: center;
     display: block;
     text-decoration: none;
@@ -22,7 +23,7 @@
     border-bottom: 1px solid $colorAccent;
     @include mediumScreen {
       border: none;
-      font-size: 1rem;
+      font-size: 1.2rem;
       &:hover {
         border: 1px solid $colorAccent;
       }

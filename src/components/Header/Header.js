@@ -7,9 +7,13 @@ export const Header = () => {
   return (
     <header className="header">
       <NavBar />
-      <div>
-        <NavLink to="/login">Zaloguj</NavLink>
-        <NavLink to="/register">Załóż konto</NavLink>
+      <div className="header__auth">
+        <NavLink to="/login" className="header_auth-link">
+          Zaloguj
+        </NavLink>
+        <NavLink to="/register" className="header_auth-link">
+          Załóż konto
+        </NavLink>
       </div>
     </header>
   );

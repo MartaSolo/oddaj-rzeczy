@@ -1,6 +1,21 @@
+@import "../../scss/settings/colors";
+
 .header {
   border: 2px solid palevioletred;
   position: relative;
   height: 60px;
-  // position: fixed;
+  .header__auth {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .header_auth-link {
+      text-decoration: none;
+      font-size: 1.5rem;
+      padding: 1rem;
+      margin: 0.5rem;
+      color: $colorFontPrimary;
+      border: 1px solid $colorAccent;
+      border-radius: 0.5rem;
+    }
+  }
 }
