@@ -1,0 +1,12 @@
+@import "../../../scss/settings/mixins";
+
+.header__auth {
+  height: 100%;
+  max-width: 80%;
+  display: flex;
+  align-items: center;
+  @include mediumScreen {
+    max-width: 100%;
+    justify-content: flex-end;
+  }
+}
