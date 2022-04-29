@@ -26,7 +26,13 @@ const Start = () => {
           </NavLink>
         </div>
       </div>
-      <div className="start__image" alt="box with used stuff"></div>
+      <div className="start__image">
+        <img
+          src={require("../../../assets/home-hero-image.jpg")}
+          alt="box with stuff"
+          className="start__image-img"
+        />
+      </div>
     </section>
   );
 };

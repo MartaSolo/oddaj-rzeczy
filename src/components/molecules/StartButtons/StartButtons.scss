@@ -1,0 +1,10 @@
+@import "../../../scss/settings/mixins";
+
+.start__links {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-around;
+  @include mediumScreen {
+    margin: 0 2rem;
+  }
+}
