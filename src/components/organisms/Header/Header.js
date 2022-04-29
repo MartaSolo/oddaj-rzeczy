@@ -1,0 +1,23 @@
+import { NavLink } from "react-router-dom";
+import NavBar from "../../molecules/NavBar";
+import "./Header.scss";
+
+const Header = () => {
+  return (
+    <header className="header">
+      <div className="header__container">
+        <NavBar />
+        <div className="header__auth">
+          <NavLink to="/login" className="header_auth-link">
+            Zaloguj
+          </NavLink>
+          <NavLink to="/register" className="header_auth-link">
+            Załóż konto
+          </NavLink>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

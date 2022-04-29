@@ -1,9 +1,8 @@
-// import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/pages/Home";
+import LogIn from "./components/pages/LogIn";
+import Register from "./components/pages/Register";
 import "./scss/main.scss";
-import { Home } from "./components/Home/Home";
-import { LogIn } from "./components/LogIn/LogIn";
-import { Register } from "./components/Register/Register";
 
 function App() {
   return (

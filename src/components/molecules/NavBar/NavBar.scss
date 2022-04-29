@@ -1,0 +1,14 @@
+@import "../../../scss/settings/mixins";
+
+.nav__mobile {
+  @include mediumScreen {
+    display: none;
+  }
+}
+
+.nav__desktop {
+  display: none;
+  @include mediumScreen {
+    display: block;
+  }
+}
