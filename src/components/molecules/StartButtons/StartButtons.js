@@ -1,5 +1,5 @@
-import React from "react";
 import AuthButton from "../../atoms/AuthButton";
+import "./StartButtons.scss";
 
 const StartButtons = () => {
   return (
@@ -7,12 +7,12 @@ const StartButtons = () => {
       <AuthButton
         to="/login"
         className="start__links-login"
-        text={`Oddaj <br /> rzeczy`}
+        text={`Oddaj\nrzeczy`}
       />
       <AuthButton
         to="/login"
         className="start__links-login"
-        text={`Zorganizuj <br /> zbiórkę`}
+        text={`Zorganizuj\nzbiórkę`}
       />
     </div>
   );

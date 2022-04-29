@@ -3,7 +3,7 @@ import "./AuthButton";
 
 const AuthButton = ({ to, className, text }) => {
   return (
-    <NavLink to={to} className={className} text={text}>
+    <NavLink to={to} className={className} style={{ whiteSpace: "pre-line" }}>
       {text}
     </NavLink>
   );
