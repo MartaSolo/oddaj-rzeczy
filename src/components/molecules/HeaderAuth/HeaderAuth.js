@@ -1,5 +1,6 @@
 import React from "react";
 import AuthLink from "../../atoms/AuthLink";
+import "./HeaderAuth.scss";
 
 const HeaderAuth = () => {
   return (

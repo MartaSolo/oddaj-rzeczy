@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import "./AuthLink.scss";
 
 const AuthLink = ({ to, text }) => {
   return (
@@ -7,13 +8,5 @@ const AuthLink = ({ to, text }) => {
     </NavLink>
   );
 };
-
-// const AuthLink = ({target, text}) => {
-//   return (
-//     <NavLink to="/register" className="header_auth-link">
-//       Załóż konto
-//     </NavLink>
-//   );
-// };
 
 export default AuthLink;
