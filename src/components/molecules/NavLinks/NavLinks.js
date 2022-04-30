@@ -12,7 +12,8 @@ const NavLinks = ({ isMobile, closeMobileMenu }) => {
       <li className="nav__list-item">
         <HashLink
           smooth
-          to="/#start"
+          to="/#top"
+          // to="/#start"
           activeClassName="active"
           className="nav__list-link"
           onClick={closeMenuHandler}

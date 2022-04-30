@@ -5,7 +5,6 @@
   background-color: $colorBackgroundPrimary;
   position: absolute;
   top: 60px;
-  @include container;
   @include mediumScreen {
     display: flex;
     justify-content: flex-end;

@@ -1,5 +1,8 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/mixins";
+
 .start__links-login {
-  background-color: red;
+  text-transform: uppercase;
   width: 200px;
   max-width: 310px;
   text-align: center;
@@ -10,7 +13,7 @@
   margin: 1rem;
   color: $colorFontPrimary;
   @include mediumScreen {
-    font-size: 2rem;
+    font-size: 1.5rem;
     &:hover {
       box-shadow: 8px 8px 14px -11px $colorFontPrimary;
     }

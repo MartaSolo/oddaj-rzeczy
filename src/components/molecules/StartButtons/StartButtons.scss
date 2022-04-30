@@ -8,22 +8,4 @@
   @include mediumScreen {
     margin: 0 2rem;
   }
-  .start__links-login {
-    background-color: red;
-    width: 200px;
-    max-width: 310px;
-    text-align: center;
-    font-size: 1.5rem;
-    border: 1px solid $colorFontPrimary;
-    border-radius: 2px;
-    padding: 1rem 1rem;
-    margin: 1rem;
-    color: $colorFontPrimary;
-    @include mediumScreen {
-      font-size: 2rem;
-      &:hover {
-        box-shadow: 8px 8px 14px -11px $colorFontPrimary;
-      }
-    }
-  }
 }

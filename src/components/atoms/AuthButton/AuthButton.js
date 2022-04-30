@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "./AuthButton";
+import "./AuthButton.scss";
 
 const AuthButton = ({ to, className, text }) => {
   return (

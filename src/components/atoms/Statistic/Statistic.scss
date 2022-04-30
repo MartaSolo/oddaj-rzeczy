@@ -1,0 +1,34 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/mixins";
+
+.start__statistic {
+  border: 1px solid green;
+  padding: 2rem;
+  color: $colorFontPrimary;
+  text-align: center;
+  background-image: url(../../../assets/3-columns-background.png);
+  @include mediumScreen {
+    padding: 3rem 4rem;
+    background-image: none;
+  }
+  .start__statistic-number {
+    font-size: 3rem;
+    color: $colorFontNumbers;
+    margin-bottom: 1rem;
+    @include mediumScreen {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+  }
+  .start__statistic-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .start__statistic-description {
+    font-size: 1rem;
+    text-align: justify;
+    @include mediumScreen {
+      margin-bottom: 1rem;
+    }
+  }
+}
