@@ -7,9 +7,9 @@
     height: 100%;
     width: 50%;
     border: 1px solid red;
+    overflow: visible;
   }
   .start__image-img {
-    width: inherit;
     height: inherit;
     object-fit: contain;
     @include mediumScreen {

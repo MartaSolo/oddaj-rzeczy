@@ -7,8 +7,8 @@ const Header = () => {
   return (
     <header className="header">
       <Container>
-        <NavBar />
         <HeaderAuth />
+        <NavBar />
       </Container>
     </header>
   );

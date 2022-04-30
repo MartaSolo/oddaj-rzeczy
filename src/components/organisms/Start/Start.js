@@ -1,4 +1,3 @@
-import Container from "../../atoms/Container";
 import BgImage from "../../atoms/BgImage";
 import StartButtons from "../../molecules/StartButtons";
 import Statistics from "../../molecules/Statistics";
@@ -7,27 +6,25 @@ import "./Start.scss";
 const Start = () => {
   return (
     <section id="start" className="start">
-      <Container>
-        <div className="start__hero">
-          <div className="start__content">
-            <div className="start__content-text">
-              <h1 className="start__content-title">Zacznij pomagać!</h1>
-              <h2 className="start__content-subtitle">
-                Oddaj niechciane rzeczy w zaufane ręce
-              </h2>
-              <div className="start__text-decoration"></div>
-            </div>
-            <StartButtons />
+      <div className="start__hero">
+        <div className="start__content">
+          <div className="start__content-text">
+            <h1 className="start__content-title">Zacznij pomagać!</h1>
+            <h2 className="start__content-subtitle">
+              Oddaj niechciane rzeczy w zaufane ręce
+            </h2>
+            <div className="start__text-decoration"></div>
           </div>
-
-          <BgImage
-            divClassName="start__content-image"
-            scr={require("../../../assets/home-hero-image.jpg")}
-            alt="box with stuff"
-            imgClassName="start__image-img"
-          />
+          <StartButtons />
         </div>
-      </Container>
+
+        <BgImage
+          divClassName="start__content-image"
+          scr={require("../../../assets/home-hero-image.jpg")}
+          alt="box with stuff"
+          imgClassName="start__image-img"
+        />
+      </div>
       <Statistics />
     </section>
   );
@@ -35,41 +32,37 @@ const Start = () => {
 
 export default Start;
 
-// import { NavLink } from "react-router-dom";
+// import Container from "../../atoms/Container";
+// import BgImage from "../../atoms/BgImage";
+// import StartButtons from "../../molecules/StartButtons";
+// import Statistics from "../../molecules/Statistics";
 // import "./Start.scss";
 
 // const Start = () => {
 //   return (
 //     <section id="start" className="start">
-//       <div className="start__content">
-//         <div className="start__text">
-//           <h1 className="start__text-title">Zacznij pomagać!</h1>
-//           <h2 className="start__text-subtitle">
-//             Oddaj niechciane rzeczy w zaufane ręce
-//           </h2>
-//           <div className="start__text-decoration"></div>
-//         </div>
+//       <Container>
+//         <div className="start__hero">
+//           <div className="start__content">
+//             <div className="start__content-text">
+//               <h1 className="start__content-title">Zacznij pomagać!</h1>
+//               <h2 className="start__content-subtitle">
+//                 Oddaj niechciane rzeczy w zaufane ręce
+//               </h2>
+//               <div className="start__text-decoration"></div>
+//             </div>
+//             <StartButtons />
+//           </div>
 
-//         <div className="start__links">
-//           <NavLink to="/login" className="start__links-login">
-//             Oddaj
-//             <br />
-//             rzeczy
-//           </NavLink>
-//           <NavLink to="/login" className="start__links-login">
-//             Zorganizuj
-//             <br />
-//             zbiórkę
-//           </NavLink>
+//           <BgImage
+//             divClassName="start__content-image"
+//             scr={require("../../../assets/home-hero-image.jpg")}
+//             alt="box with stuff"
+//             imgClassName="start__image-img"
+//           />
 //         </div>
-//       </div>
-//       <div className="start__image">
-//         <img
-//           src={require("../../../assets/home-hero-image.jpg")}
-//           alt="box with stuff"
-//           className="start__image-img"
-//         />
-//       </div>
+//       </Container>
+//       <Statistics />
 //     </section>
 //   );
 // };

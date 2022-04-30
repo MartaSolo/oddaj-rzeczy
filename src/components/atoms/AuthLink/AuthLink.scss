@@ -16,3 +16,22 @@
     }
   }
 }
+
+// @import "../../../scss/settings/colors";
+// @import "../../../scss/settings/mixins";
+
+// .header_auth-link {
+//   font-size: 1rem;
+//   padding: 1rem;
+//   margin: 0.5rem;
+//   color: $colorFontPrimary;
+//   border: 1px solid $colorAccent;
+//   border-radius: 5px;
+//   @include mediumScreen {
+//     border: none;
+//     &:hover {
+//       border: 2px solid $colorAccent;
+//       border-radius: 2px;
+//     }
+//   }
+// }

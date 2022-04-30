@@ -1,5 +1,9 @@
 @import "../../../scss/settings/mixins";
 
+.container {
+  border: 1px solid green;
+}
+
 .nav__mobile {
   @include mediumScreen {
     display: none;
