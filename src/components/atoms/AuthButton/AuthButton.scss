@@ -23,5 +23,8 @@
 }
 
 .steps__link {
-  margin: 2rem 1rem 2rem 1rem;
+  margin: 3rem 1rem 2rem 1rem;
+  @include mediumScreen {
+    margin: 2rem 1rem 2rem 1rem;
+  }
 }

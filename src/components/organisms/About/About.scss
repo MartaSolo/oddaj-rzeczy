@@ -1,4 +1,50 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/mixins";
+
 .about {
-  background-color: paleturquoise;
-  height: 50vh;
+  @include mediumScreen {
+    display: flex;
+  }
+}
+
+.about__content {
+  padding: 1rem;
+  background-color: $colorFormBackground;
+  text-align: center;
+  @include mediumScreen {
+    width: 50%;
+  }
+  .about__content-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mediumScreen {
+      margin: 2rem;
+      margin-left: 5rem;
+    }
+    .about__content-title {
+      font-size: 1.8rem;
+      padding: 1rem;
+      @include mediumScreen {
+        font-size: 2.1rem;
+        padding: 3rem 0 3rem;
+      }
+    }
+    .about__text-decoration {
+      background-image: url(../../../assets/decoration.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 33px;
+      width: 250px;
+      margin-bottom: 1rem;
+    }
+    .about__content-description {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      @include mediumScreen {
+        font-size: 1.9rem;
+      }
+    }
+  }
 }
