@@ -1,0 +1,30 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/mixins";
+
+.steps {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .steps__title {
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    @include mediumScreen {
+      margin-top: 2rem;
+    }
+  }
+  .steps__decoration {
+    background-image: url(../../../assets/decoration.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 33px;
+    width: 250px;
+    margin-bottom: 2rem;
+  }
+  .steps__container {
+    background-color: $colorFormBackground;
+    width: 100vw;
+  }
+}

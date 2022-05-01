@@ -1,7 +1,9 @@
 @import "../../../scss/settings/colors";
 @import "../../../scss/settings/mixins";
 
-.start__links-login {
+.start__links-login,
+.steps__link {
+  white-space: pre-line;
   text-transform: uppercase;
   width: 200px;
   max-width: 310px;
@@ -15,7 +17,11 @@
   @include mediumScreen {
     font-size: 1.5rem;
     &:hover {
-      box-shadow: 8px 8px 14px -11px $colorFontPrimary;
+      box-shadow: 8px 8px 17px -11px $colorFontPrimary;
     }
   }
+}
+
+.steps__link {
+  margin: 2rem 1rem 2rem 1rem;
 }

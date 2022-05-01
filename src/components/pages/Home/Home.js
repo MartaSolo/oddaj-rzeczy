@@ -1,6 +1,6 @@
 import Header from "../../organisms/Header";
 import Start from "../../organisms/Start";
-import Steps from "../../organisms/Steps";
+import SimpleSteps from "../../organisms/SimpleSteps";
 import About from "../../organisms/About";
 import Organizations from "../../organisms/Organizations";
 import Contact from "../../organisms/Contact";
@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <Header />
       <Start />
-      <Steps />
+      <SimpleSteps />
       <About />
       <Organizations />
       <Contact />

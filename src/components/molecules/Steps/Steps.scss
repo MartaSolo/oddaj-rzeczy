@@ -1,0 +1,61 @@
+@import "../../../scss/settings/mixins";
+@import "../../../scss/settings/colors";
+
+.steps__steps {
+  //   background-color: $colorFormBackground;
+  .container {
+    @include mediumScreen {
+      display: flex;
+      justify-content: center;
+    }
+    .steps__step {
+      @include mediumScreen {
+        width: 230px;
+      }
+      &:nth-child(1) {
+        .setps__step-decoration {
+          background-image: url(../../../assets/icon-1.svg);
+        }
+        .steps__step-title {
+          &::after {
+            top: 97%;
+            left: 19%;
+          }
+        }
+      }
+      &:nth-child(2) {
+        .setps__step-decoration {
+          background-image: url(../../../assets/icon-2.svg);
+        }
+        .steps__step-title {
+          &::after {
+            top: 97%;
+            left: 3%;
+          }
+        }
+      }
+      &:nth-child(3) {
+        .setps__step-decoration {
+          background-image: url(../../../assets/icon-3.svg);
+        }
+        .steps__step-title {
+          &::after {
+            top: 97%;
+            left: 19%;
+          }
+        }
+      }
+      &:nth-child(4) {
+        .setps__step-decoration {
+          background-image: url(../../../assets/icon-4.svg);
+        }
+        .steps__step-title {
+          &::after {
+            top: 97%;
+            left: 19%;
+          }
+        }
+      }
+    }
+  }
+}
