@@ -1,3 +1,4 @@
+import Decoration from "../../atoms/Decoration";
 import BgImage from "../../atoms/BgImage";
 import "./About.scss";
 
@@ -7,7 +8,7 @@ const About = () => {
       <div className="about__content">
         <div className="about__content-text">
           <h2 className="about__content-title">O nas</h2>
-          <div className="about__text-decoration"></div>
+          <Decoration className="about__text-decoration" />
           <p className="about__content-description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, quidem
             ab velit odio aliquid ullam facilis quasi consequuntur quae

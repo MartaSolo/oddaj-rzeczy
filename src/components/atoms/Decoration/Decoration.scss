@@ -1,0 +1,18 @@
+.start__text-decoration,
+.steps__decoration,
+.about__text-decoration,
+.organizations__content-decoration {
+  background-image: url(../../../assets/decoration.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 33px;
+  width: 250px;
+}
+
+.steps__decoration {
+  margin-bottom: 2rem;
+}
+
+.about__text-decoration {
+  margin-bottom: 1rem;
+}

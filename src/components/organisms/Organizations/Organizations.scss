@@ -1,4 +1,26 @@
+@import "../../../scss/settings/mixins";
+@import "../../../scss/settings/colors";
+
 .organizations {
   background-color: palevioletred;
-  height: 50vh;
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .organizations__content-title {
+      font-size: 1.8rem;
+      padding: 1rem;
+      margin-top: 1rem;
+      @include mediumScreen {
+        font-size: 2.1rem;
+        margin-top: 2rem;
+      }
+    }
+    .organizations__content-buttons {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
 }

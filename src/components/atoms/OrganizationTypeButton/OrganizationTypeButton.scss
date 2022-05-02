@@ -1,0 +1,15 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/mixins";
+
+.organizations__content-button {
+  white-space: pre-line;
+  font-size: 0.9rem;
+  border: 1px solid $colorFontPrimary;
+  border-radius: 2px;
+  width: 120px;
+  height: 80px;
+  cursor: pointer;
+  @include mediumScreen {
+    font-size: 1.5rem;
+  }
+}

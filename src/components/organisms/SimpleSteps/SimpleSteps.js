@@ -1,3 +1,4 @@
+import Decoration from "../../atoms/Decoration";
 import AuthButton from "../../atoms/AuthButton";
 import Steps from "../../molecules/Steps";
 import "./SimpleSteps.scss";
@@ -6,7 +7,7 @@ const SimpleSteps = () => {
   return (
     <section id="steps" className="steps">
       <h4 className="steps__title">Wystarczą 4 proste kroki</h4>
-      <div className="steps__decoration"></div>
+      <Decoration className="steps__decoration" />
       <div className="steps__container">
         <Steps />
       </div>

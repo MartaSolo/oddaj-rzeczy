@@ -28,16 +28,8 @@
       padding: 1rem;
       @include mediumScreen {
         font-size: 2.1rem;
-        padding: 3rem 0 3rem;
+        padding: 2rem 0 2rem 0;
       }
-    }
-    .about__text-decoration {
-      background-image: url(../../../assets/decoration.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 33px;
-      width: 250px;
-      margin-bottom: 1rem;
     }
     .about__content-description {
       padding: 1rem;
@@ -55,6 +47,9 @@
       width: 210px;
       margin-bottom: 1rem;
       align-self: flex-end;
+      @include mediumScreen {
+        margin: 0;
+      }
     }
   }
 }
