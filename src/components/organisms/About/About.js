@@ -13,6 +13,7 @@ const About = () => {
             ab velit odio aliquid ullam facilis quasi consequuntur quae
             exercitationem? Amet aperiam dolorem reprehenderit consequatur?
           </p>
+          <div className="about__content-signature"></div>
         </div>
       </div>
       <BgImage

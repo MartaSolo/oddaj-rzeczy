@@ -1,5 +1,6 @@
 @mixin mediumScreen {
-  @media (min-width: 767px) {
+  // @media (min-width: 767px) {
+  @media (min-width: 920px) {
     @content;
   }
 }

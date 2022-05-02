@@ -15,7 +15,7 @@ const NavLinks = ({ isMobile, closeMobileMenu }) => {
           <HashLink
             smooth
             to="/#top"
-            activeClassName="active"
+            // activeClassName="active"
             className="nav__list-link"
             onClick={closeMenuHandler}
           >
@@ -26,7 +26,7 @@ const NavLinks = ({ isMobile, closeMobileMenu }) => {
           <HashLink
             smooth
             to="/#steps"
-            activeClassName="active"
+            // activeClassName="active"
             className="nav__list-link"
             onClick={closeMenuHandler}
           >
@@ -37,7 +37,7 @@ const NavLinks = ({ isMobile, closeMobileMenu }) => {
           <HashLink
             smooth
             to="/#about"
-            activeClassName="active"
+            // activeClassName="active"
             className="nav__list-link"
             onClick={closeMenuHandler}
           >
@@ -48,7 +48,7 @@ const NavLinks = ({ isMobile, closeMobileMenu }) => {
           <HashLink
             smooth
             to="/#organizations"
-            activeClassName="active"
+            // activeClassName="active"
             className="nav__list-link"
             onClick={closeMenuHandler}
           >
@@ -59,7 +59,7 @@ const NavLinks = ({ isMobile, closeMobileMenu }) => {
           <HashLink
             smooth
             to="/#contact"
-            activeClassName="active"
+            // activeClassName="active"
             className="nav__list-link"
             onClick={closeMenuHandler}
           >
