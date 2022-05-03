@@ -9,13 +9,16 @@ const OrganizationListItem = ({ object }) => {
         <p className="organizations__listItem-description">
           {object.description}
         </p>
-        {object.collectedItems.map((item, index) => {
-          return (
-            <span key={index} className="organizations__listItem-item">
-              {item},{" "}
-            </span>
-          );
-        })}
+
+        <div className="organizations__listItem-items">
+          {object.collectedItems.map((item, index) => {
+            return (
+              <p key={index} className="organizations__listItem-item">
+                {item}
+              </p>
+            );
+          })}
+        </div>
       </div>
     </li>
   );
