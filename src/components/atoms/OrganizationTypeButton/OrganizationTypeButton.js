@@ -1,29 +1,20 @@
-// import "./OrganizationTypeButton.scss";
+import "./OrganizationTypeButton.scss";
 
-// const OrganizationTypeButton = ({ organizationType, onOrgChange }) => {
-//   const handleClick = () => {
-//     if (typeof onOrgChange === "function") {
-//       // onOrgChange()
-//       console.log("click");
-//     }
-//   };
-//   return (
-//     <button className="organizations__content-button" onClick={handleClick}>
-//       text
-//     </button>
-//   );
-// };
+const OrganizationTypeButton = ({ label, value }) => {
+  return (
+    <div className="organizations__input">
+      <label className="organizations__input-label" name="type" htmlFor={value}>
+        {label}
+      </label>
+      <input
+        className="organizations__input-radio"
+        type="radio"
+        name="type"
+        value={value}
+        id={value}
+      ></input>
+    </div>
+  );
+};
 
-// export default OrganizationTypeButton;
-
-// import "./OrganizationTypeButton.scss";
-
-// const OrganizationTypeButton = ({ text, handleClick }) => {
-//   return (
-//     <button className="organizations__content-button" onClick={handleClick}>
-//       {text}
-//     </button>
-//   );
-// };
-
-// export default OrganizationTypeButton;
+export default OrganizationTypeButton;

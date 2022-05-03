@@ -7,7 +7,7 @@ import "./Organizations.scss";
 
 const Organizations = () => {
   const [organizationType, setOrganizationType] = useState("fundation");
-  // console.log("organizationType", organizationType);
+  console.log("organizationType", organizationType);
 
   const [organizationsData, setOrganizationsData] = useState([]);
   console.log("organizationsData", organizationsData);
