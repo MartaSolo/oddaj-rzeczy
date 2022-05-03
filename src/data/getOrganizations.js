@@ -1,8 +1,10 @@
 import organizations from "./organizationsData";
 
-export const getOragnization = (type) => {
+const getOragnization = (type) => {
   return organizations.filter((organization) => organization.type === type);
 };
+
+export default getOragnization;
 
 // console.log(getOragnization("fundation"));
 // console.log(getOragnization("non-govermental organization"));

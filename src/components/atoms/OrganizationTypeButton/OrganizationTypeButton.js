@@ -1,10 +1,21 @@
-import "./OrganizationTypeButton.scss";
+// import "./OrganizationTypeButton.scss";
 
-const OrganizationTypeButton = ({ text }) => {
-  return <button className="organizations__content-button">{text}</button>;
-};
+// const OrganizationTypeButton = ({ organizationType, onOrgChange }) => {
+//   const handleClick = () => {
+//     if (typeof onOrgChange === "function") {
+//       // onOrgChange()
+//       console.log("click");
+//     }
+//   };
+//   return (
+//     <button className="organizations__content-button" onClick={handleClick}>
+//       text
+//     </button>
+//   );
+// };
 
-export default OrganizationTypeButton;
+// export default OrganizationTypeButton;
+
 // import "./OrganizationTypeButton.scss";
 
 // const OrganizationTypeButton = ({ text, handleClick }) => {

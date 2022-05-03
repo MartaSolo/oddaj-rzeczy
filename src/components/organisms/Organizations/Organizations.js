@@ -1,16 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import getOrganizations from "../../../data/getOrganizations";
 import Container from "../../atoms/Container";
 import Decoration from "../../atoms/Decoration";
-import OrganizationTypeButton from "../../atoms/OrganizationTypeButton";
-import organizations from "../../../data/organizationsData";
-import getOrganizations from "../../../data/getOrganizations";
+import OrganizationTypeButtons from "../../molecules/OrganizationTypeButtons";
 import "./Organizations.scss";
 
 const Organizations = () => {
   const [organizationType, setOrganizationType] = useState("fundation");
   // console.log("organizationType", organizationType);
-  console.log(organizationType);
-  const [organizationData, setOrganizationData] = useState([]);
+
+  const [organizationsData, setOrganizationsData] = useState([]);
+  console.log("organizationsData", organizationsData);
+
+  useEffect(() => {
+    setOrganizationsData(getOrganizations(organizationType));
+  }, [organizationType]);
 
   return (
     <section id="organizations" className="organizations">
@@ -18,20 +22,10 @@ const Organizations = () => {
         <h2 className="organizations__content-title">Komu pomagamy?</h2>
         <Decoration className="organizations__content-decoration" />
 
-        <div className="organizations__content-buttons">
-          <OrganizationTypeButton
-            text={`Fundacjom`}
-            onClick={() => setOrganizationType("fundation")}
-          />
-          <OrganizationTypeButton
-            text={`Organizacjom\npozarządowym`}
-            onClick={() => setOrganizationType("non-govermental organization")}
-          />
-          <OrganizationTypeButton
-            text={`Lokalnym\nzbiórkom`}
-            onClick={() => setOrganizationType("localCollection")}
-          />
-        </div>
+        <OrganizationTypeButtons
+          // organizationType={organizationType}
+          setOrganizationType={setOrganizationType}
+        />
       </Container>
     </section>
   );
