@@ -16,10 +16,16 @@
         margin-top: 2rem;
       }
     }
-    .organizations__content-buttons {
-      margin-top: 1rem;
-      display: flex;
-      justify-content: space-around;
+    .organizations__content-description {
+      font-size: 1rem;
+      padding: 2rem;
+      text-align: center;
+      line-height: 1.2;
+      @include mediumScreen {
+        font-size: 1.4rem;
+        max-width: 600px;
+        padding: 3rem 2rem;
+      }
     }
   }
 }

@@ -26,6 +26,14 @@ const Organizations = () => {
           organizationType={organizationType}
           setOrganizationType={setOrganizationType}
         />
+
+        {organizationsData.map((organization) => {
+          return (
+            <p className="organizations__content-description">
+              {organization.description}
+            </p>
+          );
+        })}
       </Container>
     </section>
   );

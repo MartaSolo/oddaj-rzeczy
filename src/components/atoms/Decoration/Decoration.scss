@@ -1,3 +1,5 @@
+@import "../../../scss/settings/mixins";
+
 .start__text-decoration,
 .steps__decoration,
 .about__text-decoration,
@@ -13,6 +15,13 @@
   margin-bottom: 2rem;
 }
 
-.about__text-decoration {
+.about__text-decoration,
+.organizations__content-decoration {
   margin-bottom: 1rem;
+}
+
+.organizations__content-decoration {
+  @include mediumScreen {
+    margin-bottom: 2rem;
+  }
 }
