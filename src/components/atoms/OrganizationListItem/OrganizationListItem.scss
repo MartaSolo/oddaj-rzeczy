@@ -1,0 +1,31 @@
+@import "../../../scss/settings/mixins";
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/fonts";
+
+.organizations__listItem {
+  //   border: 1px solid green;
+  padding: 2rem 2rem 0 2rem;
+  font-family: $fontAlt;
+  .organizations__listItem-name {
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
+  }
+  .organizations__listItem-content {
+    .organizations__listItem-description {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .organizations__listItem-item {
+      font-size: 1rem;
+      font-style: italic;
+    }
+  }
+  &::after {
+    content: "";
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+    height: 1px;
+    background-color: $colorFontPrimary;
+  }
+}
