@@ -1,19 +1,25 @@
 import OrganizationTypeButton from "../../atoms/OrganizationTypeButton";
-import "./OrganizationTypeButtons";
+import "./OrganizationTypeButtons.scss";
 
-const OrganizationTypeButtons = ({ setOrganizationType }) => {
+const OrganizationTypeButtons = ({ organizationType, setOrganizationType }) => {
   const handleChange = (e) => {
     setOrganizationType(e.target.value);
   };
 
   return (
     <div className="organizations__content-buttons" onChange={handleChange}>
-      <OrganizationTypeButton label={`Fundacjom`} value="fundations" />
       <OrganizationTypeButton
+        organizationType={organizationType}
+        label={`Fundacjom`}
+        value="fundations"
+      />
+      <OrganizationTypeButton
+        organizationType={organizationType}
         label={`Organizacjom\npozarządowym`}
         value="non-govermental organization"
       />
       <OrganizationTypeButton
+        organizationType={organizationType}
         label={`Zbiórkom\nlokalnym`}
         value="localCollection"
       />

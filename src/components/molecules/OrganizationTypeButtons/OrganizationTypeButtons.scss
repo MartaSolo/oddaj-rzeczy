@@ -1,0 +1,8 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/mixins";
+
+.organizations__content-buttons {
+  border: 2px solid orange;
+  display: flex;
+  justify-content: space-evenly;
+}

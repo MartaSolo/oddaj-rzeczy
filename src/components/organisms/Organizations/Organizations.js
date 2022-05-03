@@ -23,7 +23,7 @@ const Organizations = () => {
         <Decoration className="organizations__content-decoration" />
 
         <OrganizationTypeButtons
-          // organizationType={organizationType}
+          organizationType={organizationType}
           setOrganizationType={setOrganizationType}
         />
       </Container>

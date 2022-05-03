@@ -1,9 +1,18 @@
 import "./OrganizationTypeButton.scss";
 
-const OrganizationTypeButton = ({ label, value }) => {
+const OrganizationTypeButton = ({ organizationType, label, value }) => {
   return (
     <div className="organizations__input">
-      <label className="organizations__input-label" name="type" htmlFor={value}>
+      <label
+        // className="organizations__input-label"
+        className={
+          organizationType === value
+            ? "organizations__input-label checked"
+            : "organizations__input-label"
+        }
+        name="type"
+        htmlFor={value}
+      >
         {label}
       </label>
       <input

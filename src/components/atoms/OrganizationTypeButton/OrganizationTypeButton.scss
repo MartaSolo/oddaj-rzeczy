@@ -2,18 +2,41 @@
 @import "../../../scss/settings/mixins";
 
 .organizations__input {
-  border: 1px solid green;
+  // border: 1px solid green;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   .organizations__input-label {
     white-space: pre-line;
-    text-align: center;
+    // text-align: center;
     font-size: 0.8rem;
     line-height: 1.2;
-    border: 1px solid blue;
-    display: block;
-    padding: 1rem;
+    border: 1px solid $colorFontPrimary;
+    border-radius: 2px;
+    padding: 1rem 0;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+    @include smallScreen {
+      margin: 0.5rem 1.5rem;
+      width: 150px;
+    }
+    @include mediumScreen {
+      font-size: 1.5rem;
+      width: 200px;
+      border: none;
+    }
+  }
+  .organizations__input-label.checked {
+    background-color: $colorAccent;
+    @include mediumScreen {
+      background-color: transparent;
+      border: 1px solid $colorFontPrimary;
+    }
   }
   .organizations__input-radio {
     position: absolute;
