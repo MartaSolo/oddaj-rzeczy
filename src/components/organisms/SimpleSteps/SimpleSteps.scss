@@ -2,7 +2,7 @@
 @import "../../../scss/settings/mixins";
 
 .steps {
-  padding: 1rem;
+  border: 2px solid green;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,7 +10,7 @@
   .steps__title {
     font-size: 1.8rem;
     padding: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     text-align: center;
     @include mediumScreen {
       font-size: 2.1rem;
@@ -19,6 +19,6 @@
   }
   .steps__container {
     background-color: $colorFormBackground;
-    width: 100vw;
+    width: 100%;
   }
 }
