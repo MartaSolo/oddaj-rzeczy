@@ -3,6 +3,7 @@ import getOrganizations from "../../../data/getOrganizations";
 import Container from "../../atoms/Container";
 import Decoration from "../../atoms/Decoration";
 import OrganizationTypeButtons from "../../molecules/OrganizationTypeButtons";
+import OrganizationsList from "../../molecules/OrganizationsList";
 import "./Organizations.scss";
 
 const Organizations = () => {
@@ -29,11 +30,16 @@ const Organizations = () => {
 
         {organizationsData.map((organization) => {
           return (
-            <p className="organizations__content-description">
+            <p
+              className="organizations__content-description"
+              key={organization.type}
+            >
               {organization.description}
             </p>
           );
         })}
+
+        <OrganizationsList organizationsData={organizationsData} />
       </Container>
     </section>
   );
