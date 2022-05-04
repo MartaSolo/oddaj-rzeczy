@@ -8,10 +8,10 @@ import "./Organizations.scss";
 
 const Organizations = () => {
   const [organizationType, setOrganizationType] = useState("fundation");
-  console.log("organizationType", organizationType);
-
+  // console.log("organizationType", organizationType);
   const [organizationsData, setOrganizationsData] = useState([]);
-  console.log("organizationsData", organizationsData);
+  // console.log("organizationsData", organizationsData);
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     setOrganizationsData(getOrganizations(organizationType));
@@ -25,6 +25,7 @@ const Organizations = () => {
 
         <OrganizationTypeButtons
           organizationType={organizationType}
+          setCurrentPage={setCurrentPage}
           setOrganizationType={setOrganizationType}
         />
 
@@ -39,7 +40,11 @@ const Organizations = () => {
           );
         })}
 
-        <OrganizationsList organizationsData={organizationsData} />
+        <OrganizationsList
+          organizationsData={organizationsData}
+          currentPage={currentPage}
+          setCurrentPage={setCurrentPage}
+        />
       </Container>
     </section>
   );

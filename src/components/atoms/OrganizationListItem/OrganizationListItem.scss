@@ -61,4 +61,8 @@
     height: 1px;
     background-color: $colorFontPrimary;
   }
+  &:last-child::after {
+    content: "";
+    background-color: $colorBackgroundPrimary;
+  }
 }

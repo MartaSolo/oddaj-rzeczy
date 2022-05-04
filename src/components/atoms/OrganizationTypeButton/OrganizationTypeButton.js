@@ -4,7 +4,6 @@ const OrganizationTypeButton = ({ organizationType, label, value }) => {
   return (
     <div className="organizations__input">
       <label
-        // className="organizations__input-label"
         className={
           organizationType === value
             ? "organizations__input-label checked"

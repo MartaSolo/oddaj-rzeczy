@@ -1,9 +1,15 @@
 import OrganizationTypeButton from "../../atoms/OrganizationTypeButton";
 import "./OrganizationTypeButtons.scss";
 
-const OrganizationTypeButtons = ({ organizationType, setOrganizationType }) => {
+const OrganizationTypeButtons = ({
+  organizationType,
+  setOrganizationType,
+  currentPage,
+  setCurrentPage,
+}) => {
   const handleChange = (e) => {
     setOrganizationType(e.target.value);
+    setCurrentPage(1);
   };
 
   return (

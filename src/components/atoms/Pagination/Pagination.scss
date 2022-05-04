@@ -1,0 +1,35 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/mixins";
+
+.organizations__list-pagination {
+  //   border: 1px solid blue;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  .organizations__list-button {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    margin: 0 1rem;
+    background-color: $colorBackgroundPrimary;
+    border: 1px solid $colorPagination;
+    border-radius: 2px;
+    cursor: pointer;
+    @include mediumScreen {
+      font-size: 1.1rem;
+      padding: 1rem;
+      border: 1px solid $colorBackgroundPrimary;
+    }
+    &:hover {
+      @include mediumScreen {
+        border: 1px solid $colorPaginationHover;
+      }
+    }
+  }
+  .organizations__list-button.active {
+    background-color: $colorAccent;
+    @include mediumScreen {
+      border: 1px solid $colorPagination;
+      background-color: transparent;
+    }
+  }
+}
