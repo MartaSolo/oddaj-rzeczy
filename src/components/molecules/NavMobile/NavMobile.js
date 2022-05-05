@@ -7,7 +7,7 @@ import "./NavMobile.scss";
 const NavMobile = () => {
   const [open, setOpen] = useState(false);
   const clickHandler = () => setOpen(!open);
-  console.log("open", open);
+  // console.log("open", open);
 
   const hamburgerIcon = (
     <GiHamburgerMenu
