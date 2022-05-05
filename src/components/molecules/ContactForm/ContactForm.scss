@@ -1,0 +1,48 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/mixins";
+@import "../../../scss/settings/fonts";
+
+.contact__content-form {
+  // border: 1px solid green;
+  .contact__form-inputs {
+  }
+  .contact__form-button {
+    border: 1px solid $colorFontPrimary;
+    border-radius: 2px;
+    background-color: $colorBackgroundPrimary;
+    font-size: 1.1rem;
+    width: 150px;
+    height: 50px;
+    &:hover {
+      box-shadow: 8px 8px 17px -11px $colorFontPrimary;
+    }
+  }
+}
+
+.contact__form-input,
+.contact__form-textarea {
+  display: flex;
+  flex-direction: column;
+  .contact__input-label,
+  .contact__textarea-label {
+    text-align: left;
+    padding: 1rem 0;
+    font-weight: 600;
+  }
+  .contact__input-input,
+  .contact__textarea-textarea {
+    margin-bottom: 2rem;
+    border: none;
+    border-bottom: 1px solid $colorPagination;
+    outline: none;
+    font-size: 1.1rem;
+    color: $colorFontPrimary;
+    font-family: $fontBase;
+    &:focus {
+      border-bottom: 1px solid $colorAccent;
+    }
+    &::placeholder {
+      color: $colorInputsPlaceholders;
+    }
+  }
+}

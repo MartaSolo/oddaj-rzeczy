@@ -1,8 +1,9 @@
 @import "../../../scss/settings/mixins";
+@import "../../../scss/settings/colors";
 
 .start__content-image,
-.about__content-image {
-  border: 2px solid red;
+.about__content-image,
+.contact__content-image {
   width: 100%;
   height: 30vh;
   display: flex;
@@ -13,7 +14,8 @@
     overflow: visible;
   }
   .start__image-img,
-  .about__image-img {
+  .about__image-img,
+  .contact__image-img {
     height: inherit;
     object-fit: contain;
     @include mediumScreen {
@@ -35,5 +37,26 @@
     @include mediumScreen {
       object-position: center;
     }
+  }
+}
+
+.contact__content-image {
+  position: relative;
+  height: inherit;
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: +1;
+    background-image: linear-gradient($colorPhotoOverlay, $colorPhotoOverlay);
+  }
+  .contact__image-img {
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
   }
 }

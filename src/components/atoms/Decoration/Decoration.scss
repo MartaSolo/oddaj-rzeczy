@@ -3,7 +3,9 @@
 .start__text-decoration,
 .steps__decoration,
 .about__text-decoration,
-.organizations__content-decoration {
+.organizations__content-decoration,
+.about__text-decoration,
+.contact__text-decoration {
   background-image: url(../../../assets/decoration.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -11,7 +13,8 @@
   width: 250px;
 }
 
-.steps__decoration {
+.steps__decoration,
+.contact__text-decoration {
   margin-bottom: 2rem;
 }
 
