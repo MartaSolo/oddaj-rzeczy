@@ -4,7 +4,6 @@ import "./OrganizationTypeButtons.scss";
 const OrganizationTypeButtons = ({
   organizationType,
   setOrganizationType,
-  currentPage,
   setCurrentPage,
 }) => {
   const handleChange = (e) => {
