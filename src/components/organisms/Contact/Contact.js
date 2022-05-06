@@ -1,6 +1,7 @@
 import BgImage from "../../atoms/BgImage";
 import Decoration from "../../atoms/Decoration";
 import ContactForm from "../../molecules/ContactForm";
+import Footer from "../../molecules/Footer";
 import "./Contact.scss";
 
 const Contact = () => {
@@ -12,8 +13,8 @@ const Contact = () => {
           <Decoration className="contact__text-decoration" />
           <ContactForm />
         </div>
-        {/* <ContactForm /> */}
       </div>
+      <Footer />
     </section>
   );
 };

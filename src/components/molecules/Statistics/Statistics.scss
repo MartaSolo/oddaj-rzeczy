@@ -1,14 +1,17 @@
 @import "../../../scss/settings/mixins";
 
 .start__statistics {
-  border: 2px solid blue;
+  // border: 2px solid blue;
   @include mediumScreen {
+    height: 344px;
     background-image: url(../../../assets/3-columns-background.png);
   }
   .container {
     @include mediumScreen {
+      height: 100%;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
     }
   }
 }

@@ -8,6 +8,7 @@
   text-align: center;
   background-image: url(../../../assets/3-columns-background.png);
   @include mediumScreen {
+    width: 334px;
     padding: 3rem 4rem;
     background-image: none;
   }
@@ -16,7 +17,7 @@
     color: $colorFontNumbers;
     margin-bottom: 1rem;
     @include mediumScreen {
-      font-size: 4rem;
+      font-size: 6rem;
       margin-bottom: 2rem;
     }
   }

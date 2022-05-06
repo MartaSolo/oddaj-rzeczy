@@ -6,8 +6,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 3rem;
+  @include mediumScreen {
+    height: 325px;
+  }
   .setps__step-decoration {
     width: 83px;
     height: 83px;

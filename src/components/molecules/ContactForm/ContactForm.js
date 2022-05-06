@@ -38,8 +38,8 @@ const ContactForm = () => {
           className="contact__textarea-textarea"
           id="message"
           name="message"
-          rows={5}
-          placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est nobis dolorem explicabo. Itaque, cum quos aliquam aspernatur hic quidem officiis?"
+          rows={4}
+          placeholder="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora minima aut magnam id corporis nostrum blanditiis. Totam, illo? Maxime at ducimus eius incidunt ex?"
         ></textarea>
       </div>
 

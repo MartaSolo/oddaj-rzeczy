@@ -1,14 +1,8 @@
 // generic
-// @use "./generic/reset";
 @import "./generic/reset.scss";
 
 // settings
-// @use "./settings/colors";
-// @use "./settings/colors.scss";
 @import "./settings/colors";
-
-// @use "./settings/fonts";
-// @use "./settings/fonts.scss";
 @import "./settings/fonts";
 
 body {

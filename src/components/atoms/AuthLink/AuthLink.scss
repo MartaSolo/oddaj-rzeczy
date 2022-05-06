@@ -9,7 +9,7 @@
   border: 1px solid $colorAccent;
   border-radius: 5px;
   @include mediumScreen {
-    border: none;
+    border: 2px solid $colorBackgroundPrimary;
     &:hover {
       border: 2px solid $colorAccent;
       border-radius: 2px;
