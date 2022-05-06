@@ -3,8 +3,20 @@
 @import "../../../scss/settings/fonts";
 
 .contact__content-form {
-  // border: 1px solid green;
+  border: 2px solid green;
+  width: 100%;
+  @include mediumScreen {
+    display: flex;
+    flex-direction: column;
+  }
   .contact__form-inputs {
+    @include mediumScreen {
+      display: flex;
+      justify-content: space-between;
+    }
+    .contact__form-input {
+      width: 45%;
+    }
   }
   .contact__form-button {
     border: 1px solid $colorFontPrimary;
@@ -13,8 +25,12 @@
     font-size: 1.1rem;
     width: 150px;
     height: 50px;
+    cursor: pointer;
     &:hover {
       box-shadow: 8px 8px 17px -11px $colorFontPrimary;
+    }
+    @include mediumScreen {
+      align-self: flex-end;
     }
   }
 }

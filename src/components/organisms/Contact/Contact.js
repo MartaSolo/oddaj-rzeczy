@@ -10,15 +10,10 @@ const Contact = () => {
         <div className="contact__content-text">
           <h2 className="contact__content-title">Skontaktuj się z nami</h2>
           <Decoration className="contact__text-decoration" />
+          <ContactForm />
         </div>
-        <ContactForm />
+        {/* <ContactForm /> */}
       </div>
-      <BgImage
-        divClassName="contact__content-image"
-        scr={require("../../../assets/background-contact-form.jpg")}
-        alt="pile of clothes"
-        imgClassName="contact__image-img"
-      />
     </section>
   );
 };
