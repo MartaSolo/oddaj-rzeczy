@@ -1,15 +1,17 @@
 import { useState } from "react";
+import regexEmail from "../../../utils/regexEmail";
+import postFormData from "../../../api";
+
 import "./ContactForm.scss";
 
 const ContactForm = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  console.log("form", form);
   const [formError, setFormError] = useState({
     name: "",
     email: "",
     message: "",
   });
-  console.log("formError", formError);
+  const [formSuccess, setFormSuccess] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,16 +25,13 @@ const ContactForm = () => {
 
   const formValidation = () => {
     let isValid = true;
-    const reg =
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
     if (form.name.length === 0 || form.name.includes(" ")) {
       setFormError((prev) => {
         return { ...prev, name: "Podane imię jest nieprawidłowe!" };
       });
       isValid = false;
     }
-    if (form.email.length === 0 || !reg.test(form.email)) {
+    if (form.email.length === 0 || !regexEmail.test(form.email)) {
       setFormError((prev) => {
         return { ...prev, email: "Podany email jest nieprawidłowy!" };
       });
@@ -54,14 +53,23 @@ const ContactForm = () => {
     e.preventDefault();
     const isValid = formValidation();
     if (isValid) {
-      // send data to API
+      postFormData(form);
       setForm({ name: "", email: "", message: "" });
       setFormError({ name: "", email: "", message: "" });
+      setFormSuccess("Wiadomość została wysłana!\nWkrótce się skontaktujemy.");
     }
   };
 
   return (
-    <form className="contact__content-form" onSubmit={handleSubmit}>
+    <form
+      className={
+        formSuccess ? "contact__content-form success" : "contact__content-form"
+      }
+      onSubmit={handleSubmit}
+    >
+      {formSuccess && (
+        <div className="contact__form-success">{formSuccess}</div>
+      )}
       <div className="contact__form-inputs">
         <div className="contact__form-input">
           <label className="contact__input-label" htmlFor="name">

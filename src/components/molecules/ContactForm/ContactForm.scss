@@ -3,11 +3,18 @@
 @import "../../../scss/settings/fonts";
 
 .contact__content-form {
-  border: 2px solid green;
   width: 100%;
+  margin-top: 3.5rem;
   @include mediumScreen {
     display: flex;
     flex-direction: column;
+  }
+  .contact__form-success {
+    color: $colorSuccess;
+    font-weight: 700;
+    line-height: 1.5;
+    white-space: pre-line;
+    margin-bottom: 0.5rem;
   }
   .contact__form-inputs {
     @include mediumScreen {
@@ -36,6 +43,10 @@
       align-self: flex-end;
     }
   }
+}
+
+.contact__content-form.success {
+  margin-top: 0;
 }
 
 .contact__form-input,
