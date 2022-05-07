@@ -2,16 +2,15 @@
 @import "../../../scss/settings/mixins";
 
 .organizations__input {
-  // border: 1px solid green;
   display: flex;
   justify-content: center;
   align-items: stretch;
   .organizations__input-label {
     white-space: pre-line;
-    // text-align: center;
     font-size: 0.8rem;
     line-height: 1.2;
     border: 1px solid $colorFontPrimary;
+    border: 1px solid red;
     border-radius: 2px;
     padding: 1rem 0;
     margin: 0.5rem;
@@ -28,7 +27,7 @@
     @include mediumScreen {
       font-size: 1.5rem;
       width: 200px;
-      border: none;
+      border: 1px solid $colorBackgroundPrimary;
       &:hover {
         border: 1px solid $colorPaginationHover;
       }
