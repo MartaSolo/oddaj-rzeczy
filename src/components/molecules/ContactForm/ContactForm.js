@@ -4,7 +4,6 @@ import "./ContactForm.scss";
 const ContactForm = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   console.log("form", form);
-
   const [formError, setFormError] = useState({
     name: "",
     email: "",
@@ -27,13 +26,13 @@ const ContactForm = () => {
     const reg =
       /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    if (form.name.length < 1 || form.name.includes(" ")) {
+    if (form.name.length === 0 || form.name.includes(" ")) {
       setFormError((prev) => {
         return { ...prev, name: "Podane imię jest nieprawidłowe!" };
       });
       isValid = false;
     }
-    if (form.email.length < 1 || !reg.test(form.email)) {
+    if (form.email.length === 0 || !reg.test(form.email)) {
       setFormError((prev) => {
         return { ...prev, email: "Podany email jest nieprawidłowy!" };
       });
@@ -69,7 +68,11 @@ const ContactForm = () => {
             Wpisz swoje imię:
           </label>
           <input
-            className="contact__input-input"
+            className={
+              formError.name
+                ? "contact__input-input error"
+                : "contact__input-input"
+            }
             type="text"
             id="name"
             name="name"
@@ -77,7 +80,7 @@ const ContactForm = () => {
             value={form.name}
             onChange={handleChange}
           ></input>
-          {formError.name.length && (
+          {formError.name && (
             <span className="input__error-name">{formError.name}</span>
           )}
         </div>
@@ -86,7 +89,11 @@ const ContactForm = () => {
             Wpisz swój mail:
           </label>
           <input
-            className="contact__input-input"
+            className={
+              formError.email
+                ? "contact__input-input error"
+                : "contact__input-input"
+            }
             type="email"
             id="email"
             name="email"
@@ -94,7 +101,7 @@ const ContactForm = () => {
             value={form.email}
             onChange={handleChange}
           ></input>
-          {formError.email.length && (
+          {formError.email && (
             <span className="input__error-email">{formError.email}</span>
           )}
         </div>
@@ -105,15 +112,19 @@ const ContactForm = () => {
           Wpisz swoją wiadomość:
         </label>
         <textarea
-          className="contact__textarea-textarea"
+          className={
+            formError.message
+              ? "contact__textarea-textarea error"
+              : "contact__textarea-textarea"
+          }
           id="message"
           name="message"
           rows={4}
-          placeholder="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora minima aut magnam id corporis nostrum blanditiis. Totam, illo? Maxime at ducimus eius incidunt ex?"
+          placeholder="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora minima aut magnam id corporis nostrum blanditiis. Totam, illo? Maxime at ducimus eius incidunt ex? Minima quasi quo suscipit ipsum aperiam."
           value={form.message}
           onChange={handleChange}
         ></textarea>
-        {formError.message.length && (
+        {formError.message && (
           <span className="input__error-message">{formError.message}</span>
         )}
       </div>
