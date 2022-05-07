@@ -16,3 +16,16 @@
     }
   }
 }
+
+.login__button-register,
+.login__button-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 117px;
+  height: 50px;
+  border-radius: 2px;
+  border: 1px solid $colorFontPrimary;
+  font-size: 1.1rem;
+  color: $colorFontSecondary;
+}
