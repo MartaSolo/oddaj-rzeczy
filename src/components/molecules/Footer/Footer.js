@@ -5,10 +5,14 @@ import "./Footer.scss";
 const Footer = () => {
   return (
     <footer className="footer">
-      <Container>
-        <FooterIcon className="footer__icon facebook" />
-        <FooterIcon className="footer__icon instagram" />
-      </Container>
+      {/* <Container> */}
+      <div className="footer__content">
+        <div className="footer__content-icons">
+          <FooterIcon className="footer__icon facebook" href="/" />
+          <FooterIcon className="footer__icon instagram" href="/" />
+        </div>
+      </div>
+      {/* </Container> */}
     </footer>
   );
 };

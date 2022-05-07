@@ -1,6 +1,33 @@
 @import "../../../scss/settings/mixins";
 
 .footer {
-  border: 1px solid green;
+  background-color: rgba(0, 0, 255, 0.418);
   height: 60px;
+  @include mediumScreen {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .footer__content {
+    border: 2px solid red;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @include mediumScreen {
+      width: 50%;
+      justify-content: center;
+    }
+    .footer__content-icons {
+      border: 2px solid green;
+      display: flex;
+      @include mediumScreen {
+        justify-content: flex-end;
+        width: 530px;
+      }
+    }
+  }
 }

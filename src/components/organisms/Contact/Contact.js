@@ -1,4 +1,3 @@
-import BgImage from "../../atoms/BgImage";
 import Decoration from "../../atoms/Decoration";
 import ContactForm from "../../molecules/ContactForm";
 import Footer from "../../molecules/Footer";
