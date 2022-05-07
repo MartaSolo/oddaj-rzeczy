@@ -41,6 +41,7 @@
 .contact__form-textarea {
   display: flex;
   flex-direction: column;
+  // -----------
   .contact__input-label,
   .contact__textarea-label {
     text-align: left;
@@ -63,4 +64,14 @@
       color: $colorInputsPlaceholders;
     }
   }
+}
+
+.input__error-name,
+.input__error-email,
+.input__error-message {
+  color: $colorError;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: left;
+  // -------------
 }

@@ -8,11 +8,8 @@ import "./Organizations.scss";
 
 const Organizations = () => {
   const [organizationType, setOrganizationType] = useState("fundation");
-  // console.log("organizationType", organizationType);
   const [organizationsData, setOrganizationsData] = useState([]);
-  // console.log("organizationsData", organizationsData);
   const [currentPage, setCurrentPage] = useState(1);
-  console.log("currentPage", currentPage);
 
   useEffect(() => {
     setOrganizationsData(getOrganizations(organizationType));

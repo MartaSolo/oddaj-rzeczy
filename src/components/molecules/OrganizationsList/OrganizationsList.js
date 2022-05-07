@@ -9,13 +9,10 @@ const OrganizationsList = ({
   setCurrentPage,
 }) => {
   const [organizations, setOrganizations] = useState([]);
-  // console.log("organizations", organizations);
   const [selectedOrganizations, setSelectedOrganizations] = useState([]);
-  console.log("selectedOrganizations", selectedOrganizations);
 
   const [itemsPerPage] = useState(3);
   const [totalPages, setTotalpages] = useState(0);
-  // console.log("totalPages", totalPages);
 
   useEffect(() => {
     const organizationsArray = () => {
@@ -31,9 +28,7 @@ const OrganizationsList = ({
   }, [organizations]);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
-  // console.log("startIndex", startIndex);
   const endIndex = currentPage * itemsPerPage;
-  // console.log("endIndex", endIndex);
 
   useEffect(() => {
     setSelectedOrganizations(() => {
