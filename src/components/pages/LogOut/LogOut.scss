@@ -1,0 +1,43 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/mixins";
+
+.logout {
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .logout__content {
+    margin-top: 160px;
+    width: 100%;
+    max-width: 504px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .logout__content-title {
+      white-space: pre-line;
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 2rem 0 2rem 0;
+      @include mediumScreen {
+        font-size: 2.5rem;
+        padding-bottom: 2rem;
+      }
+    }
+    .logout__content-home {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $colorFontPrimary;
+      width: 150px;
+      height: 50px;
+      font-size: 1.1rem;
+      margin-top: 1.5rem;
+      @include mediumScreen {
+        &:hover {
+          box-shadow: 8px 8px 17px -11px $colorFontPrimary;
+        }
+      }
+    }
+  }
+}
