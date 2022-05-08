@@ -1,39 +1,111 @@
 @import "../../../scss/settings/colors";
+@import "../../../scss/settings/mixins";
 
 .login__content-form {
-  background-color: $colorFormBackground;
-  // border: 1px solid blue;
+  border: 1px solid blue;
   width: 100%;
-  max-width: 385px;
-  height: 245px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  .contact__form-inputs {
-    width: 254px;
-    .contact__form-input {
-      margin-bottom: 1rem;
-      &:first-child {
-        margin-bottom: 3rem;
+  .login__form-inputs {
+    background-color: $colorFormBackground;
+    width: 100%;
+    max-width: 385px;
+    height: 235px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.login__form-input {
+  width: 250px;
+  .login__input-label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+  .login__input-input {
+    font-size: 1rem;
+    padding: 0;
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: $colorFormBackground;
+    border-bottom: 1px solid $colorPagination;
+    outline: none;
+    margin-bottom: 1rem;
+    &:focus {
+      border-bottom: 1px solid $colorAccent;
+    }
+  }
+  &:first-child {
+    .login__input-input {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+.login__form-input {
+  .login__input-input.error {
+    border-bottom: 1px solid $colorError;
+    margin-bottom: 0rem;
+    &:focus {
+      border-bottom: 1px solid $colorAccent;
+    }
+  }
+}
+
+.login__error-email,
+.login__error-password {
+  display: block;
+  color: $colorError;
+  font-size: 0.9rem;
+}
+
+.login__error-email {
+  margin-bottom: 1.6rem;
+}
+
+// Buttons
+.login__form-buttons {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @include mediumScreen {
+    margin-top: 3rem;
+  }
+  .login__button-register,
+  .login__button-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 117px;
+    height: 50px;
+    border-radius: 2px;
+    border: 1px solid $colorFontPrimary;
+    font-size: 1.1rem;
+    color: $colorFontSecondary;
+  }
+  .login__button-login {
+    cursor: pointer;
+    background-color: $colorAccent;
+    @include mediumScreen {
+      background-color: transparent;
+      &:hover {
+        box-shadow: 8px 8px 17px -11px $colorFontPrimary;
       }
-      .login__input-label {
-        display: block;
-        width: 100%;
-        font-size: 1rem;
-        font-weight: 600;
-        margin-bottom: 2rem;
-      }
-      .login__input-input {
-        padding: 0;
-        display: block;
-        width: 100%;
-        border: none;
-        background-color: $colorFormBackground;
-        border-bottom: 1px solid $colorPagination;
-        outline: none;
-        &:focus {
-          border-bottom: 1px solid $colorAccent;
-        }
+    }
+  }
+  .login__button-register {
+    @include mediumScreen {
+      border: 1px solid $colorBackgroundPrimary;
+      &:hover {
+        border: 1px solid $colorPaginationHover;
       }
     }
   }

@@ -14,18 +14,24 @@
   width: 250px;
 }
 
-.steps__decoration,
-.login__content-decoration {
+.steps__decoration {
   margin-bottom: 2rem;
 }
 
 .about__text-decoration,
 .organizations__content-decoration,
-.contact__text-decoration {
+.contact__text-decoration,
+.login__content-decoration {
   margin-bottom: 1rem;
 }
 
 .organizations__content-decoration {
+  @include mediumScreen {
+    margin-bottom: 2rem;
+  }
+}
+
+.login__content-decoration {
   @include mediumScreen {
     margin-bottom: 2rem;
   }
