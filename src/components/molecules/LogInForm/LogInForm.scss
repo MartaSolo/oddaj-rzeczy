@@ -2,16 +2,19 @@
 
 .login__content-form {
   background-color: $colorFormBackground;
+  // border: 1px solid blue;
+  width: 100%;
   max-width: 385px;
-  height: 235px;
+  height: 245px;
   display: flex;
   justify-content: center;
   align-items: center;
   .contact__form-inputs {
-    width: 250px;
+    width: 254px;
     .contact__form-input {
+      margin-bottom: 1rem;
       &:first-child {
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
       }
       .login__input-label {
         display: block;
@@ -21,11 +24,16 @@
         margin-bottom: 2rem;
       }
       .login__input-input {
+        padding: 0;
         display: block;
         width: 100%;
         border: none;
         background-color: $colorFormBackground;
         border-bottom: 1px solid $colorPagination;
+        outline: none;
+        &:focus {
+          border-bottom: 1px solid $colorAccent;
+        }
       }
     }
   }

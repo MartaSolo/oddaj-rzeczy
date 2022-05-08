@@ -10,6 +10,9 @@
   border-radius: 5px;
   @include mediumScreen {
     border: 2px solid $colorBackgroundPrimary;
+    &:nth-child(2) {
+      border: 2px solid $colorAccent;
+    }
     &:hover {
       border: 2px solid $colorAccent;
       border-radius: 2px;
@@ -28,4 +31,18 @@
   border: 1px solid $colorFontPrimary;
   font-size: 1.1rem;
   color: $colorFontSecondary;
+}
+.login__button-login {
+  background-color: $colorAccent;
+  @include mediumScreen {
+    background-color: transparent;
+    &:hover {
+      box-shadow: 8px 8px 17px -11px $colorFontPrimary;
+    }
+  }
+}
+.login__button-register {
+  @include mediumScreen {
+    border: 1px solid $colorBackgroundPrimary;
+  }
 }
