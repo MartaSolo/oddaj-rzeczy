@@ -1,34 +1,40 @@
 @import "../../../scss/settings/colors";
 @import "../../../scss/settings/mixins";
 
-.login__content-form {
+.register__content-form {
   border: 1px solid blue;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .login__form-inputs {
+  .register__form-inputs {
     background-color: $colorFormBackground;
     width: 100%;
     max-width: 385px;
-    height: 235px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include mediumScreen {
+      height: 330px;
+    }
   }
 }
 
-.login__form-input {
+.register__form-input {
   width: 250px;
-  .login__input-label {
+  .register__input-label {
     display: block;
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    @include mediumScreen {
+      margin-bottom: 2rem;
+    }
   }
-  .login__input-input {
+  .register__input-input {
     font-size: 1rem;
     padding: 0;
     display: block;
@@ -37,20 +43,21 @@
     background-color: $colorFormBackground;
     border-bottom: 1px solid $colorPagination;
     outline: none;
-    margin-bottom: 1rem;
+    // margin-bottom: 1rem;
+    margin-bottom: 2rem;
     &:focus {
       border-bottom: 1px solid $colorAccent;
     }
   }
-  &:first-child {
-    .login__input-input {
-      margin-bottom: 2.5rem;
+  &:last-child {
+    .register__input-input {
+      margin-bottom: 1.4rem;
     }
   }
 }
 
-.login__form-input {
-  .login__input-input.error {
+.register__form-input {
+  .register__input-input.error {
     border-bottom: 1px solid $colorError;
     margin-bottom: 0.5rem;
     &:focus {
@@ -59,19 +66,21 @@
   }
 }
 
-.login__error-email,
-.login__error-password {
+.register__error-email,
+.register__error-password,
+.register__error-password2 {
   display: block;
   color: $colorError;
   font-size: 0.9rem;
+  margin-bottom: 0.6rem;
 }
 
-.login__error-email {
-  margin-bottom: 1.2rem;
+.register__error-password2 {
+  margin-bottom: 0rem;
 }
 
 // Buttons
-.login__form-buttons {
+.register__form-buttons {
   margin-top: 1rem;
   width: 100%;
   display: flex;
@@ -79,8 +88,8 @@
   @include mediumScreen {
     margin-top: 3rem;
   }
-  .login__button-register,
-  .login__button-login {
+  .register__button-register,
+  .register__button-login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,22 +99,29 @@
     border: 1px solid $colorFontPrimary;
     font-size: 1.1rem;
     color: $colorFontSecondary;
-  }
-  .login__button-login {
     cursor: pointer;
-    background-color: $colorAccent;
-    @include mediumScreen {
-      background-color: transparent;
-      &:hover {
-        box-shadow: 8px 8px 17px -11px $colorFontPrimary;
-      }
-    }
   }
-  .login__button-register {
+  .register__button-login {
+    margin-left: 1rem;
     @include mediumScreen {
+      margin-left: 0;
+      background-color: transparent;
       border: 1px solid $colorBackgroundPrimary;
       &:hover {
         border: 1px solid $colorPaginationHover;
+      }
+    }
+  }
+  .register__button-register {
+    margin-right: 1rem;
+    background-color: $colorAccent;
+
+    @include mediumScreen {
+      background-color: transparent;
+      margin-right: 0;
+      border: 1px solid $colorFontPrimary;
+      &:hover {
+        box-shadow: 8px 8px 17px -11px $colorFontPrimary;
       }
     }
   }

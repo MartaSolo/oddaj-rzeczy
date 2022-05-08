@@ -6,7 +6,8 @@
 .organizations__content-decoration,
 .about__text-decoration,
 .contact__text-decoration,
-.login__content-decoration {
+.login__content-decoration,
+.register__content-decoration {
   background-image: url(../../../assets/decoration.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -21,7 +22,8 @@
 .about__text-decoration,
 .organizations__content-decoration,
 .contact__text-decoration,
-.login__content-decoration {
+.login__content-decoration,
+.register__content-decoration {
   margin-bottom: 1rem;
 }
 
@@ -31,7 +33,8 @@
   }
 }
 
-.login__content-decoration {
+.login__content-decoration,
+.register__content-decoration {
   @include mediumScreen {
     margin-bottom: 2rem;
   }
