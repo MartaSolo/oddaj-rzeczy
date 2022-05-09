@@ -34,3 +34,12 @@
     border: 1px solid $colorBackgroundPrimary;
   }
 }
+
+.header_auth-link.user {
+  @include mediumScreen {
+    border: 1px solid $colorBackgroundPrimary;
+    &:first-child {
+      border: 1px solid $colorAccent;
+    }
+  }
+}

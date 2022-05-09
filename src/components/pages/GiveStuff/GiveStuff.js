@@ -1,10 +1,12 @@
+import HeaderUser from "../../organisms/HeaderUser";
 import "./GiveStuff.scss";
 
 const GiveStuff = () => {
   return (
-    <div>
+    <>
+      <HeaderUser />
       <div>GiveStuff component</div>
-    </div>
+    </>
   );
 };
 
