@@ -8,7 +8,6 @@
     @include mediumScreen {
       display: block;
       height: calc(100vh - 180px);
-      //   width: 45%;
       width: 100%;
       background-image: url(../../../assets/form-hero-image.jpg);
       background-repeat: no-repeat;
@@ -16,23 +15,23 @@
       //   background-position: 50%;
     }
     .container {
-      border: 2px solid blue;
+      // border: 2px solid blue;
       @include mediumScreen {
       }
       .givestuff__hero-content {
-        border: 2px solid palevioletred;
-        background-color: rgba(172, 104, 155, 0.473);
         @include mediumScreen {
           width: 55%;
-          transform: translate(81%);
+          transform: translate(75%);
         }
         .givestuff__hero-start {
+          // border: 1px solid blue;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           padding: 1rem;
           @include mediumScreen {
+            height: calc(100vh - 300px);
             margin-top: 60px;
           }
           .givestuff__hero-title {
