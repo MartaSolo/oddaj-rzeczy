@@ -1,0 +1,38 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/mixins";
+
+.givestuff__steps-step {
+  height: 70px;
+  width: 70px;
+  margin: 5px;
+  border: 1px solid $colorFontPrimary;
+  transform: rotate(45deg);
+  position: relative;
+  @include mediumScreen {
+    height: 113px;
+    width: 113px;
+    margin: 15px;
+  }
+  .givestuff__steps-number {
+    font-size: 1.2rem;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 10%;
+    left: 14%;
+    @include mediumScreen {
+      font-size: 2rem;
+    }
+  }
+  .givestuff__steps-text {
+    font-size: 0.8rem;
+    white-space: pre-line;
+    text-align: center;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 34%;
+    left: 15%;
+    @include mediumScreen {
+      font-size: 1.4rem;
+    }
+  }
+}

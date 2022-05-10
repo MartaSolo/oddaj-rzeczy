@@ -1,0 +1,9 @@
+@import "../../../scss/settings/mixins";
+
+.givestuff__hero-steps {
+  margin: 1rem 0 1rem 0;
+  display: flex;
+  @include mediumScreen {
+    margin: 2rem 0 2rem 0;
+  }
+}
