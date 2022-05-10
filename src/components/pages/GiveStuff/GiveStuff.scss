@@ -2,7 +2,6 @@
 
 .givestuff__hero {
   @include mediumScreen {
-    // display: flex;
   }
   .givestuff__hero-img {
     border: 1px solid red;
@@ -17,15 +16,15 @@
       //   background-position: 50%;
     }
     .container {
-      border: 2px solid red;
+      border: 2px solid blue;
       @include mediumScreen {
-        // display: flex;
       }
       .givestuff__hero-content {
         border: 2px solid palevioletred;
         background-color: rgba(172, 104, 155, 0.473);
         @include mediumScreen {
           width: 55%;
+          transform: translate(81%);
         }
         .givestuff__hero-start {
           display: flex;
@@ -33,11 +32,11 @@
           justify-content: center;
           align-items: center;
           padding: 1rem;
-          //   background-color: rgba(216, 112, 147, 0.486);
           @include mediumScreen {
             margin-top: 60px;
           }
           .givestuff__hero-title {
+            padding-top: 1.5rem;
             font-size: 1.7rem;
             line-height: 1.3;
             text-align: center;
@@ -47,12 +46,14 @@
           }
           .givestuff__hero-title.main {
             text-transform: uppercase;
+            padding-top: 0rem;
             padding-bottom: 1rem;
           }
           .givestuff__hero-subtitle {
             font-size: 1.8rem;
             font-weight: 300;
             padding-bottom: 1rem;
+            text-align: center;
             @include mediumScreen {
               font-size: 2.5rem;
             }
@@ -62,61 +63,3 @@
     }
   }
 }
-
-// @import "../../../scss/settings/mixins";
-
-// .givestuff__hero {
-//   @include mediumScreen {
-//     display: flex;
-//   }
-//   .givestuff__hero-img {
-//     display: none;
-//     border: 1px solid red;
-//     @include mediumScreen {
-//       display: block;
-//       height: calc(100vh - 180px);
-//       width: 45%;
-//       background-image: url(../../../assets/form-hero-image.jpg);
-//       background-repeat: no-repeat;
-//       background-size: cover;
-//       background-position: 100%;
-//     }
-//   }
-//   .givestuff__hero-content {
-//     background-color: rgba(175, 238, 238, 0.473);
-//     @include mediumScreen {
-//       width: 55%;
-//     }
-//     .givestuff__hero-start {
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: center;
-//       align-items: center;
-//       padding: 1rem;
-//       background-color: rgba(216, 112, 147, 0.486);
-//       @include mediumScreen {
-//         margin-top: 60px;
-//       }
-//       .givestuff__hero-title {
-//         font-size: 1.7rem;
-//         line-height: 1.3;
-//         text-align: center;
-//         @include mediumScreen {
-//           font-size: 2.3rem;
-//         }
-//       }
-//       .givestuff__hero-title.main {
-//         text-transform: uppercase;
-//         padding-bottom: 1rem;
-//       }
-//       .givestuff__hero-subtitle {
-//         font-size: 1.8rem;
-//         font-weight: 300;
-//         padding-bottom: 1rem;
-//         @include mediumScreen {
-//           font-size: 2.5rem;
-//         }
-//       }
-//     }
-//   }
-// }

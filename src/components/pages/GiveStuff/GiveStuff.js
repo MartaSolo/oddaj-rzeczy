@@ -1,5 +1,6 @@
 import Container from "../../atoms/Container";
 import Decoration from "../../atoms/Decoration";
+import GiveStuffSteps from "../../molecules/GiveStuffSteps";
 import HeaderUser from "../../organisms/HeaderUser";
 import Contact from "../../organisms/Contact";
 import "./GiveStuff.scss";
@@ -9,7 +10,7 @@ const GiveStuff = () => {
     <section className="givestuff">
       <div className="givestuff__hero">
         <div className="givestuff__hero-img">
-          <Container>
+          <Container className="givestuff">
             <div className="givestuff__hero-content">
               <HeaderUser />
               <div className="givestuff__hero-start">
@@ -21,7 +22,7 @@ const GiveStuff = () => {
                 <h3 className="givestuff__hero-subtitle">
                   Wystarczą 4 proste kroki:
                 </h3>
-                <div className="givestuff__hero-steps">Steps</div>
+                <GiveStuffSteps />
               </div>
             </div>
           </Container>
