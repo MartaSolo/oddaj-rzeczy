@@ -36,11 +36,21 @@
     height: 50px;
     margin-top: 1rem;
     cursor: pointer;
-    &:hover {
-      box-shadow: 8px 8px 17px -11px $colorFontPrimary;
+    &:disabled {
+      border: 1px solid $colorPaginationHover;
+      color: $colorPaginationHover;
     }
     @include mediumScreen {
       align-self: flex-end;
+      &:hover {
+        box-shadow: 8px 8px 17px -11px $colorFontPrimary;
+      }
+      &:disabled {
+        &:hover {
+          box-shadow: none;
+          cursor: not-allowed;
+        }
+      }
     }
   }
 }
@@ -91,3 +101,97 @@
   text-align: left;
   margin-bottom: 1rem;
 }
+
+// @import "../../../scss/settings/colors";
+// @import "../../../scss/settings/mixins";
+// @import "../../../scss/settings/fonts";
+
+// .contact__content-form {
+//   width: 100%;
+//   margin-top: 3.5rem;
+//   @include mediumScreen {
+//     display: flex;
+//     flex-direction: column;
+//   }
+//   .contact__form-success {
+//     color: $colorSuccess;
+//     font-weight: 700;
+//     line-height: 1.5;
+//     white-space: pre-line;
+//     margin-bottom: 0.5rem;
+//   }
+//   .contact__form-inputs {
+//     @include mediumScreen {
+//       display: flex;
+//       justify-content: space-between;
+//     }
+//     .contact__form-input {
+//       @include mediumScreen {
+//         width: 45%;
+//       }
+//     }
+//   }
+//   .contact__form-button {
+//     border: 1px solid $colorFontPrimary;
+//     border-radius: 2px;
+//     background-color: $colorBackgroundPrimary;
+//     font-size: 1.1rem;
+//     width: 150px;
+//     height: 50px;
+//     margin-top: 1rem;
+//     cursor: pointer;
+//     &:hover {
+//       box-shadow: 8px 8px 17px -11px $colorFontPrimary;
+//     }
+//     @include mediumScreen {
+//       align-self: flex-end;
+//     }
+//   }
+// }
+
+// .contact__content-form.success {
+//   margin-top: 0;
+// }
+
+// .contact__form-input,
+// .contact__form-textarea {
+//   display: flex;
+//   flex-direction: column;
+//   .contact__input-label,
+//   .contact__textarea-label {
+//     text-align: left;
+//     padding: 1rem 0;
+//     font-weight: 600;
+//   }
+//   .contact__input-input,
+//   .contact__textarea-textarea {
+//     margin-bottom: 2.5rem;
+//     border: none;
+//     border-bottom: 1px solid $colorPagination;
+//     outline: none;
+//     font-size: 1.1rem;
+//     color: $colorFontPrimary;
+//     font-family: $fontBase;
+//     &:focus {
+//       border-bottom: 1px solid $colorAccent;
+//     }
+//     &::placeholder {
+//       color: $colorInputsPlaceholders;
+//     }
+//   }
+// }
+
+// .contact__input-input.error,
+// .contact__textarea-textarea.error {
+//   margin-bottom: 0.6rem;
+//   border-bottom: 1px solid $colorError;
+// }
+
+// .input__error-name,
+// .input__error-email,
+// .input__error-message {
+//   color: $colorError;
+//   font-size: 0.9rem;
+//   text-align: left;
+//   margin-bottom: 1rem;
+// }
