@@ -1,8 +1,8 @@
-import React from "react";
+import "./GiveStuffButton.scss";
 
-const GiveStuffButton = ({ className, text, onClick }) => {
+const GiveStuffButton = ({ className, type, text, onClick }) => {
   return (
-    <button className={className} onClick={onClick}>
+    <button className={className} type={type} onClick={onClick}>
       {text}
     </button>
   );

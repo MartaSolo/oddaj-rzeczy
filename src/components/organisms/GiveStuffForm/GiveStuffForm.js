@@ -1,10 +1,24 @@
 import { useState } from "react";
 import Container from "../../atoms/Container";
+import StuffInputs from "../../molecules/StuffInputs";
 import GiveStuffButtons from "../../molecules/GiveStuffButtons";
 import "./GiveStuffForm.scss";
 
 const GiveStuffForm = () => {
   const [step, setStep] = useState(1);
+  const [form, setForm] = useState({
+    stuff: [],
+    bags: "",
+    location: "",
+    target: "",
+    street: "",
+    city: "",
+    postalCode: "",
+    phoneNumber: "",
+    date: "",
+    hour: "",
+    shipment: "",
+  });
   console.log("step", step);
 
   return (
@@ -20,9 +34,9 @@ const GiveStuffForm = () => {
         <Container>
           <form className="givestuff__form-form">
             <p className="givestuff__form-step">Krok {step}/4</p>
-            <div>Inputy</div>
+            <StuffInputs stuff={form.stuff} />
+            <GiveStuffButtons step={step} setStep={setStep} />
           </form>
-          <GiveStuffButtons step={step} setStep={setStep} />
         </Container>
       </div>
     </section>

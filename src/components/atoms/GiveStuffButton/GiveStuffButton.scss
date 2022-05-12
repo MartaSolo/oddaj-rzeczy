@@ -1,0 +1,27 @@
+@import "../../../scss/settings/mixins";
+@import "../../../scss/settings/colors";
+
+.givestuff__form-button {
+  margin: 1rem;
+  width: 120px;
+  height: 60px;
+  border-radius: 2px;
+  border: 1px solid $colorFontPrimary;
+  font-size: 1.1rem;
+  background-color: transparent;
+  @include mediumScreen {
+    cursor: pointer;
+    width: 180px;
+    height: 80px;
+    font-size: 1.5rem;
+    &:hover {
+      box-shadow: 8px 8px 17px -11px $colorFontPrimary;
+    }
+  }
+}
+.givestuff__form-button.submit {
+  width: 140px;
+  @include mediumScreen {
+    width: 240px;
+  }
+}
