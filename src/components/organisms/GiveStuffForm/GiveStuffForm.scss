@@ -1,0 +1,30 @@
+@import "../../../scss/settings/mixins";
+@import "../../../scss/settings/colors";
+
+.givestuff__form {
+  height: 100vh;
+  .givestuff__form-important {
+    background-color: $colorAccent;
+    @include mediumScreen {
+      min-height: 180px;
+    }
+    .form__important-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      padding: 1rem;
+      @include mediumScreen {
+        font-size: 2.2rem;
+      }
+    }
+    .form__important-description {
+      font-weight: 1rem;
+      padding: 0 1rem 1rem 1rem;
+      @include mediumScreen {
+        font-weight: 1.4rem;
+      }
+    }
+  }
+  .givestuff__form-form {
+    background-color: palegoldenrod;
+  }
+}

@@ -15,7 +15,7 @@
       //   background-position: 50%;
     }
     .container {
-      // border: 2px solid blue;
+      height: inherit;
       @include mediumScreen {
       }
       .givestuff__hero-content {
