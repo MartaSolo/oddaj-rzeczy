@@ -94,10 +94,18 @@
   .login__button-login {
     cursor: pointer;
     background-color: $colorAccent;
+    &:disabled {
+      border: 1px solid $colorPaginationHover;
+      color: $colorPaginationHover;
+    }
     @include mediumScreen {
       background-color: transparent;
       &:hover {
         box-shadow: 8px 8px 17px -11px $colorFontPrimary;
+      }
+      &:disabled {
+        cursor: not-allowed;
+        box-shadow: none;
       }
     }
   }

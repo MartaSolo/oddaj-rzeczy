@@ -11,46 +11,68 @@ const LogInForm = () => {
     password: "",
   });
   // console.log("logInFormError", logInFormError);
+  const [logInFormTouched, setLogInFormTouched] = useState({
+    email: false,
+    password: false,
+  });
+  // console.log("logInFormTouched", logInFormTouched);
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setLogInForm((prev) => {
-      return {
-        ...prev,
-        [name]: value,
-      };
-    });
+    setLogInForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    if (e.target.value !== "") {
+      setLogInFormError((prev) => ({ ...prev, [e.target.name]: "" }));
+    }
   };
 
-  const logInFormValidation = () => {
-    let isValid = true;
-
-    if (logInForm.email.length === 0 || !regexEmail.test(logInForm.email)) {
-      setLogInFormError((prev) => {
-        return { ...prev, email: "Podany email jest nieprawidłowy!" };
-      });
-      isValid = false;
+  const handleBlur = (e) => {
+    switch (e.target.name) {
+      case "email":
+        setLogInFormTouched((prev) => ({ ...prev, email: true }));
+        if (logInForm.email.length === 0 || !regexEmail.test(logInForm.email)) {
+          setLogInFormError((prev) => ({
+            ...prev,
+            email: "Podany email jest nieprawidłowy!",
+          }));
+        }
+        break;
+      case "password":
+        setLogInFormTouched((prev) => ({ ...prev, password: true }));
+        if (logInForm.password.length < 6) {
+          setLogInFormError((prev) => ({
+            ...prev,
+            password: "Podane hasło jest za krótkie!",
+          }));
+        }
+        break;
+      default:
+        console.log("input not included in the fucntion");
     }
-    if (logInForm.password.length < 6) {
-      setLogInFormError((prev) => {
-        return {
-          ...prev,
-          password: "Podane hasło jest za krótkie!",
-        };
-      });
-      isValid = false;
-    }
-    return isValid;
   };
+
+  const islogInFormValid = () => {
+    if (
+      !logInFormError.email &&
+      !logInFormError.password &&
+      logInFormTouched.email === true &&
+      logInFormTouched.password === true &&
+      logInForm.email &&
+      logInForm.password
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+  // console.log("islogInFormValid", islogInFormValid());
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const isValid = logInFormValidation();
-    if (isValid) {
-      // send data to API
-      setLogInForm({ email: "", password: "" });
-      setLogInFormError({ email: "", password: "" });
+    if (!islogInFormValid()) {
+      return;
     }
+    // send data to API
+    setLogInForm({ email: "", password: "" });
+    setLogInFormTouched({ email: false, password: false });
   };
 
   return (
@@ -72,6 +94,7 @@ const LogInForm = () => {
             autoComplete="username"
             value={logInForm.email}
             onChange={handleChange}
+            onBlur={handleBlur}
           ></input>
           {logInFormError.email && (
             <span className="login__error-email">{logInFormError.email}</span>
@@ -93,6 +116,7 @@ const LogInForm = () => {
             autoComplete="current-password"
             value={logInForm.password}
             onChange={handleChange}
+            onBlur={handleBlur}
           ></input>
           {logInFormError.password && (
             <span className="login__error-password">
@@ -107,7 +131,11 @@ const LogInForm = () => {
           className="login__button-register"
           text="Załóż konto"
         />
-        <button className="login__button-login" type="submit">
+        <button
+          className="login__button-login"
+          type="submit"
+          disabled={!islogInFormValid()}
+        >
           Zaloguj się
         </button>
       </div>
