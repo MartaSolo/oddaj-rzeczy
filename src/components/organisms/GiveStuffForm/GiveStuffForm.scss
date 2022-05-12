@@ -2,7 +2,10 @@
 @import "../../../scss/settings/colors";
 
 .givestuff__form {
+  border: 2px solid blue;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
   .givestuff__form-important {
     background-color: $colorAccent;
     @include mediumScreen {
@@ -17,14 +20,30 @@
       }
     }
     .form__important-description {
-      font-weight: 1rem;
+      font-size: 1rem;
       padding: 0 1rem 1rem 1rem;
       @include mediumScreen {
-        font-weight: 1.4rem;
+        font-size: 1.4rem;
       }
     }
   }
-  .givestuff__form-form {
+  .givestuff__form-content {
     background-color: palegoldenrod;
+    padding: 1rem;
+    flex-grow: 1;
+    background-color: $colorGiveStuffForm;
+    @include mediumScreen {
+      background-image: url(../../../assets/background-form.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .givestuff__form-form {
+      .givestuff__form-step {
+        font-size: 1.1rem;
+        @include mediumScreen {
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
 }

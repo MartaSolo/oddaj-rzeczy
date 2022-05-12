@@ -5,21 +5,21 @@ import "./ContactForm.scss";
 
 const ContactForm = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  console.log("form", form);
+  // console.log("form", form);
 
   const [formError, setFormError] = useState({
     name: "",
     email: "",
     message: "",
   });
-  console.log("formError", formError);
+  // console.log("formError", formError);
 
   const [formTouched, setFormTouched] = useState({
     name: false,
     email: false,
     message: false,
   });
-  console.log("formTouched", formTouched);
+  // console.log("formTouched", formTouched);
 
   const [formSuccess, setFormSuccess] = useState("");
 
@@ -83,7 +83,7 @@ const ContactForm = () => {
       return false;
     }
   };
-  console.log("isFormValid", isFormValid());
+  // console.log("isFormValid", isFormValid());
 
   const handleSubmit = (e) => {
     e.preventDefault();

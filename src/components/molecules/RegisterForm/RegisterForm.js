@@ -9,20 +9,20 @@ const RegisterForm = () => {
     password: "",
     password2: "",
   });
-  console.log("registerForm", registerForm);
+  // console.log("registerForm", registerForm);
   const [registerFormError, setRegisterFormError] = useState({
     email: "",
     password: "",
     password2: "",
   });
-  console.log("registerFormError", registerFormError);
+  // console.log("registerFormError", registerFormError);
 
   const [registerFormTouched, setRegisterFormTouched] = useState({
     email: false,
     password: false,
     password2: false,
   });
-  console.log("registerFormTouched", registerFormTouched);
+  // console.log("registerFormTouched", registerFormTouched);
 
   const handleChange = (e) => {
     setRegisterForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -88,7 +88,7 @@ const RegisterForm = () => {
       return false;
     }
   };
-  console.log("isRegisterFormValid", isRegisterFormValid());
+  // console.log("isRegisterFormValid", isRegisterFormValid());
 
   const handleSubmit = (e) => {
     e.preventDefault();
