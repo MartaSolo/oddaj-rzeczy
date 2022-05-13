@@ -3,9 +3,9 @@ import Container from "../../atoms/Container";
 import TypeInputs from "../../molecules/TypeInputs";
 import BagsSelect from "../../molecules/BagsSelect";
 import LocalizationSelect from "../../molecules/LocalizationSelect";
+import HelpGroupCheckboxes from "../../molecules/HelpGroupCheckboxes";
 import GiveStuffButtons from "../../molecules/GiveStuffButtons";
 import "./GiveStuffForm.scss";
-import HelpGroupCheckboxes from "../../molecules/HelpGroupCheckboxes/HelpGroupCheckboxes";
 
 const GiveStuffForm = () => {
   const [step, setStep] = useState(1);

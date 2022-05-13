@@ -9,20 +9,11 @@ const RegisterForm = () => {
     password: "",
     password2: "",
   });
-  // console.log("registerForm", registerForm);
   const [registerFormError, setRegisterFormError] = useState({
     email: "",
     password: "",
     password2: "",
   });
-  // console.log("registerFormError", registerFormError);
-
-  const [registerFormTouched, setRegisterFormTouched] = useState({
-    email: false,
-    password: false,
-    password2: false,
-  });
-  // console.log("registerFormTouched", registerFormTouched);
 
   const handleChange = (e) => {
     setRegisterForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -31,43 +22,36 @@ const RegisterForm = () => {
     }
   };
 
-  const handleBlur = (e) => {
-    switch (e.target.name) {
-      case "email":
-        setRegisterFormTouched((prev) => ({ ...prev, email: true }));
-        if (
-          registerForm.email.length === 0 ||
-          !regexEmail.test(registerForm.email)
-        ) {
-          setRegisterFormError((prev) => ({
-            ...prev,
-            email: "Podany email jest nieprawidłowy!",
-          }));
-        }
-        break;
-      case "password":
-        setRegisterFormTouched((prev) => ({ ...prev, password: true }));
-        if (registerForm.password.length < 6) {
-          setRegisterFormError((prev) => ({
-            ...prev,
-            password: "Podane hasło jest za krótkie!",
-          }));
-        }
-        break;
-      case "password2":
-        setRegisterFormTouched((prev) => ({ ...prev, password2: true }));
-        if (
-          registerForm.password2.length === 0 ||
-          registerForm.password2 !== registerForm.password
-        ) {
-          setRegisterFormError((prev) => ({
-            ...prev,
-            password2: "Podane hasła są rózne!",
-          }));
-        }
-        break;
-      default:
-        console.log("input not included in the fucntion");
+  const handleEmailBlur = () => {
+    if (
+      registerForm.email.length === 0 ||
+      !regexEmail.test(registerForm.email)
+    ) {
+      setRegisterFormError((prev) => ({
+        ...prev,
+        email: "Podany email jest nieprawidłowy!",
+      }));
+    }
+  };
+
+  const handlePasswordBlur = () => {
+    if (registerForm.password.length < 6) {
+      setRegisterFormError((prev) => ({
+        ...prev,
+        password: "Podane hasło jest za krótkie!",
+      }));
+    }
+  };
+
+  const handlePassword2Blur = () => {
+    if (
+      registerForm.password2.length === 0 ||
+      registerForm.password2 !== registerForm.password
+    ) {
+      setRegisterFormError((prev) => ({
+        ...prev,
+        password2: "Podane hasła są rózne!",
+      }));
     }
   };
 
@@ -76,9 +60,6 @@ const RegisterForm = () => {
       !registerFormError.email &&
       !registerFormError.password &&
       !registerFormError.password2 &&
-      registerFormTouched.email === true &&
-      registerFormTouched.password === true &&
-      registerFormTouched.password2 === true &&
       registerForm.email &&
       registerForm.password &&
       registerForm.password2
@@ -88,7 +69,6 @@ const RegisterForm = () => {
       return false;
     }
   };
-  // console.log("isRegisterFormValid", isRegisterFormValid());
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -97,7 +77,6 @@ const RegisterForm = () => {
     }
     // send data to API
     setRegisterForm({ email: "", password: "", password2: "" });
-    setRegisterFormTouched({ email: false, password: false, password2: false });
   };
 
   return (
@@ -119,7 +98,7 @@ const RegisterForm = () => {
             autoComplete="username"
             value={registerForm.email}
             onChange={handleChange}
-            onBlur={handleBlur}
+            onBlur={handleEmailBlur}
           ></input>
           {registerFormError.email && (
             <span className="register__error-email">
@@ -143,7 +122,7 @@ const RegisterForm = () => {
             autoComplete="current-password"
             value={registerForm.password}
             onChange={handleChange}
-            onBlur={handleBlur}
+            onBlur={handlePasswordBlur}
           ></input>
           {registerFormError.password && (
             <span className="register__error-password">
@@ -167,7 +146,7 @@ const RegisterForm = () => {
             autoComplete="current-password"
             value={registerForm.password2}
             onChange={handleChange}
-            onBlur={handleBlur}
+            onBlur={handlePassword2Blur}
           ></input>
           {registerFormError.password2 && (
             <span className="register__error-password2">

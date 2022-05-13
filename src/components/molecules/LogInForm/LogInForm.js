@@ -5,17 +5,10 @@ import "./LogInForm.scss";
 
 const LogInForm = () => {
   const [logInForm, setLogInForm] = useState({ email: "", password: "" });
-  // console.log("logInForm", logInForm);
   const [logInFormError, setLogInFormError] = useState({
     email: "",
     password: "",
   });
-  // console.log("logInFormError", logInFormError);
-  const [logInFormTouched, setLogInFormTouched] = useState({
-    email: false,
-    password: false,
-  });
-  // console.log("logInFormTouched", logInFormTouched);
 
   const handleChange = (e) => {
     setLogInForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -24,28 +17,21 @@ const LogInForm = () => {
     }
   };
 
-  const handleBlur = (e) => {
-    switch (e.target.name) {
-      case "email":
-        setLogInFormTouched((prev) => ({ ...prev, email: true }));
-        if (logInForm.email.length === 0 || !regexEmail.test(logInForm.email)) {
-          setLogInFormError((prev) => ({
-            ...prev,
-            email: "Podany email jest nieprawidłowy!",
-          }));
-        }
-        break;
-      case "password":
-        setLogInFormTouched((prev) => ({ ...prev, password: true }));
-        if (logInForm.password.length < 6) {
-          setLogInFormError((prev) => ({
-            ...prev,
-            password: "Podane hasło jest za krótkie!",
-          }));
-        }
-        break;
-      default:
-        console.log("input not included in the fucntion");
+  const handleEmailBlur = () => {
+    if (logInForm.email.length === 0 || !regexEmail.test(logInForm.email)) {
+      setLogInFormError((prev) => ({
+        ...prev,
+        email: "Podany email jest nieprawidłowy!",
+      }));
+    }
+  };
+
+  const handlePasswordBlur = () => {
+    if (logInForm.password.length < 6) {
+      setLogInFormError((prev) => ({
+        ...prev,
+        password: "Podane hasło jest za krótkie!",
+      }));
     }
   };
 
@@ -53,8 +39,6 @@ const LogInForm = () => {
     if (
       !logInFormError.email &&
       !logInFormError.password &&
-      logInFormTouched.email === true &&
-      logInFormTouched.password === true &&
       logInForm.email &&
       logInForm.password
     ) {
@@ -63,7 +47,6 @@ const LogInForm = () => {
       return false;
     }
   };
-  // console.log("islogInFormValid", islogInFormValid());
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -72,7 +55,6 @@ const LogInForm = () => {
     }
     // send data to API
     setLogInForm({ email: "", password: "" });
-    setLogInFormTouched({ email: false, password: false });
   };
 
   return (
@@ -94,7 +76,7 @@ const LogInForm = () => {
             autoComplete="username"
             value={logInForm.email}
             onChange={handleChange}
-            onBlur={handleBlur}
+            onBlur={handleEmailBlur}
           ></input>
           {logInFormError.email && (
             <span className="login__error-email">{logInFormError.email}</span>
@@ -116,7 +98,7 @@ const LogInForm = () => {
             autoComplete="current-password"
             value={logInForm.password}
             onChange={handleChange}
-            onBlur={handleBlur}
+            onBlur={handlePasswordBlur}
           ></input>
           {logInFormError.password && (
             <span className="login__error-password">

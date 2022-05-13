@@ -5,22 +5,11 @@ import "./ContactForm.scss";
 
 const ContactForm = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  // console.log("form", form);
-
   const [formError, setFormError] = useState({
     name: "",
     email: "",
     message: "",
   });
-  // console.log("formError", formError);
-
-  const [formTouched, setFormTouched] = useState({
-    name: false,
-    email: false,
-    message: false,
-  });
-  // console.log("formTouched", formTouched);
-
   const [formSuccess, setFormSuccess] = useState("");
 
   const handleChange = (e) => {
@@ -30,39 +19,30 @@ const ContactForm = () => {
     }
   };
 
-  const handleBlur = (e) => {
-    switch (e.target.name) {
-      case "name":
-        setFormTouched((prev) => ({ ...prev, name: true }));
-        if (form.name.trim() === "" || form.name.includes(" ")) {
-          setFormError((prev) => ({
-            ...prev,
-            name: "Podane imię jest nieprawidłowe!",
-          }));
-        }
-        break;
+  const handleNameBlur = () => {
+    if (form.name.trim() === "" || form.name.includes(" ")) {
+      setFormError((prev) => ({
+        ...prev,
+        name: "Podane imię jest nieprawidłowe!",
+      }));
+    }
+  };
 
-      case "email":
-        setFormTouched((prev) => ({ ...prev, email: true }));
-        if (form.email.trim() === "" || !regexEmail.test(form.email)) {
-          setFormError((prev) => ({
-            ...prev,
-            email: "Podany email jest nieprawidłowy!",
-          }));
-        }
-        break;
+  const handleEmailBlur = () => {
+    if (form.email.trim() === "" || !regexEmail.test(form.email)) {
+      setFormError((prev) => ({
+        ...prev,
+        email: "Podany email jest nieprawidłowy!",
+      }));
+    }
+  };
 
-      case "message":
-        setFormTouched((prev) => ({ ...prev, message: true }));
-        if (form.message.length < 120) {
-          setFormError((prev) => ({
-            ...prev,
-            message: "Wiadomość musi mieć co najmniej 120 znaków!",
-          }));
-        }
-        break;
-      default:
-        console.log("input not included in the fucntion");
+  const handleMessageBlur = () => {
+    if (form.message.length < 120) {
+      setFormError((prev) => ({
+        ...prev,
+        message: "Wiadomość musi mieć co najmniej 120 znaków!",
+      }));
     }
   };
 
@@ -71,9 +51,6 @@ const ContactForm = () => {
       !formError.name &&
       !formError.email &&
       !formError.message &&
-      formTouched.name === true &&
-      formTouched.email === true &&
-      formTouched.message === true &&
       form.name &&
       form.email &&
       form.message
@@ -83,7 +60,6 @@ const ContactForm = () => {
       return false;
     }
   };
-  // console.log("isFormValid", isFormValid());
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -92,7 +68,6 @@ const ContactForm = () => {
     }
     postFormData(form);
     setForm({ name: "", email: "", message: "" });
-    setFormTouched({ name: false, email: false, message: false });
     setFormSuccess("Wiadomość została wysłana!\nWkrótce się skontaktujemy.");
   };
 
@@ -123,7 +98,7 @@ const ContactForm = () => {
             placeholder="Marta"
             value={form.name}
             onChange={handleChange}
-            onBlur={handleBlur}
+            onBlur={handleNameBlur}
           ></input>
           {formError.name && (
             <span className="input__error-name">{formError.name}</span>
@@ -145,7 +120,7 @@ const ContactForm = () => {
             placeholder="abcd@xyz.pl"
             value={form.email}
             onChange={handleChange}
-            onBlur={handleBlur}
+            onBlur={handleEmailBlur}
           ></input>
           {formError.email && (
             <span className="input__error-email">{formError.email}</span>
@@ -169,7 +144,7 @@ const ContactForm = () => {
           placeholder="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae tempora minima aut magnam id corporis nostrum blanditiis. Totam, illo? Maxime at ducimus eius incidunt ex? Minima quasi quo suscipit ipsum aperiam."
           value={form.message}
           onChange={handleChange}
-          onBlur={handleBlur}
+          onBlur={handleMessageBlur}
         ></textarea>
         {formError.message && (
           <span className="input__error-message">{formError.message}</span>
