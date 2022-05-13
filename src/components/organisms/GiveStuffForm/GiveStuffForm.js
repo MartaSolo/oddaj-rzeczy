@@ -1,16 +1,19 @@
 import { useState } from "react";
 import Container from "../../atoms/Container";
-import StuffInputs from "../../molecules/StuffInputs";
+import TypeInputs from "../../molecules/TypeInputs";
 import BagsSelect from "../../molecules/BagsSelect";
+import LocationSelect from "../../molecules/LocationSelect";
 import GiveStuffButtons from "../../molecules/GiveStuffButtons";
 import "./GiveStuffForm.scss";
 
 const GiveStuffForm = () => {
   const [step, setStep] = useState(1);
-  const [stuff, setStuff] = useState("");
+  const [type, setType] = useState("");
   // console.log("stuff", stuff);
   const [bags, setBags] = useState("");
-  console.log("bags", bags);
+  // console.log("bags", bags);
+  const [location, setLocation] = useState("");
+  console.log("location", location);
 
   // const [stuff, setStuff] = useState({
   //   clothesReusable: false,
@@ -20,7 +23,6 @@ const GiveStuffForm = () => {
   //   others: false,
   // });
   // const [form, setForm] = useState({
-  //   bags: "",
   //   location: "",
   //   target: "",
   //   street: "",
@@ -46,9 +48,13 @@ const GiveStuffForm = () => {
         <Container>
           <form className="givestuff__form-form">
             <p className="givestuff__form-step">Krok {step}/4</p>
-            <StuffInputs setStuff={setStuff} />
-            <BagsSelect bags={bags} setBags={setBags} />
-            <GiveStuffButtons step={step} setStep={setStep} />
+            <div className="givestuff__form-inputs">
+              <TypeInputs setType={setType} />
+              <BagsSelect bags={bags} setBags={setBags} />
+              <LocationSelect location={location} setLocation={setLocation} />
+
+              <GiveStuffButtons step={step} setStep={setStep} />
+            </div>
           </form>
         </Container>
       </div>

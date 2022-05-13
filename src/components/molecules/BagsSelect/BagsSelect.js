@@ -9,18 +9,21 @@ const BagsSelect = ({ bags, setBags }) => {
   return (
     <div className="bags__select">
       <h3 className="bags__select-title">
-        Podaj liczbę 60l worków, w które spakowałeś/łas rzeczy:
+        Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:
       </h3>
 
-      <Select
-        selectClassName="bags__select-select"
-        selectId="bags"
-        selectName="bags"
-        value={bags}
-        onChange={handleChange}
-        options={options}
-        optionClassName="bags__select-option"
-      />
+      <div className="bags__select-content">
+        <p className="bags__select-subtitle">Liczba 60l worków:</p>
+        <Select
+          selectClassName="bags__select-select"
+          selectId="bags"
+          selectName="bags"
+          value={bags}
+          onChange={handleChange}
+          options={options}
+          optionClassName="bags__select-option"
+        />
+      </div>
     </div>
   );
 };
