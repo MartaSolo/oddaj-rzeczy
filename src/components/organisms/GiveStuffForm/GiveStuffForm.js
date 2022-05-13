@@ -46,8 +46,8 @@ const GiveStuffForm = () => {
         <Container>
           <form className="givestuff__form-form">
             <p className="givestuff__form-step">Krok {step}/4</p>
-            <StuffInputs stuff={stuff} setStuff={setStuff} />
-            <BagsSelect setBags={setBags} />
+            <StuffInputs setStuff={setStuff} />
+            <BagsSelect bags={bags} setBags={setBags} />
             <GiveStuffButtons step={step} setStep={setStep} />
           </form>
         </Container>

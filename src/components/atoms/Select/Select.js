@@ -1,29 +1,33 @@
 import "./Select.scss";
 
 const Select = ({
-  divClassName,
   selectClassName,
   selectName,
   selectId,
+  value,
   onChange,
   options,
   optionClassName,
 }) => {
   return (
-    <div className={divClassName}>
-      <select
-        className={selectClassName}
-        name={selectName}
-        id={selectId}
-        onChange={onChange}
-      >
-        {options.map((option) => {
+    <select
+      className={selectClassName}
+      name={selectName}
+      id={selectId}
+      value={value}
+      onChange={onChange}
+    >
+      <option className={optionClassName} hidden>
+        --- Wybierz ---
+      </option>
+      {options.map((option) => {
+        return (
           <option className={optionClassName} value={option} key={option}>
             {option}
-          </option>;
-        })}
-      </select>
-    </div>
+          </option>
+        );
+      })}
+    </select>
   );
 };
 
