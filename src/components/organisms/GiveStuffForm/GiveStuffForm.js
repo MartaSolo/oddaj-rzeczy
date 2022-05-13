@@ -2,38 +2,28 @@ import { useState } from "react";
 import Container from "../../atoms/Container";
 import TypeInputs from "../../molecules/TypeInputs";
 import BagsSelect from "../../molecules/BagsSelect";
-import LocationSelect from "../../molecules/LocationSelect";
+import LocalizationSelect from "../../molecules/LocalizationSelect";
 import GiveStuffButtons from "../../molecules/GiveStuffButtons";
 import "./GiveStuffForm.scss";
+import HelpGroupCheckboxes from "../../molecules/HelpGroupCheckboxes/HelpGroupCheckboxes";
 
 const GiveStuffForm = () => {
   const [step, setStep] = useState(1);
+  // console.log("step", step);
   const [type, setType] = useState("");
   // console.log("stuff", stuff);
   const [bags, setBags] = useState("");
   // console.log("bags", bags);
-  const [location, setLocation] = useState("");
-  console.log("location", location);
-
-  // const [stuff, setStuff] = useState({
-  //   clothesReusable: false,
-  //   clothesUnreusable: false,
-  //   toys: false,
-  //   books: false,
-  //   others: false,
-  // });
-  // const [form, setForm] = useState({
-  //   location: "",
-  //   target: "",
-  //   street: "",
-  //   city: "",
-  //   postalCode: "",
-  //   phoneNumber: "",
-  //   date: "",
-  //   hour: "",
-  //   shipment: "",
-  // });
-  console.log("step", step);
+  const [localization, setLocalization] = useState("");
+  // console.log("localization", localization);
+  const [helpGroup, setHelpGroup] = useState({
+    children: false,
+    singleMothers: false,
+    homelsess: false,
+    disabled: false,
+    elderly: false,
+  });
+  console.log("helpGroup", helpGroup);
 
   return (
     <section className="givestuff__form">
@@ -51,7 +41,14 @@ const GiveStuffForm = () => {
             <div className="givestuff__form-inputs">
               <TypeInputs setType={setType} />
               <BagsSelect bags={bags} setBags={setBags} />
-              <LocationSelect location={location} setLocation={setLocation} />
+              <LocalizationSelect
+                localization={localization}
+                setLocalization={setLocalization}
+              />
+              <HelpGroupCheckboxes
+                helpGroup={helpGroup}
+                setHelpGroup={setHelpGroup}
+              />
 
               <GiveStuffButtons step={step} setStep={setStep} />
             </div>

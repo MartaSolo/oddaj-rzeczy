@@ -8,6 +8,7 @@ const Checkbox = ({
   inputValue,
   onChange,
   labelClassName,
+  labelName,
   labelhtmlFor,
   labeltext,
 }) => {
@@ -21,7 +22,7 @@ const Checkbox = ({
         value={inputValue}
         onChange={onChange}
       ></input>
-      <label className={labelClassName} htmlFor={labelhtmlFor}>
+      <label className={labelClassName} name={labelName} htmlFor={labelhtmlFor}>
         {labeltext}
       </label>
     </div>
