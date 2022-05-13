@@ -17,7 +17,6 @@ const HelpGroupCheckboxes = ({ helpGroup, setHelpGroup }) => {
         inuptClassName="helpgroup__input-checkbox"
         inputName="helpgroup"
         inputId="children"
-        // inputValue="children"
         inputValue={helpGroup.children}
         onChange={handleChange}
         labelClassName="helpgroup__input-label"
@@ -30,7 +29,6 @@ const HelpGroupCheckboxes = ({ helpGroup, setHelpGroup }) => {
         inuptClassName="helpgroup__input-checkbox"
         inputName="helpgroup"
         inputId="singleMothers"
-        // inputValue="singleMothers"
         inputValue={helpGroup.singleMothers}
         onChange={handleChange}
         labelClassName="helpgroup__input-label"
@@ -43,7 +41,6 @@ const HelpGroupCheckboxes = ({ helpGroup, setHelpGroup }) => {
         inuptClassName="helpgroup__input-checkbox"
         inputName="helpgroup"
         inputId="homelsess"
-        // inputValue="homelsess"
         inputValue={helpGroup.homelsess}
         onChange={handleChange}
         labelClassName="helpgroup__input-label"
@@ -56,7 +53,6 @@ const HelpGroupCheckboxes = ({ helpGroup, setHelpGroup }) => {
         inuptClassName="helpgroup__input-checkbox"
         inputName="helpgroup"
         inputId="disabled"
-        // inputValue="disabled"
         inputValue={helpGroup.disabled}
         onChange={handleChange}
         labelClassName="helpgroup__input-label"
@@ -69,7 +65,6 @@ const HelpGroupCheckboxes = ({ helpGroup, setHelpGroup }) => {
         inuptClassName="helpgroup__input-checkbox"
         inputName="helpgroup"
         inputId="elderly"
-        // inputValue="elderly"
         inputValue={helpGroup.elderly}
         onChange={handleChange}
         labelClassName="helpgroup__input-label"

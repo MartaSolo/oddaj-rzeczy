@@ -5,6 +5,7 @@ import TypeInputs from "../../molecules/TypeInputs";
 import BagsSelect from "../../molecules/BagsSelect";
 import LocalizationSelect from "../../molecules/LocalizationSelect";
 import HelpGroupCheckboxes from "../../molecules/HelpGroupCheckboxes";
+import LocalizationSpecificInput from "../../molecules/LocalizationSpecificInput";
 import GiveStuffButtons from "../../molecules/GiveStuffButtons";
 import "./GiveStuffForm.scss";
 
@@ -18,13 +19,15 @@ const GiveStuffForm = () => {
   const [localization, setLocalization] = useState("");
   // console.log("localization", localization);
   const [helpGroup, setHelpGroup] = useState({
-    children: false,
+    children: true,
     singleMothers: false,
     homelsess: false,
     disabled: false,
     elderly: false,
   });
-  console.log("helpGroup", helpGroup);
+  // console.log("helpGroup", helpGroup);
+  const [localizationSpecific, setLocalizationSpecific] = useState("");
+  // console.log("localizationSpecific", localizationSpecific);
 
   return (
     <section className="givestuff__form">
@@ -44,6 +47,10 @@ const GiveStuffForm = () => {
               <HelpGroupCheckboxes
                 helpGroup={helpGroup}
                 setHelpGroup={setHelpGroup}
+              />
+              <LocalizationSpecificInput
+                localizationSpecific={localizationSpecific}
+                setLocalizationSpecific={setLocalizationSpecific}
               />
 
               <GiveStuffButtons step={step} setStep={setStep} />
