@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Container from "../../atoms/Container";
+import GiveStuffImportant from "../../molecules/GiveStuffImportant";
 import TypeInputs from "../../molecules/TypeInputs";
 import BagsSelect from "../../molecules/BagsSelect";
 import LocalizationSelect from "../../molecules/LocalizationSelect";
@@ -27,12 +28,7 @@ const GiveStuffForm = () => {
 
   return (
     <section className="givestuff__form">
-      <div className="givestuff__form-important">
-        <Container>
-          <h3 className="form__important-title">Ważne!</h3>
-          <p className="form__important-description">Treść komunikatu</p>
-        </Container>
-      </div>
+      <GiveStuffImportant step={step} />
 
       <div className="givestuff__form-content">
         <Container>
