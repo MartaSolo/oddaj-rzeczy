@@ -61,7 +61,8 @@ const AddressInputs = ({
         </label>
         <input
           className="address_input-input"
-          type="text"
+          type="tel"
+          //   pattern="/^\d{9}$/"
           id="phone"
           name="phone"
           value={phone}

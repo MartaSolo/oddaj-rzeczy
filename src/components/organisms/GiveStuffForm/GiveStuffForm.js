@@ -70,6 +70,16 @@ const GiveStuffForm = () => {
 
               <div className="adresstime__inputs">
                 <h3>Podaj adres oraz termin odbioru przez kuriera</h3>
+                <AddressInputs
+                  street={street}
+                  setStreet={setStreet}
+                  city={city}
+                  setCity={setCity}
+                  postCode={postCode}
+                  setPostCode={setPostCode}
+                  phone={phone}
+                  setPhone={setPhone}
+                />
               </div>
 
               <GiveStuffButtons step={step} setStep={setStep} />
