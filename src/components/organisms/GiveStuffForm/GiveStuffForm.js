@@ -6,6 +6,7 @@ import BagsSelect from "../../molecules/BagsSelect";
 import LocalizationSelect from "../../molecules/LocalizationSelect";
 import HelpGroupCheckboxes from "../../molecules/HelpGroupCheckboxes";
 import LocalizationSpecificInput from "../../molecules/LocalizationSpecificInput";
+import AddressInputs from "../../molecules/AddressInputs";
 import GiveStuffButtons from "../../molecules/GiveStuffButtons";
 import "./GiveStuffForm.scss";
 
@@ -28,6 +29,20 @@ const GiveStuffForm = () => {
   // console.log("helpGroup", helpGroup);
   const [localizationSpecific, setLocalizationSpecific] = useState("");
   // console.log("localizationSpecific", localizationSpecific);
+  const [street, setStreet] = useState("");
+  console.log("street", street);
+  const [city, setCity] = useState("");
+  console.log("city", city);
+  const [postCode, setPostCode] = useState("");
+  console.log("postCode", postCode);
+  const [phone, setPhone] = useState("");
+  console.log("phone", phone);
+  const [date, setDate] = useState("");
+  console.log("date", date);
+  const [time, setTime] = useState("");
+  console.log("time", time);
+  const [note, setNote] = useState("");
+  console.log("note", note);
 
   return (
     <section className="givestuff__form">
@@ -52,6 +67,10 @@ const GiveStuffForm = () => {
                 localizationSpecific={localizationSpecific}
                 setLocalizationSpecific={setLocalizationSpecific}
               />
+
+              <div className="adresstime__inputs">
+                <h3>Podaj adres oraz termin odbioru przez kuriera</h3>
+              </div>
 
               <GiveStuffButtons step={step} setStep={setStep} />
             </div>
