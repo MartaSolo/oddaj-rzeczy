@@ -6,12 +6,12 @@ const LocalizationSpecificInput = ({
 }) => {
   return (
     <div className="localizationspec__input">
-      <lable
+      <label
         className="localizationspec__input-title"
         name="localizationSpecific"
       >
         Wpisz nazwę konkretnej organizacji (opcjonalnie)
-      </lable>
+      </label>
       <input
         className="localizationspec__input-input"
         name="localizationSpecific"

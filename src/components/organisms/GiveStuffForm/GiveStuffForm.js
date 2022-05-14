@@ -7,6 +7,8 @@ import LocalizationSelect from "../../molecules/LocalizationSelect";
 import HelpGroupCheckboxes from "../../molecules/HelpGroupCheckboxes";
 import LocalizationSpecificInput from "../../molecules/LocalizationSpecificInput";
 import AddressInputs from "../../molecules/AddressInputs";
+import DateInputs from "../../molecules/DateInputs";
+import SummaryForm from "../../molecules/SummaryForm";
 import GiveStuffButtons from "../../molecules/GiveStuffButtons";
 import "./GiveStuffForm.scss";
 
@@ -26,23 +28,23 @@ const GiveStuffForm = () => {
     disabled: false,
     elderly: false,
   });
-  // console.log("helpGroup", helpGroup);
+  console.log("helpGroup", helpGroup);
   const [localizationSpecific, setLocalizationSpecific] = useState("");
   // console.log("localizationSpecific", localizationSpecific);
   const [street, setStreet] = useState("");
-  console.log("street", street);
+  // console.log("street", street);
   const [city, setCity] = useState("");
-  console.log("city", city);
+  // console.log("city", city);
   const [postCode, setPostCode] = useState("");
-  console.log("postCode", postCode);
+  // console.log("postCode", postCode);
   const [phone, setPhone] = useState("");
-  console.log("phone", phone);
+  // console.log("phone", phone);
   const [date, setDate] = useState("");
-  console.log("date", date);
+  // console.log("date", date);
   const [time, setTime] = useState("");
-  console.log("time", time);
+  // console.log("time", time);
   const [note, setNote] = useState("");
-  console.log("note", note);
+  // console.log("note", note);
 
   return (
     <section className="givestuff__form">
@@ -53,34 +55,66 @@ const GiveStuffForm = () => {
           <form className="givestuff__form-form">
             <p className="givestuff__form-step">Krok {step}/4</p>
             <div className="givestuff__form-inputs">
-              <TypeInputs setType={setType} />
-              <BagsSelect bags={bags} setBags={setBags} />
-              <LocalizationSelect
-                localization={localization}
-                setLocalization={setLocalization}
-              />
-              <HelpGroupCheckboxes
-                helpGroup={helpGroup}
-                setHelpGroup={setHelpGroup}
-              />
-              <LocalizationSpecificInput
-                localizationSpecific={localizationSpecific}
-                setLocalizationSpecific={setLocalizationSpecific}
-              />
+              {step === 1 && <TypeInputs setType={setType} />}
 
-              <div className="adresstime__inputs">
-                <h3>Podaj adres oraz termin odbioru przez kuriera</h3>
-                <AddressInputs
+              {step === 2 && <BagsSelect bags={bags} setBags={setBags} />}
+
+              {step === 3 && (
+                <>
+                  <LocalizationSelect
+                    localization={localization}
+                    setLocalization={setLocalization}
+                  />
+                  <HelpGroupCheckboxes
+                    helpGroup={helpGroup}
+                    setHelpGroup={setHelpGroup}
+                  />
+                  <LocalizationSpecificInput
+                    localizationSpecific={localizationSpecific}
+                    setLocalizationSpecific={setLocalizationSpecific}
+                  />
+                </>
+              )}
+
+              {step === 4 && (
+                <div className="adresstime__inputs">
+                  <h3>Podaj adres oraz termin odbioru przez kuriera</h3>
+                  <AddressInputs
+                    street={street}
+                    setStreet={setStreet}
+                    city={city}
+                    setCity={setCity}
+                    postCode={postCode}
+                    setPostCode={setPostCode}
+                    phone={phone}
+                    setPhone={setPhone}
+                  />
+                  <DateInputs
+                    date={date}
+                    setDate={setDate}
+                    time={time}
+                    setTime={setTime}
+                    note={note}
+                    setNote={setNote}
+                  />
+                </div>
+              )}
+
+              {step === 5 && (
+                <SummaryForm
+                  type={type}
+                  bags={bags}
+                  helpGroup={helpGroup}
+                  localization={localization}
                   street={street}
-                  setStreet={setStreet}
                   city={city}
-                  setCity={setCity}
                   postCode={postCode}
-                  setPostCode={setPostCode}
                   phone={phone}
-                  setPhone={setPhone}
+                  date={date}
+                  time={time}
+                  note={note}
                 />
-              </div>
+              )}
 
               <GiveStuffButtons step={step} setStep={setStep} />
             </div>
