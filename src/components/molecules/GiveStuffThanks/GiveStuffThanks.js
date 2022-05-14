@@ -1,5 +1,5 @@
 import Decoration from "../../atoms/Decoration";
-import "./iveStuffThanks.scss";
+import "./GiveStuffThanks.scss";
 
 const GiveStuffThanks = () => {
   return (

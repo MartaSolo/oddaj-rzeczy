@@ -4,6 +4,7 @@
 .givestuff__form {
   border: 2px solid blue;
   height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   .givestuff__form-content {
@@ -15,6 +16,7 @@
       background-image: url(../../../assets/background-form.jpg);
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: 100%;
     }
     .givestuff__form-form {
       .givestuff__form-step {

@@ -14,7 +14,7 @@ const GiveStuffButtons = ({ step, setStep }) => {
 
   return (
     <div className="givestuff__form-buttons">
-      {step >= 2 && (
+      {step >= 2 && step !== 6 && (
         <GiveStuffButton
           className="givestuff__form-button prev"
           type="button"
@@ -37,6 +37,7 @@ const GiveStuffButtons = ({ step, setStep }) => {
           className="givestuff__form-button submit"
           type="submit"
           text="Potwierdzam"
+          onClick={handleNextStep}
         />
       )}
     </div>
