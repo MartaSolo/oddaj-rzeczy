@@ -1,6 +1,6 @@
-import "./SummaryFormAddress.scss";
+import "./GiveStuffSummaryAddress.scss";
 
-const SummaryFormAddress = ({ street, city, postCode, phone }) => {
+const GiveStuffSummaryAddress = ({ street, city, postCode, phone }) => {
   return (
     <div className="summary__address">
       <h5 className="summary__address-subtitle">Adres odbioru:</h5>
@@ -26,4 +26,4 @@ const SummaryFormAddress = ({ street, city, postCode, phone }) => {
   );
 };
 
-export default SummaryFormAddress;
+export default GiveStuffSummaryAddress;

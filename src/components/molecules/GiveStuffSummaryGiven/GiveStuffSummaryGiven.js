@@ -1,6 +1,6 @@
-import "./SummaryFormGive";
+import "./GiveStuffSummaryGiven.scss";
 
-const SummaryFormGive = ({ bags, type, helpGroup }) => {
+const GiveStuffSummaryGiven = ({ bags, type, helpGroup }) => {
   const bagsNumber = Number(bags);
 
   const typeDescription = () => {
@@ -61,4 +61,4 @@ const SummaryFormGive = ({ bags, type, helpGroup }) => {
   );
 };
 
-export default SummaryFormGive;
+export default GiveStuffSummaryGiven;

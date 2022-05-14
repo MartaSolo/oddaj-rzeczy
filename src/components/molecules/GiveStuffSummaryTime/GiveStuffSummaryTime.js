@@ -1,6 +1,6 @@
-import "./SummaryFormTime.scss";
+import "./GiveStuffSummaryTime.scss";
 
-const SummaryFormTime = ({ date, time, note }) => {
+const GiveStuffSummaryTime = ({ date, time, note }) => {
   return (
     <div className="summary__time">
       <h5 className="summary__time-subtitle">Termin odbioru:</h5>
@@ -22,4 +22,4 @@ const SummaryFormTime = ({ date, time, note }) => {
   );
 };
 
-export default SummaryFormTime;
+export default GiveStuffSummaryTime;

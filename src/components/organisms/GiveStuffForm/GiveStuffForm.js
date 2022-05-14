@@ -8,7 +8,7 @@ import HelpGroupCheckboxes from "../../molecules/HelpGroupCheckboxes";
 import LocalizationSpecificInput from "../../molecules/LocalizationSpecificInput";
 import AddressInputs from "../../molecules/AddressInputs";
 import DateInputs from "../../molecules/DateInputs";
-import SummaryForm from "../../molecules/SummaryForm";
+import GiveStuffSummary from "../../molecules/GiveStuffSummary";
 import GiveStuffButtons from "../../molecules/GiveStuffButtons";
 import "./GiveStuffForm.scss";
 
@@ -101,11 +101,10 @@ const GiveStuffForm = () => {
               )}
 
               {step === 5 && (
-                <SummaryForm
+                <GiveStuffSummary
                   type={type}
                   bags={bags}
                   helpGroup={helpGroup}
-                  localization={localization}
                   street={street}
                   city={city}
                   postCode={postCode}
