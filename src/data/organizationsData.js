@@ -52,7 +52,7 @@ const organizations = [
         id: 66,
         name: 'Fundacja "JiM"',
         description:
-          " Usługi socjalne, pomoc społeczna, pomoc dla osób nie posiadających miejsca zamieszkania",
+          "Usługi socjalne, pomoc społeczna, pomoc dla osób nie posiadających miejsca zamieszkania",
         collectedItems: ["ubrania", "meble", "jedzenie", "koce"],
       },
       {
