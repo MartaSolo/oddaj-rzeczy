@@ -21,19 +21,19 @@ export const UserAuthContextProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  // runs only once at first rendering to check if the user is logged in, current user will come from firebase, whenever the auth state changes we set a state user with the current user
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });
-    // whenever the component umnouts we want to clean up
     return () => {
       unsubscribe();
     };
   }, []);
 
   return (
-    <userAuthContext.Provider value={{}}>{children}</userAuthContext.Provider>
+    <userAuthContext.Provider value={{ user, signUp }}>
+      {children}
+    </userAuthContext.Provider>
   );
 };
 

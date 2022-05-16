@@ -1,6 +1,9 @@
 import { useState } from "react";
 import AuthLink from "../../atoms/AuthLink";
 import regexEmail from "../../../utils/regexEmail";
+// ---------------------
+import { useUserAuth } from "../../../context/UserAuthContext";
+// ---------------------
 import "./LogInForm.scss";
 
 const LogInForm = () => {
@@ -9,6 +12,10 @@ const LogInForm = () => {
     email: "",
     password: "",
   });
+
+  // ---------------------
+  const { signUp } = useUserAuth();
+  // ---------------------
 
   const handleChange = (e) => {
     setLogInForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
