@@ -14,6 +14,8 @@ const LogInForm = () => {
   });
 
   // ---------------------
+  // tu ma być login funckja zaimportowana
+
   const { signUp } = useUserAuth();
   // ---------------------
 
@@ -54,12 +56,23 @@ const LogInForm = () => {
       return false;
     }
   };
+  console.log("islogInFormValid", islogInFormValid());
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!islogInFormValid()) {
       return;
     }
+    // ----------------------------
+    // tu ma być login funckja zaimportowana
+    signUp(logInForm.email, logInForm.password)
+      .then((response) => {
+        console.log("response", response);
+      })
+      .catch((error) => {
+        console.log("error.message", error.message);
+      });
+    // ----------------------------
     // send data to API
     setLogInForm({ email: "", password: "" });
   };

@@ -43,15 +43,16 @@
     background-color: $colorFormBackground;
     border-bottom: 1px solid $colorPagination;
     outline: none;
-    // margin-bottom: 1rem;
     margin-bottom: 2rem;
     &:focus {
       border-bottom: 1px solid $colorAccent;
     }
   }
-  &:last-child {
+  // &:last-child {
+  &:nth-child(3) {
     .register__input-input {
-      margin-bottom: 1.4rem;
+      // margin-bottom: 1.4rem;
+      margin-bottom: 0.5rem;
     }
   }
 }
@@ -65,17 +66,25 @@
     }
   }
 }
-
+// ------------------
+.register__error-form {
+  display: block;
+  height: 1rem;
+}
+// ------------------
+//  ponizej tez dwa razy dodane
 .register__error-email,
 .register__error-password,
-.register__error-password2 {
+.register__error-password2,
+.register__error-form {
   display: block;
   color: $colorError;
   font-size: 0.9rem;
   margin-bottom: 0.6rem;
 }
 
-.register__error-password2 {
+.register__error-password2,
+.register__error-form {
   margin-bottom: 0rem;
 }
 

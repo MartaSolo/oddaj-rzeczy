@@ -1,6 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import AuthLink from "../../atoms/AuthLink";
 import regexEmail from "../../../utils/regexEmail";
+// ---------------------
+import { useUserAuth } from "../../../context/UserAuthContext";
+// ---------------------
 import "./RegisterForm.scss";
 
 const RegisterForm = () => {
@@ -9,11 +13,19 @@ const RegisterForm = () => {
     password: "",
     password2: "",
   });
+  // console.log("registerForm", registerForm);
+
   const [registerFormError, setRegisterFormError] = useState({
     email: "",
     password: "",
     password2: "",
+    firebaseAuth: "",
   });
+  // console.log("registerFormError", registerFormError);
+  // ---------------------
+  const { signUp } = useUserAuth();
+  const navigate = useNavigate();
+  // ---------------------
 
   const handleChange = (e) => {
     setRegisterForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -75,7 +87,27 @@ const RegisterForm = () => {
     if (!isRegisterFormValid()) {
       return;
     }
-    // send data to API
+    // ----------------------------
+    signUp(registerForm.email, registerForm.password)
+      .then((response) => {
+        // przekierowanie do home
+        navigate("/");
+        console.log("response", response);
+      })
+      .catch((error) => {
+        console.log("error.message", error.message);
+        if (error.message) {
+          setRegisterFormError((prev) => ({
+            ...prev,
+            firebaseAuth: "Podane dane są nieprawidłowe!",
+          }));
+        }
+      });
+    // to chyba niepotrzebne
+    if (registerFormError.firebaseAuth) {
+      return;
+    }
+    // ----------------------------
     setRegisterForm({ email: "", password: "", password2: "" });
   };
 
@@ -154,6 +186,11 @@ const RegisterForm = () => {
             </span>
           )}
         </div>
+        {/* ------------------------------ */}
+        <span className="register__error-form">
+          {registerFormError.firebaseAuth}
+        </span>
+        {/* ------------------------------ */}
       </div>
       <div className="register__form-buttons">
         <AuthLink
@@ -164,7 +201,8 @@ const RegisterForm = () => {
         <button
           className="register__button-register"
           type="submit"
-          disabled={!isRegisterFormValid()}
+          // disabled={!isRegisterFormValid()}
+          disabled={!isRegisterFormValid() || registerFormError.firebaseAuth}
         >
           Załóż konto
         </button>
