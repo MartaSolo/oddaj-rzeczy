@@ -1,4 +1,5 @@
 @import "../../../scss/settings/mixins";
+@import "../../../scss/settings/colors";
 
 .header__auth.user {
   height: 100%;
@@ -16,6 +17,29 @@
       display: flex;
       font-size: 1rem;
       margin-right: 1rem;
+    }
+  }
+}
+
+.header_auth-logout {
+  font-size: 1rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  color: $colorFontPrimary;
+  border: 1px solid $colorAccent;
+  border-radius: 5px;
+  @include mediumScreen {
+    border: 2px solid $colorBackgroundPrimary;
+    border: 1px solid $colorBackgroundPrimary;
+    &:first-child {
+      border: 1px solid $colorAccent;
+    }
+    &:nth-child(2) {
+      border: 2px solid $colorAccent;
+    }
+    &:hover {
+      border: 2px solid $colorAccent;
+      border-radius: 5px;
     }
   }
 }

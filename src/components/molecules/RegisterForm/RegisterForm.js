@@ -201,7 +201,6 @@ const RegisterForm = () => {
         <button
           className="register__button-register"
           type="submit"
-          // disabled={!isRegisterFormValid()}
           disabled={!isRegisterFormValid() || registerFormError.firebaseAuth}
         >
           Załóż konto

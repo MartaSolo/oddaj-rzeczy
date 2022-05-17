@@ -44,7 +44,8 @@
   }
   &:first-child {
     .login__input-input {
-      margin-bottom: 2.5rem;
+      // margin-bottom: 2.5rem;
+      margin-bottom: 1.6rem;
     }
   }
 }
@@ -59,14 +60,21 @@
   }
 }
 
+.login__error-form {
+  display: block;
+  height: 1rem;
+}
+
 .login__error-email,
-.login__error-password {
+.login__error-password,
+.login__error-form {
   display: block;
   color: $colorError;
   font-size: 0.9rem;
 }
 
-.login__error-email {
+.login__error-email,
+.login__error-form {
   margin-bottom: 1.2rem;
 }
 

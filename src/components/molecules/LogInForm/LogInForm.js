@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import AuthLink from "../../atoms/AuthLink";
 import regexEmail from "../../../utils/regexEmail";
 // ---------------------
@@ -11,12 +12,12 @@ const LogInForm = () => {
   const [logInFormError, setLogInFormError] = useState({
     email: "",
     password: "",
+    firebaseAuth: "",
   });
 
   // ---------------------
-  // tu ma być login funckja zaimportowana
-
-  const { signUp } = useUserAuth();
+  const { logIn } = useUserAuth();
+  const navigate = useNavigate();
   // ---------------------
 
   const handleChange = (e) => {
@@ -65,15 +66,26 @@ const LogInForm = () => {
     }
     // ----------------------------
     // tu ma być login funckja zaimportowana
-    signUp(logInForm.email, logInForm.password)
+    logIn(logInForm.email, logInForm.password)
       .then((response) => {
+        // przekierowanie do home
+        navigate("/");
         console.log("response", response);
       })
       .catch((error) => {
         console.log("error.message", error.message);
+        if (error.message) {
+          setLogInFormError((prev) => ({
+            ...prev,
+            firebaseAuth: "Podane dane są nieprawidłowe!",
+          }));
+        }
       });
+    // to chyba niepotrzebne
+    if (logInFormError.firebaseAuth) {
+      return;
+    }
     // ----------------------------
-    // send data to API
     setLogInForm({ email: "", password: "" });
   };
 
@@ -126,6 +138,9 @@ const LogInForm = () => {
             </span>
           )}
         </div>
+        {/* ------------------------------ */}
+        <span className="login__error-form">{logInFormError.firebaseAuth}</span>
+        {/* ------------------------------ */}
       </div>
       <div className="login__form-buttons">
         <AuthLink
