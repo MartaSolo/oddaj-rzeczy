@@ -1,0 +1,13 @@
+@import "../../../scss/settings/mixins";
+@import "../../../scss/settings/colors";
+
+.type__inputs {
+  .type__inputs-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1rem;
+    @include mediumScreen {
+      font-size: 2rem;
+    }
+  }
+}

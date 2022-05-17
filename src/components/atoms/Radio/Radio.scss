@@ -1,0 +1,49 @@
+@import "../../../scss/settings/mixins";
+@import "../../../scss/settings/colors";
+
+.type__input {
+  padding: 0.5rem;
+  @include mediumScreen {
+    padding: 1rem;
+  }
+
+  .type__input-label {
+    font-size: 1.2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    white-space: pre-line;
+    &:hover input ~ .checkmark {
+      background-color: $colorPaginationHover;
+    }
+    & input:checked ~ .checkmark {
+      background-color: $colorAccent;
+    }
+    @include mediumScreen {
+      font-size: 1.5rem;
+      white-space: normal;
+    }
+    .type__input-radio {
+      position: absolute;
+      height: 0;
+      width: 0;
+      cursor: pointer;
+      opacity: 0;
+    }
+    .checkmark {
+      width: 30px;
+      height: 30px;
+      border: 1px solid $colorFontPrimary;
+      border-radius: 2px;
+      margin-right: 1rem;
+      cursor: pointer;
+      :hover {
+        background-color: $colorPagination;
+      }
+      @include mediumScreen {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}

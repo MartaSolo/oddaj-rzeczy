@@ -82,9 +82,9 @@ const LogInForm = () => {
         }
       });
     // to chyba niepotrzebne
-    if (logInFormError.firebaseAuth) {
-      return;
-    }
+    // if (logInFormError.firebaseAuth) {
+    //   return;
+    // }
     // ----------------------------
     setLogInForm({ email: "", password: "" });
   };

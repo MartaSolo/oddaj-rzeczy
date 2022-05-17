@@ -19,9 +19,9 @@ const GiveStuffForm = () => {
   const [type, setType] = useState("");
   console.log("type", type);
   const [bags, setBags] = useState("");
-  console.log("bags", bags);
+  // console.log("bags", bags);
   const [localization, setLocalization] = useState("");
-  console.log("localization", localization);
+  // console.log("localization", localization);
   const [helpGroup, setHelpGroup] = useState({
     children: true,
     singleMothers: false,
@@ -31,21 +31,21 @@ const GiveStuffForm = () => {
   });
   console.log("helpGroup", helpGroup);
   const [localizationSpecific, setLocalizationSpecific] = useState("");
-  console.log("localizationSpecific", localizationSpecific);
+  // console.log("localizationSpecific", localizationSpecific);
   const [street, setStreet] = useState("");
-  console.log("street", street);
+  // console.log("street", street);
   const [city, setCity] = useState("");
-  console.log("city", city);
+  // console.log("city", city);
   const [postCode, setPostCode] = useState("");
-  console.log("postCode", postCode);
+  // console.log("postCode", postCode);
   const [phone, setPhone] = useState("");
-  console.log("phone", phone);
+  // console.log("phone", phone);
   const [date, setDate] = useState("");
-  console.log("date", date);
+  // console.log("date", date);
   const [time, setTime] = useState("");
-  console.log("time", time);
+  // console.log("time", time);
   const [note, setNote] = useState("");
-  console.log("note", note);
+  // console.log("note", note);
 
   return (
     <section className="givestuff__form">
@@ -118,9 +118,8 @@ const GiveStuffForm = () => {
               )}
 
               {step === 6 && <GiveStuffThanks />}
-
-              <GiveStuffButtons step={step} setStep={setStep} />
             </div>
+            <GiveStuffButtons step={step} setStep={setStep} />
           </form>
         </Container>
       </div>

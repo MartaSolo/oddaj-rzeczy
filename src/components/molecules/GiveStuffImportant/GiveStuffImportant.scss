@@ -6,19 +6,26 @@
   @include mediumScreen {
     min-height: 180px;
   }
-  .form__important-title {
-    font-size: 1.4rem;
-    font-weight: 600;
-    padding: 1rem;
-    @include mediumScreen {
-      font-size: 2.2rem;
-    }
-  }
-  .form__important-description {
-    font-size: 1rem;
-    padding: 0 1rem 1rem 1rem;
-    @include mediumScreen {
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .form__important-title {
       font-size: 1.4rem;
+      font-weight: 600;
+      padding: 1rem;
+      @include mediumScreen {
+        font-size: 2.2rem;
+      }
+    }
+    .form__important-description {
+      font-size: 1rem;
+      padding: 0 1rem 1rem 1rem;
+      @include mediumScreen {
+        font-size: 1.4rem;
+        max-height: 1200px;
+      }
     }
   }
 }

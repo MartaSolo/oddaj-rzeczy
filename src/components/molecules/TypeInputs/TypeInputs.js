@@ -19,7 +19,7 @@ const TypeInputs = ({ setType }) => {
         labelClassName="type__input-label"
         labelName="type"
         labelhtmlFor="clothesReusable"
-        labeltext="ubrania, które nadają się do ponownego użycia"
+        labeltext={`ubrania, które nadają się\ndo ponownego użycia`}
       />
       <Radio
         divClassName="type__input"

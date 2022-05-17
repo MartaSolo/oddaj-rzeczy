@@ -14,15 +14,16 @@ const Radio = ({
 }) => {
   return (
     <div className={divClassName}>
-      <input
-        className={inuptClassName}
-        type="radio"
-        name={inputName}
-        id={inputId}
-        value={inputValue}
-        onChange={onChange}
-      ></input>
       <label className={labelClassName} name={labelName} htmlFor={labelhtmlFor}>
+        <input
+          className={inuptClassName}
+          type="radio"
+          name={inputName}
+          id={inputId}
+          value={inputValue}
+          onChange={onChange}
+        ></input>
+        <span className="checkmark"></span>
         {labeltext}
       </label>
     </div>
@@ -30,3 +31,34 @@ const Radio = ({
 };
 
 export default Radio;
+
+// const Radio = ({
+//   divClassName,
+//   inuptClassName,
+//   inputName,
+//   inputId,
+//   inputValue,
+//   onChange,
+//   labelClassName,
+//   labelName,
+//   labelhtmlFor,
+//   labeltext,
+// }) => {
+//   return (
+//     <div className={divClassName}>
+//       <input
+//         className={inuptClassName}
+//         type="radio"
+//         name={inputName}
+//         id={inputId}
+//         value={inputValue}
+//         onChange={onChange}
+//       ></input>
+//       <label className={labelClassName} name={labelName} htmlFor={labelhtmlFor}>
+//         {labeltext}
+//       </label>
+//     </div>
+//   );
+// };
+
+// export default Radio;
