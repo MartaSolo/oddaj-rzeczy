@@ -1,8 +1,10 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  apiKey: "AIzaSyAsOF-u_37mtGtcC9YU2nLiZrfrFMAxvBg",
+  // apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
   projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
   storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
@@ -10,18 +12,13 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
-// const firebaseConfig = {
-//   apiKey: "AIzaSyAsOF-u_37mtGtcC9YU2nLiZrfrFMAxvBg",
-//   authDomain: "oddaj-rzeczy-10922.firebaseapp.com",
-//   projectId: "oddaj-rzeczy-10922",
-//   storageBucket: "oddaj-rzeczy-10922.appspot.com",
-//   messagingSenderId: "558753799432",
-//   appId: "1:558753799432:web:09d89abba8c687c8e360bd",
-// };
-
+// initializing the instance of the service
 const app = initializeApp(firebaseConfig);
 
-// authentication service
+// initializing authentication service
 export const auth = getAuth(app);
+
+// initializing firestore
+export const db = getFirestore(app);
 
 export default app;

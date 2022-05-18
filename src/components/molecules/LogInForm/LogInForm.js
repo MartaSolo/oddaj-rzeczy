@@ -64,7 +64,6 @@ const LogInForm = () => {
     }
     logIn(logInForm.email, logInForm.password)
       .then((response) => {
-        // przekierowanie do home
         navigate("/");
         console.log("response", response);
       })

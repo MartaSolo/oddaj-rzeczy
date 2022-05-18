@@ -1,7 +1,20 @@
 import GiveStuffButton from "../../atoms/GiveStuffButton";
 import "./GiveStuffButtons.scss";
 
-const GiveStuffButtons = ({ step, setStep }) => {
+const GiveStuffButtons = ({
+  step,
+  setStep,
+  type,
+  bags,
+  helpGroup,
+  street,
+  city,
+  postCode,
+  phone,
+  date,
+  time,
+  note,
+}) => {
   const handlePrevStep = (e) => {
     e.preventDefault();
     setStep((prev) => prev - 1);
@@ -37,7 +50,7 @@ const GiveStuffButtons = ({ step, setStep }) => {
           className="givestuff__form-button submit"
           type="submit"
           text="Potwierdzam"
-          onClick={handleNextStep}
+          // onClick={handleNextStep}
         />
       )}
     </div>

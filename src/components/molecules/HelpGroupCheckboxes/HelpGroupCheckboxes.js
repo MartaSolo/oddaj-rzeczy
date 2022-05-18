@@ -3,7 +3,7 @@ import "./HelpGroupCheckboxes.scss";
 
 const HelpGroupCheckboxes = ({ helpGroup, setHelpGroup }) => {
   const handleChange = (e) => {
-    console.log(e.target.name, e.target.value, e.target.checked, e.target.id);
+    // console.log(e.target.name, e.target.value, e.target.checked, e.target.id);
     setHelpGroup((prev) => {
       return { ...prev, [e.target.id]: e.target.checked };
     });
