@@ -15,10 +15,8 @@ const LogInForm = () => {
     firebaseAuth: "",
   });
 
-  // ---------------------
   const { logIn } = useUserAuth();
   const navigate = useNavigate();
-  // ---------------------
 
   const handleChange = (e) => {
     setLogInForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -64,8 +62,6 @@ const LogInForm = () => {
     if (!islogInFormValid()) {
       return;
     }
-    // ----------------------------
-    // tu ma być login funckja zaimportowana
     logIn(logInForm.email, logInForm.password)
       .then((response) => {
         // przekierowanie do home
@@ -81,11 +77,6 @@ const LogInForm = () => {
           }));
         }
       });
-    // to chyba niepotrzebne
-    // if (logInFormError.firebaseAuth) {
-    //   return;
-    // }
-    // ----------------------------
     setLogInForm({ email: "", password: "" });
   };
 

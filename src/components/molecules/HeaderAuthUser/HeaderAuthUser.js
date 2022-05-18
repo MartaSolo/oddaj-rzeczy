@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import AuthLink from "../../atoms/AuthLink";
 import { useUserAuth } from "../../../context/UserAuthContext";
-
 import "./HeaderAuthUser.scss";
 
 const HeaderAuthUser = () => {

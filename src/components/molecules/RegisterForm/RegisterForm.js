@@ -2,9 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthLink from "../../atoms/AuthLink";
 import regexEmail from "../../../utils/regexEmail";
-// ---------------------
 import { useUserAuth } from "../../../context/UserAuthContext";
-// ---------------------
 import "./RegisterForm.scss";
 
 const RegisterForm = () => {
@@ -22,10 +20,9 @@ const RegisterForm = () => {
     firebaseAuth: "",
   });
   // console.log("registerFormError", registerFormError);
-  // ---------------------
+
   const { signUp } = useUserAuth();
   const navigate = useNavigate();
-  // ---------------------
 
   const handleChange = (e) => {
     setRegisterForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -87,10 +84,8 @@ const RegisterForm = () => {
     if (!isRegisterFormValid()) {
       return;
     }
-    // ----------------------------
     signUp(registerForm.email, registerForm.password)
       .then((response) => {
-        // przekierowanie do home
         navigate("/");
         console.log("response", response);
       })
@@ -103,11 +98,6 @@ const RegisterForm = () => {
           }));
         }
       });
-    // to chyba niepotrzebne
-    if (registerFormError.firebaseAuth) {
-      return;
-    }
-    // ----------------------------
     setRegisterForm({ email: "", password: "", password2: "" });
   };
 
