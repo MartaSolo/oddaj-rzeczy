@@ -11,13 +11,11 @@ import DateInputs from "../../molecules/DateInputs";
 import GiveStuffSummary from "../../molecules/GiveStuffSummary";
 import GiveStuffThanks from "../../molecules/GiveStuffThanks";
 import GiveStuffButtons from "../../molecules/GiveStuffButtons";
-import "./GiveStuffForm.scss";
-
-// -------------------------------
 import { useUserAuth } from "../../../context/UserAuthContext";
-import { postGiveStuffFormData } from "../../../firebase/firestore";
 import { db } from "../../../firebase/firebaseConfig";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import "./GiveStuffForm.scss";
+
 // -------------------------------
 
 const GiveStuffForm = () => {
@@ -41,8 +39,6 @@ const GiveStuffForm = () => {
   const [time, setTime] = useState("");
   const [note, setNote] = useState("");
 
-  // -----------------------------------
-  // onSubmit - working
   const collectionRef = collection(db, "giveStuffForm");
   const { user } = useUserAuth();
   const userEmail = user.email;
@@ -72,7 +68,6 @@ const GiveStuffForm = () => {
       console.log("addDoc error", error);
     }
   };
-  // -----------------------------------
 
   return (
     <section className="givestuff__form">

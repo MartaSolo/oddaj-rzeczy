@@ -50,7 +50,6 @@ const GiveStuffButtons = ({
           className="givestuff__form-button submit"
           type="submit"
           text="Potwierdzam"
-          // onClick={handleNextStep}
         />
       )}
     </div>
