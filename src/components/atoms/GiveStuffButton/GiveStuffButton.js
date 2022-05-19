@@ -1,13 +1,12 @@
 import "./GiveStuffButton.scss";
-// import "./GiveStuffButton.scss";
 
-const GiveStuffButton = ({ className, type, text, onClick, onSubmit }) => {
+const GiveStuffButton = ({ className, type, text, onClick, disabled }) => {
   return (
     <button
       className={className}
       type={type}
       onClick={onClick}
-      onSubmit={onSubmit}
+      disabled={disabled}
     >
       {text}
     </button>
@@ -15,15 +14,3 @@ const GiveStuffButton = ({ className, type, text, onClick, onSubmit }) => {
 };
 
 export default GiveStuffButton;
-
-// import "./GiveStuffButton.scss";
-
-// const GiveStuffButton = ({ className, type, text, onClick }) => {
-//   return (
-//     <button className={className} type={type} onClick={onClick}>
-//       {text}
-//     </button>
-//   );
-// };
-
-// export default GiveStuffButton;

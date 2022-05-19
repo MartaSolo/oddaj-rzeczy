@@ -24,7 +24,7 @@ const GiveStuffForm = () => {
   const [bags, setBags] = useState("");
   const [localization, setLocalization] = useState("");
   const [helpGroup, setHelpGroup] = useState({
-    children: true,
+    children: false,
     singleMothers: false,
     homelsess: false,
     disabled: false,
@@ -150,13 +150,14 @@ const GiveStuffForm = () => {
               type={type}
               bags={bags}
               helpGroup={helpGroup}
+              localization={localization}
+              localizationSpecific={localizationSpecific}
               street={street}
               city={city}
               postCode={postCode}
               phone={phone}
               date={date}
               time={time}
-              note={note}
             />
           </form>
         </Container>
