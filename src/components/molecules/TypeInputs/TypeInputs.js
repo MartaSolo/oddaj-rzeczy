@@ -1,17 +1,25 @@
 import Radio from "../../atoms/Radio";
 import "./TypeInputs.scss";
 
-const TypeInputs = ({ setType }) => {
+const TypeInputs = ({ type, setType }) => {
   const handleChange = (e) => {
     setType(e.target.value);
   };
+
+  // const className = () => {
+  //   type === inputValue ? "type__input-label checked" : "type__input-label";
+  // };
 
   return (
     <div className="type__inputs">
       <h3 className="type__inputs-title">Zaznacz co chcesz oddać:</h3>
       <Radio
         divClassName="type__input"
-        inuptClassName="type__input-radio"
+        inuptClassName={
+          type === "clothesReusable"
+            ? "type__input-radio checked"
+            : "type__input-radio"
+        }
         inputName="type"
         inputId="clothesReusable"
         inputValue="clothesReusable"
@@ -23,7 +31,11 @@ const TypeInputs = ({ setType }) => {
       />
       <Radio
         divClassName="type__input"
-        inuptClassName="type__input-radio"
+        inuptClassName={
+          type === "clothesUnreusable"
+            ? "type__input-radio checked"
+            : "type__input-radio"
+        }
         inputName="type"
         inputId="clothesUnreusable"
         inputValue="clothesUnreusable"
@@ -35,7 +47,9 @@ const TypeInputs = ({ setType }) => {
       />
       <Radio
         divClassName="type__input"
-        inuptClassName="type__input-radio"
+        inuptClassName={
+          type === "toys" ? "type__input-radio checked" : "type__input-radio"
+        }
         inputName="type"
         inputId="toys"
         inputValue="toys"
@@ -47,7 +61,9 @@ const TypeInputs = ({ setType }) => {
       />
       <Radio
         divClassName="type__input"
-        inuptClassName="type__input-radio"
+        inuptClassName={
+          type === "books" ? "type__input-radio checked" : "type__input-radio"
+        }
         inputName="type"
         inputId="books"
         inputValue="books"
@@ -59,7 +75,9 @@ const TypeInputs = ({ setType }) => {
       />
       <Radio
         divClassName="type__input"
-        inuptClassName="type__input-radio"
+        inuptClassName={
+          type === "others" ? "type__input-radio checked" : "type__input-radio"
+        }
         inputName="type"
         inputId="others"
         inputValue="others"

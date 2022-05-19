@@ -6,6 +6,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  // może i na mobile zrobic 100vh?
   @include mediumScreen {
     height: 100vh;
   }

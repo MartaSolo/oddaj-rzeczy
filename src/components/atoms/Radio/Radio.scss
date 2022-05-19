@@ -6,7 +6,6 @@
   @include mediumScreen {
     padding: 1rem;
   }
-
   .type__input-label {
     font-size: 1.2rem;
     position: relative;
@@ -15,9 +14,6 @@
     white-space: pre-line;
     &:hover input ~ .checkmark {
       background-color: $colorPaginationHover;
-    }
-    & input:checked ~ .checkmark {
-      background-color: $colorAccent;
     }
     @include mediumScreen {
       font-size: 1.5rem;
@@ -30,6 +26,9 @@
       cursor: pointer;
       opacity: 0;
     }
+    .type__input-radio.checked ~ .checkmark {
+      background-color: $colorAccent;
+    }
     .checkmark {
       width: 30px;
       height: 30px;
@@ -37,13 +36,16 @@
       border-radius: 2px;
       margin-right: 1rem;
       cursor: pointer;
-      :hover {
-        background-color: $colorPagination;
-      }
       @include mediumScreen {
         width: 40px;
         height: 40px;
       }
     }
+    // &.checked ~ .checkmark {
+    //   background-color: $colorAccent;
+    // }
   }
+  // .type__input-label .checked ~ .checkmark {
+  //   background-color: $colorAccent;
+  // }
 }

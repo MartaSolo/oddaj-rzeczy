@@ -15,7 +15,6 @@ const DateInputs = ({ date, setDate, time, setTime, note, setNote }) => {
           name="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
-          //   onBlur={handleNameBlur}
         ></input>
       </div>
       <div className="date__inputs-ipnut">
@@ -29,7 +28,6 @@ const DateInputs = ({ date, setDate, time, setTime, note, setNote }) => {
           name="time"
           value={time}
           onChange={(e) => setTime(e.target.value)}
-          //   onBlur={handleNameBlur}
         ></input>
       </div>
       <div className="date__inputs-ipnut">
@@ -43,7 +41,6 @@ const DateInputs = ({ date, setDate, time, setTime, note, setNote }) => {
           rows={4}
           value={note}
           onChange={(e) => setNote(e.target.value)}
-          //   onBlur={handleNameBlur}
         ></textarea>
       </div>
     </div>

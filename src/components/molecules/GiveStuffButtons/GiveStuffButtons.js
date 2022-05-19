@@ -8,19 +8,13 @@ const GiveStuffButtons = ({
   bags,
   helpGroup,
   localization,
-  localizationSpecific,
   street,
   city,
   postCode,
   phone,
   date,
   time,
-  note,
 }) => {
-  console.log("type", type);
-  console.log("helpGroup", helpGroup);
-  console.log("localization", localization);
-
   const handlePrevStep = (e) => {
     e.preventDefault();
     setStep((prev) => prev - 1);
@@ -32,7 +26,6 @@ const GiveStuffButtons = ({
   };
 
   let checkedHelpGroup = Object.values(helpGroup).filter((el) => el === true);
-  console.log("checkedHelpGroup", checkedHelpGroup);
 
   const isNextBtnDisabled = () => {
     if (step === 1 && !type) {

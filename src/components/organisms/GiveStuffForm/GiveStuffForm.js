@@ -82,7 +82,7 @@ const GiveStuffForm = () => {
             {step <= 4 && <p className="givestuff__form-step">Krok {step}/4</p>}
 
             <div className="givestuff__form-inputs">
-              {step === 1 && <TypeInputs setType={setType} />}
+              {step === 1 && <TypeInputs type={type} setType={setType} />}
 
               {step === 2 && <BagsSelect bags={bags} setBags={setBags} />}
 
@@ -151,7 +151,6 @@ const GiveStuffForm = () => {
               bags={bags}
               helpGroup={helpGroup}
               localization={localization}
-              localizationSpecific={localizationSpecific}
               street={street}
               city={city}
               postCode={postCode}
