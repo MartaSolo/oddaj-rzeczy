@@ -16,26 +16,15 @@ import "./GiveStuffForm.scss";
 // -------------------------------
 import { useUserAuth } from "../../../context/UserAuthContext";
 import { postGiveStuffFormData } from "../../../firebase/firestore";
-import app, { db } from "../../../firebase/firebaseConfig";
-import {
-  collection,
-  doc,
-  addDoc,
-  setDoc,
-  serverTimestamp,
-} from "firebase/firestore";
+import { db } from "../../../firebase/firebaseConfig";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 // -------------------------------
 
 const GiveStuffForm = () => {
   const [step, setStep] = useState(1);
-  // console.log("step", step);
   const [type, setType] = useState("");
-  // console.log("type", type);
   const [bags, setBags] = useState("");
-  // console.log("bags", bags);
-  // console.log("typeof bags", typeof bags);
   const [localization, setLocalization] = useState("");
-  // console.log("localization", localization);
   const [helpGroup, setHelpGroup] = useState({
     children: true,
     singleMothers: false,
@@ -43,41 +32,32 @@ const GiveStuffForm = () => {
     disabled: false,
     elderly: false,
   });
-  // console.log("helpGroup", helpGroup);
   const [localizationSpecific, setLocalizationSpecific] = useState("");
-  // console.log("localizationSpecific", localizationSpecific);
   const [street, setStreet] = useState("");
-  // console.log("street", street);
   const [city, setCity] = useState("");
-  // console.log("city", city);
   const [postCode, setPostCode] = useState("");
-  // console.log("postCode", postCode);
   const [phone, setPhone] = useState("");
-  // console.log("phone", phone);
   const [date, setDate] = useState("");
-  // console.log("date", date);
   const [time, setTime] = useState("");
-  // console.log("time", time);
   const [note, setNote] = useState("");
-  // console.log("note", note);
 
   // -----------------------------------
+  // onSubmit - working
+  const collectionRef = collection(db, "giveStuffForm");
   const { user } = useUserAuth();
   const userEmail = user.email;
-  console.log(userEmail);
-  const collectionRef = collection(db, "giveStuffForm");
-  // -----------------------------------
-  // onSubmit
+
   const handleSendGiveStuffForm = async (e) => {
     e.preventDefault();
     try {
       await addDoc(collectionRef, {
-        //nie dodajem 2 pierwsztch
         user: userEmail,
         created: serverTimestamp(),
         type: type,
         bags: bags,
+        localization: localization,
         helpGroup: helpGroup,
+        localizationSpecific: localizationSpecific,
         street: street,
         city: city,
         postCode: postCode,
@@ -87,6 +67,7 @@ const GiveStuffForm = () => {
         note: note,
       });
       console.log("submit");
+      setStep((prev) => prev + 1);
     } catch (error) {
       console.log("addDoc error", error);
     }
