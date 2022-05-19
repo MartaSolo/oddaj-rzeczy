@@ -18,7 +18,7 @@ const Select = ({
       onChange={onChange}
     >
       <option className={optionClassName} hidden>
-        --- Wybierz ---
+        -- Wybierz --
       </option>
       {options.map((option) => {
         return (

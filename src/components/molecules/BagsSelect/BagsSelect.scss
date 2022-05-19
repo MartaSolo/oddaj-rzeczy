@@ -1,0 +1,48 @@
+@import "../../../scss/settings/mixins";
+@import "../../../scss/settings/colors";
+
+.bags__select {
+  .bags__select-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1rem;
+    @include mediumScreen {
+      font-size: 2rem;
+    }
+  }
+  .bags__select-content {
+    @include mediumScreen {
+      display: flex;
+    }
+    .bags__select-subtitle {
+      font-size: 1.2rem;
+      padding: 1rem;
+      @include mediumScreen {
+        font-size: 1.5rem;
+      }
+    }
+    .bags__select-select {
+      font-size: 1.2rem;
+      text-align: center;
+      color: $colorFontPrimary;
+      padding: 0.5rem;
+      margin-left: 1rem;
+      background-color: $colorGiveStuffForm;
+      cursor: pointer;
+      border: 1px solid $colorFontPrimary;
+      border-radius: 2px;
+      outline: none;
+      &:focus {
+        outline: 1px solid $colorFontPrimary;
+      }
+
+      @include mediumScreen {
+        font-size: 1.5rem;
+        background-color: transparent;
+      }
+      .bags__select-option {
+        background-color: $colorGiveStuffForm;
+      }
+    }
+  }
+}
