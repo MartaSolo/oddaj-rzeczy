@@ -1,0 +1,17 @@
+@import "../../../scss/settings/mixins";
+@import "../../../scss/settings/colors";
+
+.helpgroups__inputs {
+  padding: 1rem;
+  .helpgroups__inputs-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 1rem 0 1rem 0;
+    @include mediumScreen {
+      font-size: 1.5rem;
+    }
+  }
+  .helpgroups__inputs-checkboxes {
+    border: 1px solid blue;
+  }
+}

@@ -1,0 +1,35 @@
+@import "../../../scss/settings/mixins";
+@import "../../../scss/settings/colors";
+
+.localization__select {
+  .localization__select-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1rem;
+    @include mediumScreen {
+      font-size: 2rem;
+    }
+  }
+  .localization__select-select {
+    font-size: 1.1rem;
+    text-align: center;
+    color: $colorFontPrimary;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    background-color: $colorGiveStuffForm;
+    cursor: pointer;
+    border: 1px solid $colorFontPrimary;
+    border-radius: 2px;
+    outline: none;
+    &:focus {
+      outline: 1px solid $colorFontPrimary;
+    }
+    @include mediumScreen {
+      font-size: 1.5rem;
+      background-color: transparent;
+    }
+    .localization__select-option {
+      background-color: $colorGiveStuffForm;
+    }
+  }
+}
