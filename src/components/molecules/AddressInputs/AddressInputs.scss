@@ -2,13 +2,17 @@
 @import "../../../scss/settings/mixins";
 
 .address__inputs {
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
+  @include mediumScreen {
+    padding: 1rem;
+  }
   .address__inputs-title {
     font-size: 1.2rem;
     font-weight: 700;
-    padding: 1rem 0 1rem 0;
+    padding: 0 0 1rem 0;
     @include mediumScreen {
       font-size: 1.5rem;
+      padding: 1rem 0 2rem 0;
     }
   }
   .address__inputs-content {

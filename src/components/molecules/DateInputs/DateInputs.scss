@@ -1,0 +1,61 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/mixins";
+@import "../../../scss/settings/fonts";
+
+.date__inputs {
+  padding: 1rem;
+  .date__inputs-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0 0 1rem 0;
+    @include mediumScreen {
+      font-size: 1.5rem;
+      padding: 1rem 0 2rem 0;
+    }
+  }
+  .date__inputs-content {
+    .date__inputs-ipnut {
+      display: flex;
+      flex-direction: column;
+      @include mediumScreen {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      .date__input-label {
+        font-size: 1.1rem;
+        white-space: normal;
+        padding: 0.5rem;
+        padding-left: 0;
+        @include mediumScreen {
+          white-space: pre-line;
+          padding: 0;
+          width: 100px;
+        }
+      }
+      .date__input {
+        display: flex;
+        flex-direction: column;
+        .date__input-input,
+        .date__input-textarea {
+          color: $colorFontPrimary;
+          font-style: $fontBase;
+          font-size: 1.1rem;
+          padding: 0.5rem;
+          border: 1px solid $colorFontPrimary;
+          border-radius: 2px;
+          background-color: $colorGiveStuffForm;
+          margin-bottom: 1.7rem;
+          &.error {
+            margin-bottom: 0;
+          }
+        }
+        .date__input-error {
+          font-size: 0.9rem;
+          padding: 0.4rem;
+          padding-left: 0;
+          color: $colorError;
+        }
+      }
+    }
+  }
+}
