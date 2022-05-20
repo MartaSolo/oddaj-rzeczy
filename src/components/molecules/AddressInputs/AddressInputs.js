@@ -89,100 +89,112 @@ const AddressInputs = ({
     <div className="address__inputs">
       <h4 className="address__inputs-title">Adres odbioru:</h4>
 
-      <div className="address__inputs-ipnut">
-        <label className="address__input-label" htmlFor="street">
-          Ulica
-        </label>
-        <input
-          className={
-            adressInputsErrors.street
-              ? "address__input-input error"
-              : "address__input-input"
-          }
-          type="text"
-          id="street"
-          name="street"
-          value={street}
-          onChange={handleStreetChange}
-          onBlur={handleStreetBlur}
-        ></input>
-        {adressInputsErrors.street && (
-          <span className="address__input-error">
-            {adressInputsErrors.street}
-          </span>
-        )}
-      </div>
+      <div className="address__inputs-content">
+        <div className="address__inputs-input">
+          <label className="address__input-label" htmlFor="street">
+            Ulica
+          </label>
+          <div className="address__input">
+            <input
+              className={
+                adressInputsErrors.street
+                  ? "address__input-input error"
+                  : "address__input-input"
+              }
+              type="text"
+              id="street"
+              name="street"
+              value={street}
+              onChange={handleStreetChange}
+              onBlur={handleStreetBlur}
+            ></input>
 
-      <div className="address__inputs-ipnut">
-        <label className="address__input-label" htmlFor="city">
-          Miasto
-        </label>
-        <input
-          className={
-            adressInputsErrors.city
-              ? "address__input-input error"
-              : "address__input-input"
-          }
-          type="text"
-          id="city"
-          name="city"
-          value={city}
-          onChange={handleCityChange}
-          onBlur={handleCityBlur}
-        ></input>
-        {adressInputsErrors.city && (
-          <span className="address__input-error">
-            {adressInputsErrors.city}
-          </span>
-        )}
-      </div>
+            {adressInputsErrors.street && (
+              <span className="address__input-error">
+                {adressInputsErrors.street}
+              </span>
+            )}
+          </div>
+        </div>
 
-      <div className="address__inputs-ipnut">
-        <label className="address__input-label" htmlFor="postCode">
-          {`Kod\npocztowy`}
-        </label>
-        <input
-          className={
-            adressInputsErrors.postCode
-              ? "address__input-input error"
-              : "address__input-input"
-          }
-          type="text"
-          id="postCode"
-          name="postCode"
-          value={postCode}
-          onChange={handlePostCodeChange}
-          onBlur={handlePostCodeBlur}
-        ></input>
-        {adressInputsErrors.postCode && (
-          <span className="address__input-error">
-            {adressInputsErrors.postCode}
-          </span>
-        )}
-      </div>
+        <div className="address__inputs-input">
+          <label className="address__input-label" htmlFor="city">
+            Miasto
+          </label>
+          <div className="address__input">
+            <input
+              className={
+                adressInputsErrors.city
+                  ? "address__input-input error"
+                  : "address__input-input"
+              }
+              type="text"
+              id="city"
+              name="city"
+              value={city}
+              onChange={handleCityChange}
+              onBlur={handleCityBlur}
+            ></input>
+            {adressInputsErrors.city && (
+              <span className="address__input-error">
+                {adressInputsErrors.city}
+              </span>
+            )}
+          </div>
+        </div>
 
-      <div className="address__inputs-ipnut">
-        <label className="address__input-label" htmlFor="phone">
-          {`Numer\ntelefonu`}
-        </label>
-        <input
-          className={
-            adressInputsErrors.phone
-              ? "address__input-input error"
-              : "address__input-input"
-          }
-          type="tel"
-          id="phone"
-          name="phone"
-          value={phone}
-          onChange={handlePhoneChange}
-          onBlur={handlePhoneBlur}
-        ></input>
-        {adressInputsErrors.phone && (
-          <span className="adress__input-error">
-            {adressInputsErrors.phone}
-          </span>
-        )}
+        <div className="address__inputs-input">
+          <label className="address__input-label" htmlFor="postCode">
+            {`Kod\npocztowy`}
+          </label>
+          <div className="address__input">
+            <input
+              className={
+                adressInputsErrors.postCode
+                  ? "address__input-input error"
+                  : "address__input-input"
+              }
+              type="text"
+              id="postCode"
+              name="postCode"
+              value={postCode}
+              onChange={handlePostCodeChange}
+              onBlur={handlePostCodeBlur}
+            ></input>
+            {adressInputsErrors.postCode && (
+              <span className="address__input-error">
+                {adressInputsErrors.postCode}
+              </span>
+            )}
+          </div>
+        </div>
+
+        <div className="address__inputs-input">
+          <label className="address__input-label" htmlFor="phone">
+            {`Numer\ntelefonu`}
+          </label>
+          <div className="address__input">
+            <input
+              className={
+                adressInputsErrors.phone
+                  ? "address__input-input error"
+                  : "address__input-input"
+              }
+              type="tel"
+              id="phone"
+              name="phone"
+              value={phone}
+              onChange={handlePhoneChange}
+              onBlur={handlePhoneBlur}
+            ></input>
+
+            {adressInputsErrors.phone && (
+              <span className="address__input-error">
+                {adressInputsErrors.phone}
+              </span>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );

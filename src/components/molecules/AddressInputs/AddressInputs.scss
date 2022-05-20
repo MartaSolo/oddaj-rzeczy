@@ -1,2 +1,56 @@
 @import "../../../scss/settings/colors";
 @import "../../../scss/settings/mixins";
+
+.address__inputs {
+  padding: 1rem;
+  .address__inputs-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 1rem 0 1rem 0;
+    @include mediumScreen {
+      font-size: 1.5rem;
+    }
+  }
+  .address__inputs-content {
+    .address__inputs-input {
+      display: flex;
+      flex-direction: column;
+      @include mediumScreen {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      .address__input-label {
+        font-size: 1.1rem;
+        white-space: normal;
+        padding: 0.5rem;
+        padding-left: 0;
+        @include mediumScreen {
+          white-space: pre-line;
+          padding: 0;
+          width: 90px;
+        }
+      }
+      .address__input {
+        display: flex;
+        flex-direction: column;
+        .address__input-input {
+          font-size: 1.1rem;
+          padding: 0.5rem;
+          border: 1px solid $colorFontPrimary;
+          border-radius: 2px;
+          background-color: $colorGiveStuffForm;
+          margin-bottom: 1.7rem;
+          &.error {
+            margin-bottom: 0;
+          }
+        }
+        .address__input-error {
+          font-size: 0.9rem;
+          padding: 0.4rem;
+          padding-left: 0;
+          color: $colorError;
+        }
+      }
+    }
+  }
+}

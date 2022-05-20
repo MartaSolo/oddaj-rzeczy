@@ -45,3 +45,19 @@
     }
   }
 }
+
+.adresstime__inputs {
+  .adresstime__inputs-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1rem;
+    @include mediumScreen {
+      font-size: 2rem;
+    }
+  }
+  .adresstime__inputs-inputs {
+    @include mediumScreen {
+      display: flex;
+    }
+  }
+}

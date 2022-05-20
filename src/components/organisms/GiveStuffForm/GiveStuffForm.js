@@ -105,25 +105,29 @@ const GiveStuffForm = () => {
 
               {step === 4 && (
                 <div className="adresstime__inputs">
-                  <h3>Podaj adres oraz termin odbioru przez kuriera</h3>
-                  <AddressInputs
-                    street={street}
-                    setStreet={setStreet}
-                    city={city}
-                    setCity={setCity}
-                    postCode={postCode}
-                    setPostCode={setPostCode}
-                    phone={phone}
-                    setPhone={setPhone}
-                  />
-                  <DateInputs
-                    date={date}
-                    setDate={setDate}
-                    time={time}
-                    setTime={setTime}
-                    note={note}
-                    setNote={setNote}
-                  />
+                  <h3 className="adresstime__inputs-title">
+                    Podaj adres oraz termin odbioru przez kuriera
+                  </h3>
+                  <div className="adresstime__inputs-inputs">
+                    <AddressInputs
+                      street={street}
+                      setStreet={setStreet}
+                      city={city}
+                      setCity={setCity}
+                      postCode={postCode}
+                      setPostCode={setPostCode}
+                      phone={phone}
+                      setPhone={setPhone}
+                    />
+                    <DateInputs
+                      date={date}
+                      setDate={setDate}
+                      time={time}
+                      setTime={setTime}
+                      note={note}
+                      setNote={setNote}
+                    />
+                  </div>
                 </div>
               )}
 
