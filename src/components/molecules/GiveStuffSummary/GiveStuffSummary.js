@@ -7,6 +7,7 @@ const GiveStuffSummary = ({
   type,
   bags,
   helpGroup,
+  localization,
   street,
   city,
   postCode,
@@ -19,7 +20,12 @@ const GiveStuffSummary = ({
     <div className="summary__form">
       <h3 className="summary__form-title">Podsumowanie Twojej darowizny</h3>
 
-      <GiveStuffSummaryGiven bags={bags} type={type} helpGroup={helpGroup} />
+      <GiveStuffSummaryGiven
+        bags={bags}
+        type={type}
+        helpGroup={helpGroup}
+        localization={localization}
+      />
 
       <div className="summary__adresstime">
         <GiveStuffSummaryAddress

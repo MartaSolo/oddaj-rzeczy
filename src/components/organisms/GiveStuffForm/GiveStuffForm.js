@@ -136,6 +136,7 @@ const GiveStuffForm = () => {
                   type={type}
                   bags={bags}
                   helpGroup={helpGroup}
+                  localization={localization}
                   street={street}
                   city={city}
                   postCode={postCode}

@@ -1,6 +1,6 @@
 import "./GiveStuffSummaryGiven.scss";
 
-const GiveStuffSummaryGiven = ({ bags, type, helpGroup }) => {
+const GiveStuffSummaryGiven = ({ bags, type, helpGroup, localization }) => {
   const bagsNumber = Number(bags);
 
   const typeDescription = () => {
@@ -43,19 +43,36 @@ const GiveStuffSummaryGiven = ({ bags, type, helpGroup }) => {
   };
   return (
     <div className="summary__form-give">
-      <h5 className="summary__give-subtitle">Oddajesz</h5>
+      <h5 className="summary__give-subtitle">Oddajesz: </h5>
       <div className="summary__give-content">
-        {bagsNumber === 1 && (
-          <p className="summary__give-bags">{bags} worek, </p>
-        )}
-        {bagsNumber !== 1 && bagsNumber !== 5 && (
-          <p className="summary__give-bags">{bags} worki, </p>
-        )}
-        {bagsNumber === 5 && (
-          <p className="summary__give-bags">{bags} worków, </p>
-        )}
-        <p className="summary__give-type">{typeDescription()}, </p>
-        <p className="summary__give-helpgroup">{checkedHelpGroup(helpGroup)}</p>
+        <div className="summary__give-stuff">
+          {bagsNumber === 1 && (
+            <p className="summary__give-details">
+              {`${bags} worek,\n${typeDescription()},\n${checkedHelpGroup(
+                helpGroup
+              )}`}
+            </p>
+          )}
+          {bagsNumber !== 1 && bagsNumber !== 5 && (
+            <p className="summary__give-details">
+              {`${bags} worki,\n${typeDescription()},\n${checkedHelpGroup(
+                helpGroup
+              )}`}
+            </p>
+          )}
+          {bagsNumber === 5 && (
+            <p className="summary__give-details">
+              {`${bags} worków,\n${typeDescription()},\n${checkedHelpGroup(
+                helpGroup
+              )}`}
+            </p>
+          )}
+        </div>
+        <div className="summary__give-where">
+          <p className="summary__give-localization">
+            dla lokalizacji: {localization}
+          </p>
+        </div>
       </div>
     </div>
   );

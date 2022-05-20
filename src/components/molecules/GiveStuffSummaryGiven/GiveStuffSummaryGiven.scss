@@ -1,0 +1,63 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/mixins";
+
+.summary__form-give {
+  padding: 1rem;
+  .summary__give-subtitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    @include mediumScreen {
+      font-size: 1.5rem;
+      padding: 1rem 0 0 0;
+    }
+  }
+  .summary__give-content {
+    padding: 1rem 0 1rem 0;
+    .summary__give-stuff {
+      display: flex;
+      align-items: center;
+      padding-bottom: 1rem;
+      &::before {
+        content: "";
+        display: block;
+        height: 50px;
+        width: 50px;
+        padding-right: 1rem;
+        background-image: url(../../../assets/icon-1.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .summary__give-details {
+        font-size: 1.1rem;
+        line-height: 1.2;
+        white-space: pre-line;
+        @include mediumScreen {
+          font-size: 1.5rem;
+          white-space: normal;
+        }
+      }
+    }
+    .summary__give-where {
+      display: flex;
+      align-items: center;
+      padding-bottom: 1rem;
+      &::before {
+        content: "";
+        display: block;
+        height: 50px;
+        width: 50px;
+        padding-right: 1rem;
+        background-image: url(../../../assets/icon-4.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      .summary__give-localization {
+        font-size: 1.1rem;
+        line-height: 1.2;
+        @include mediumScreen {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

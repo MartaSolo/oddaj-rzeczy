@@ -1,0 +1,13 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/mixins";
+
+.summary__form {
+  .summary__form-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1rem;
+    @include mediumScreen {
+      font-size: 2rem;
+    }
+  }
+}
