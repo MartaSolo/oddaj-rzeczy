@@ -17,11 +17,11 @@
     padding: 0.6rem 1rem;
     margin: 0.5rem 1.5rem 0.5rem 0;
     cursor: pointer;
-    &:hover {
-      background-color: $colorPaginationHover;
-    }
     @include mediumScreen {
       font-size: 1.5rem;
+      &:hover {
+        background-color: $colorPaginationHover;
+      }
     }
   }
   & .checked {
