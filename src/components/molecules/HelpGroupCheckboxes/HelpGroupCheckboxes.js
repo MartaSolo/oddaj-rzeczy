@@ -19,7 +19,11 @@ const HelpGroupCheckboxes = ({ helpGroup, setHelpGroup }) => {
           inputId="children"
           inputValue={helpGroup.children}
           onChange={handleChange}
-          labelClassName="helpgroup__input-label"
+          labelClassName={
+            helpGroup.children
+              ? "helpgroup__input-label checked"
+              : "helpgroup__input-label"
+          }
           labelName="helpgroup"
           labelhtmlFor="children"
           labeltext="dzieciom"
@@ -31,7 +35,11 @@ const HelpGroupCheckboxes = ({ helpGroup, setHelpGroup }) => {
           inputId="singleMothers"
           inputValue={helpGroup.singleMothers}
           onChange={handleChange}
-          labelClassName="helpgroup__input-label"
+          labelClassName={
+            helpGroup.singleMothers
+              ? "helpgroup__input-label checked"
+              : "helpgroup__input-label"
+          }
           labelName="helpgroup"
           labelhtmlFor="singleMothers"
           labeltext="samotnym matkom"
@@ -43,7 +51,11 @@ const HelpGroupCheckboxes = ({ helpGroup, setHelpGroup }) => {
           inputId="homelsess"
           inputValue={helpGroup.homelsess}
           onChange={handleChange}
-          labelClassName="helpgroup__input-label"
+          labelClassName={
+            helpGroup.homelsess
+              ? "helpgroup__input-label checked"
+              : "helpgroup__input-label"
+          }
           labelName="helpgroup"
           labelhtmlFor="homelsess"
           labeltext="bezdomnym"
@@ -55,7 +67,11 @@ const HelpGroupCheckboxes = ({ helpGroup, setHelpGroup }) => {
           inputId="disabled"
           inputValue={helpGroup.disabled}
           onChange={handleChange}
-          labelClassName="helpgroup__input-label"
+          labelClassName={
+            helpGroup.disabled
+              ? "helpgroup__input-label checked"
+              : "helpgroup__input-label"
+          }
           labelName="helpgroup"
           labelhtmlFor="disabled"
           labeltext="niepełnosprawnym"
@@ -67,7 +83,11 @@ const HelpGroupCheckboxes = ({ helpGroup, setHelpGroup }) => {
           inputId="elderly"
           inputValue={helpGroup.elderly}
           onChange={handleChange}
-          labelClassName="helpgroup__input-label"
+          labelClassName={
+            helpGroup.elderly
+              ? "helpgroup__input-label checked"
+              : "helpgroup__input-label"
+          }
           labelName="helpgroup"
           labelhtmlFor="elderly"
           labeltext="osobom starszym"

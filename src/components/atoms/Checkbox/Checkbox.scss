@@ -1,0 +1,30 @@
+@import "../../../scss/settings/mixins";
+@import "../../../scss/settings/colors";
+
+.helpgroup__input {
+  display: flex;
+  .helpgroup__input-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .helpgroup__input-label {
+    border: 1px solid $colorFontPrimary;
+    border-radius: 2px;
+    font-size: 1.1rem;
+    padding: 0.6rem 1rem;
+    margin: 0.5rem 1.5rem 0.5rem 0;
+    cursor: pointer;
+    &:hover {
+      background-color: $colorPaginationHover;
+    }
+    @include mediumScreen {
+      font-size: 1.5rem;
+    }
+  }
+  & .checked {
+    background-color: $colorAccent;
+  }
+}
