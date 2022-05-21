@@ -1,20 +1,24 @@
 @import "../../../scss/settings/mixins";
 
-.footer__icon {
+.footer__icon-link {
   display: block;
   border: 1px solid red;
   width: 30px;
   height: 30px;
   margin-right: 1rem;
   cursor: pointer;
-}
-
-.footer__icon.facebook {
-  background-image: url(../../../assets/facebook.svg);
-}
-.footer__icon.instagram {
-  background-image: url(../../../assets/instagram.svg);
-  @include mediumScreen {
-    margin-right: 0;
+  .footer__icon-img {
+    display: block;
+    width: 30px;
+    height: 30px;
+    &.facebook {
+      background-image: url(../../../assets/facebook.svg);
+    }
+    &.instagram {
+      background-image: url(../../../assets/instagram.svg);
+      @include mediumScreen {
+        margin-right: 0;
+      }
+    }
   }
 }

@@ -6,8 +6,18 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer__content">
         <div className="footer__content-icons">
-          <FooterIcon className="footer__icon facebook" href="/" />
-          <FooterIcon className="footer__icon instagram" href="/" />
+          <FooterIcon
+            linkClassName="footer__icon-link"
+            href="/"
+            imgClassName="footer__icon-img facebook"
+            alt="facebook icon"
+          />
+          <FooterIcon
+            linkClassName="footer__icon-link"
+            href="/"
+            imgClassName="footer__icon-img instagram"
+            alt="instagram icon"
+          />
         </div>
       </div>
     </footer>

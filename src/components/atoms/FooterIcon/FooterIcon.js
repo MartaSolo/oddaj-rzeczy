@@ -1,7 +1,11 @@
 import "./FooterIcon.scss";
 
-const FooterIcon = ({ className, href }) => {
-  return <a className={className} href={href}></a>;
+const FooterIcon = ({ linkClassName, href, imgClassName, alt }) => {
+  return (
+    <a className={linkClassName} href={href}>
+      <img className={imgClassName} alt={alt} />
+    </a>
+  );
 };
 
 export default FooterIcon;
