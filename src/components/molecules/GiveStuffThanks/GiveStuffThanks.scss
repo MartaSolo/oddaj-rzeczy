@@ -1,0 +1,25 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/mixins";
+
+.givestuff__thanks {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid blue;
+  height: 100%;
+  @include mediumScreen {
+    width: 50%;
+  }
+  .givestuff__thanks-text {
+    white-space: pre-line;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    padding-bottom: 2rem;
+    @include mediumScreen {
+      font-size: 2.5rem;
+    }
+  }
+}

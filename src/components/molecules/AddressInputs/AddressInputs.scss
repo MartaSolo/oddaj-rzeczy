@@ -18,32 +18,34 @@
   .address__inputs-content {
     .address__inputs-input {
       display: flex;
-      flex-direction: column;
-      @include mediumScreen {
-        flex-direction: row;
-        align-items: flex-start;
-      }
+      flex-direction: row;
+      align-items: flex-start;
       .address__input-label {
         font-size: 1.1rem;
-        white-space: normal;
-        padding: 0.5rem;
-        padding-left: 0;
+        white-space: pre-line;
+        width: 90px;
         @include mediumScreen {
-          white-space: pre-line;
-          padding: 0;
-          width: 90px;
+          width: 120px;
+          font-size: 1.5rem;
+          line-height: 1.2;
         }
       }
       .address__input {
+        // border: 1px solid blue;
         display: flex;
         flex-direction: column;
         .address__input-input {
+          max-width: 190px;
           font-size: 1.1rem;
           padding: 0.5rem;
           border: 1px solid $colorFontPrimary;
           border-radius: 2px;
           background-color: $colorGiveStuffForm;
           margin-bottom: 1.7rem;
+          @include mediumScreen {
+            margin-bottom: 1.9rem;
+            font-size: 1.5rem;
+          }
           &.error {
             margin-bottom: 0;
           }
@@ -53,6 +55,10 @@
           padding: 0.4rem;
           padding-left: 0;
           color: $colorError;
+          @include mediumScreen {
+            font-size: 1.1rem;
+            padding: 0.4rem;
+          }
         }
       }
     }

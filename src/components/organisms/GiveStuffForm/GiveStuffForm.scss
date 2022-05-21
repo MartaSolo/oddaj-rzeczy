@@ -6,10 +6,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  // może i na mobile zrobic 100vh?
-  @include mediumScreen {
-    height: 100vh;
-  }
+  height: 100vh;
   .givestuff__form-content {
     padding: 1rem;
     flex-grow: 1;
@@ -37,9 +34,7 @@
         }
         .givestuff__form-inputs {
           border: 1px solid red;
-          @include mediumScreen {
-            flex-grow: 1;
-          }
+          flex-grow: 1;
         }
       }
     }
@@ -48,11 +43,12 @@
 
 .adresstime__inputs {
   .adresstime__inputs-title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    padding: 1rem;
+    padding: 0 1rem 0 1rem;
     @include mediumScreen {
       font-size: 2rem;
+      padding: 1rem;
     }
   }
   .adresstime__inputs-inputs {

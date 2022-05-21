@@ -2,7 +2,10 @@
 @import "../../../scss/settings/colors";
 
 .helpgroups__inputs {
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
+  @include mediumScreen {
+    padding: 1rem;
+  }
   .helpgroups__inputs-title {
     font-size: 1.2rem;
     font-weight: 700;

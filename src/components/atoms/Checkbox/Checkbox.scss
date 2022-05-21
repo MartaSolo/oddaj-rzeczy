@@ -15,10 +15,11 @@
     border-radius: 2px;
     font-size: 1.1rem;
     padding: 0.6rem 1rem;
-    margin: 0.5rem 1.5rem 0.5rem 0;
+    margin: 0.5rem 1rem 0.5rem 0;
     cursor: pointer;
     @include mediumScreen {
       font-size: 1.5rem;
+      margin: 0.5rem 1.5rem 0.5rem 0;
       &:hover {
         background-color: $colorPaginationHover;
       }

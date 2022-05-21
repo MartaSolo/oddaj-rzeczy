@@ -1,0 +1,51 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/mixins";
+
+.summary__time {
+  padding: 0 1rem 0 1rem;
+  @include mediumScreen {
+    padding: 1rem;
+    padding-top: 2rem;
+    max-width: 450px;
+  }
+  .summary__time-subtitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0 0 1rem 0;
+    @include mediumScreen {
+      font-size: 1.5rem;
+      padding: 0 0 2rem 0;
+    }
+  }
+  .summary__time-content {
+    .summary__details {
+      padding-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      @include mediumScreen {
+        padding-bottom: 2rem;
+      }
+      .summary__details-name {
+        white-space: pre-line;
+        font-size: 1.1rem;
+        width: 100px;
+        @include mediumScreen {
+          font-size: 1.5rem;
+          width: 140px;
+        }
+      }
+      .summary__details-value {
+        font-size: 1.1rem;
+        @include mediumScreen {
+          font-size: 1.5rem;
+        }
+      }
+      &:nth-child(3) {
+        display: none;
+        @include mediumScreen {
+          display: block;
+        }
+      }
+    }
+  }
+}

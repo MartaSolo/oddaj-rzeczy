@@ -18,7 +18,7 @@ const DateInputs = ({ date, setDate, time, setTime, note, setNote }) => {
     if ((date = "" || new Date(date) < new Date())) {
       setDateInputsErrors((prev) => ({
         ...prev,
-        date: "Podana data jest niewłaściwa!",
+        date: "Data jest niewłaściwa!",
       }));
     }
   };
@@ -54,7 +54,7 @@ const DateInputs = ({ date, setDate, time, setTime, note, setNote }) => {
 
         <div className="date__inputs-ipnut">
           <label className="date__input-label" htmlFor="time">
-            Time
+            Czas
           </label>
           <div className="date__input">
             <input

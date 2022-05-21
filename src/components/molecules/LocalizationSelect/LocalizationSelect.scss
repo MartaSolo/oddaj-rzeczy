@@ -2,8 +2,13 @@
 @import "../../../scss/settings/colors";
 
 .localization__select {
+  display: flex;
+  @include mediumScreen {
+    flex-direction: column;
+    max-width: 250px;
+  }
   .localization__select-title {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
     padding: 1rem;
     @include mediumScreen {
@@ -30,6 +35,7 @@
     }
     .localization__select-option {
       background-color: $colorGiveStuffForm;
+      // width: 90%;
     }
   }
 }

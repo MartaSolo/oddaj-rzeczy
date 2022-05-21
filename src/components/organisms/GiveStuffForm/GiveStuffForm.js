@@ -62,7 +62,7 @@ const GiveStuffForm = () => {
         time: time,
         note: note,
       });
-      console.log("submit");
+      // console.log("submit");
       setStep((prev) => prev + 1);
     } catch (error) {
       console.log("addDoc error", error);

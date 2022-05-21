@@ -32,7 +32,7 @@ const AddressInputs = ({
     if (!regexStreet.test(street)) {
       setAddressInputsErrors((prev) => ({
         ...prev,
-        street: "Podana nazwa jest za krótka!",
+        street: "Nazwa jest za krótka!",
       }));
     }
   };
@@ -48,7 +48,7 @@ const AddressInputs = ({
     if (city.length < 2) {
       setAddressInputsErrors((prev) => ({
         ...prev,
-        city: "Podana nazwa jest za krótka!",
+        city: "Nazwa jest za krótka!",
       }));
     }
   };
@@ -64,7 +64,7 @@ const AddressInputs = ({
     if (!regexPostCode.test(postCode)) {
       setAddressInputsErrors((prev) => ({
         ...prev,
-        postCode: "Podany kod jest niewłaściwy!",
+        postCode: "Kod jest niewłaściwy!",
       }));
     }
   };
@@ -80,7 +80,7 @@ const AddressInputs = ({
     if (!regexPhone.test(phone)) {
       setAddressInputsErrors((prev) => ({
         ...prev,
-        phone: "Podany numer jest niewłaściwy!",
+        phone: "Numer jest niewłaściwy!",
       }));
     }
   };

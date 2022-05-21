@@ -3,33 +3,49 @@
 @import "../../../scss/settings/fonts";
 
 .date__inputs {
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
+  @include mediumScreen {
+    padding: 1rem;
+  }
   .date__inputs-title {
     font-size: 1.2rem;
     font-weight: 700;
-    padding: 0 0 1rem 0;
+    padding: 0 0 0.5rem 0;
     @include mediumScreen {
       font-size: 1.5rem;
       padding: 1rem 0 2rem 0;
     }
   }
   .date__inputs-content {
+    display: flex;
+    // flex-wrap: wrap;
+    @include mediumScreen {
+      flex-direction: column;
+    }
     .date__inputs-ipnut {
       display: flex;
       flex-direction: column;
+      margin-right: 1rem;
       @include mediumScreen {
         flex-direction: row;
         align-items: flex-start;
       }
+      &:nth-child(3) {
+        display: none;
+        @include mediumScreen {
+          display: block;
+        }
+      }
       .date__input-label {
         font-size: 1.1rem;
-        white-space: normal;
-        padding: 0.5rem;
-        padding-left: 0;
+        white-space: pre-line;
+        width: 70px;
+        padding-bottom: 0.5rem;
         @include mediumScreen {
-          white-space: pre-line;
-          padding: 0;
-          width: 100px;
+          padding-bottom: 0;
+          width: 130px;
+          font-size: 1.5rem;
+          line-height: 1.2;
         }
       }
       .date__input {
@@ -38,13 +54,16 @@
         .date__input-input,
         .date__input-textarea {
           color: $colorFontPrimary;
-          font-style: $fontBase;
           font-size: 1.1rem;
           padding: 0.5rem;
           border: 1px solid $colorFontPrimary;
           border-radius: 2px;
           background-color: $colorGiveStuffForm;
           margin-bottom: 1.7rem;
+          @include mediumScreen {
+            margin-bottom: 1.9rem;
+            font-size: 1.5rem;
+          }
           &.error {
             margin-bottom: 0;
           }
@@ -52,8 +71,13 @@
         .date__input-error {
           font-size: 0.9rem;
           padding: 0.4rem;
+          padding-bottom: 0;
           padding-left: 0;
           color: $colorError;
+          @include mediumScreen {
+            font-size: 1.1rem;
+            padding: 0.4rem;
+          }
         }
       }
     }

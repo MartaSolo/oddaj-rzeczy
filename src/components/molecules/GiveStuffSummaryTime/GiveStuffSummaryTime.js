@@ -14,7 +14,7 @@ const GiveStuffSummaryTime = ({ date, time, note }) => {
           <p className="summary__details-value">{time}</p>
         </div>
         <div className="summary__details">
-          <p className="summary__details-name">{`Uwagi\ndla kiriera`}</p>
+          <p className="summary__details-name">{`Uwagi\ndla kuriera`}</p>
           <p className="summary__details-value">{note}</p>
         </div>
       </div>
