@@ -2,24 +2,19 @@
 @import "../../../scss/settings/mixins";
 
 .register__content-form {
-  border: 1px solid blue;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   .register__form-inputs {
+    padding: 2rem 0 1rem 0;
     background-color: $colorFormBackground;
     width: 100%;
     max-width: 385px;
-    height: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    @include mediumScreen {
-      height: 330px;
-    }
   }
 }
 
@@ -29,10 +24,7 @@
     display: block;
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 1.5rem;
-    @include mediumScreen {
-      margin-bottom: 2rem;
-    }
+    margin-bottom: 2rem;
   }
   .register__input-input {
     font-size: 1rem;
@@ -48,44 +40,31 @@
       border-bottom: 1px solid $colorAccent;
     }
   }
-  // &:last-child {
-  &:nth-child(3) {
-    .register__input-input {
-      // margin-bottom: 1.4rem;
-      margin-bottom: 0.5rem;
-    }
-  }
 }
 
 .register__form-input {
   .register__input-input.error {
     border-bottom: 1px solid $colorError;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     &:focus {
       border-bottom: 1px solid $colorAccent;
     }
   }
 }
-// ------------------
-.register__error-form {
-  display: block;
-  height: 1rem;
-}
-// ------------------
-//  ponizej tez dwa razy dodane
+
 .register__error-email,
 .register__error-password,
 .register__error-password2,
 .register__error-form {
+  text-align: center;
   display: block;
   color: $colorError;
   font-size: 0.9rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.7rem;
 }
 
-.register__error-password2,
 .register__error-form {
-  margin-bottom: 0rem;
+  height: 1rem;
 }
 
 // Buttons

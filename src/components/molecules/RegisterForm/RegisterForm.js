@@ -11,7 +11,6 @@ const RegisterForm = () => {
     password: "",
     password2: "",
   });
-  // console.log("registerForm", registerForm);
 
   const [registerFormError, setRegisterFormError] = useState({
     email: "",
@@ -19,7 +18,6 @@ const RegisterForm = () => {
     password2: "",
     firebaseAuth: "",
   });
-  // console.log("registerFormError", registerFormError);
 
   const { signUp } = useUserAuth();
   const navigate = useNavigate();
