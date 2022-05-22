@@ -26,13 +26,9 @@
       font-size: 1.2rem;
       border: 1px solid $colorBackgroundPrimary;
       &:hover {
-        border: 1px solid $colorFontPrimary;
+        border: 1px solid $colorPaginationHover;
         border-radius: 2px;
       }
     }
-  }
-  .nav__list-link.active {
-    border: 1px solid $colorFontPrimary;
-    border-radius: 2px;
   }
 }

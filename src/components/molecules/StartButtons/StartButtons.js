@@ -4,7 +4,6 @@ import "./StartButtons.scss";
 
 const StartButtons = () => {
   const { user } = useUserAuth();
-  console.log("user", user);
   return (
     <div className="start__links">
       <AuthButton
