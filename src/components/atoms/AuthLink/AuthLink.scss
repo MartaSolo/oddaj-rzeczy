@@ -7,15 +7,14 @@
   margin: 0.5rem;
   color: $colorFontPrimary;
   border: 1px solid $colorAccent;
-  border-radius: 5px;
+  border-radius: 2px;
   @include mediumScreen {
-    border: 2px solid $colorBackgroundPrimary;
+    border: 1px solid $colorBackgroundPrimary;
     &:nth-child(2) {
-      border: 2px solid $colorAccent;
+      border: 1px solid $colorAccent;
     }
     &:hover {
-      border: 2px solid $colorAccent;
-      border-radius: 5px;
+      border: 1px solid $colorAccent;
     }
   }
 }
@@ -37,9 +36,9 @@
 
 .header_auth-link.user {
   @include mediumScreen {
-    border: 1px solid $colorBackgroundPrimary;
-    &:first-child {
-      border: 1px solid $colorAccent;
+    border: 1px solid $colorAccent;
+    &:hover {
+      background-color: $colorAccentHover;
     }
   }
 }

@@ -3,8 +3,6 @@
 
 .contact {
   border: 3px solid green;
-  // display: flex;
-  // justify-content: center;
   @include mediumScreen {
     height: 100vh;
     background-image: linear-gradient($colorPhotoOverlay, $colorPhotoOverlay),
@@ -12,7 +10,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     justify-content: flex-end;
-    // ----------
     position: relative;
   }
   .contact__content {
@@ -24,7 +21,6 @@
     @include mediumScreen {
       width: 50%;
       padding: 2rem 0 0 0;
-      // -------------
       height: calc(100vh - 90px);
       position: absolute;
       top: 0;

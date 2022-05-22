@@ -2,7 +2,7 @@
 @import "../../../scss/settings/mixins";
 
 .steps__step {
-  border: 1px solid red;
+  border-bottom: 1px solid $colorFontPrimary;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,8 @@
   text-align: center;
   padding: 1rem 3rem;
   @include mediumScreen {
-    height: 325px;
+    height: 300px;
+    border-bottom: none;
   }
   .setps__step-decoration {
     width: 83px;

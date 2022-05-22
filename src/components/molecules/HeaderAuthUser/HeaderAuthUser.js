@@ -28,7 +28,7 @@ const HeaderAuthUser = () => {
           className="header_auth-link user"
           text="Oddaj rzeczy"
         />
-        <button className="header_auth-logout user" onClick={handleLogOut}>
+        <button className="header_auth-logout" onClick={handleLogOut}>
           Wyloguj
         </button>
       </div>

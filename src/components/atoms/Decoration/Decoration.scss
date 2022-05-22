@@ -20,6 +20,9 @@
 
 .steps__decoration {
   margin-bottom: 2rem;
+  @include mediumScreen {
+    margin-bottom: 0;
+  }
 }
 
 .about__text-decoration,

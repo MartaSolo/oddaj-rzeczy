@@ -22,23 +22,17 @@
 
 .header_auth-logout {
   font-size: 1rem;
-  padding: 1rem;
+  padding: 1.1rem;
   margin: 0.5rem;
   color: $colorFontPrimary;
   border: 1px solid $colorAccent;
-  border-radius: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: $colorBackgroundPrimary;
   @include mediumScreen {
-    border: 2px solid $colorBackgroundPrimary;
     border: 1px solid $colorBackgroundPrimary;
-    &:first-child {
-      border: 1px solid $colorAccent;
-    }
-    &:nth-child(2) {
-      border: 2px solid $colorAccent;
-    }
     &:hover {
-      border: 2px solid $colorAccent;
-      border-radius: 5px;
+      border: 1px solid $colorPaginationHover;
     }
   }
 }

@@ -2,7 +2,6 @@
 @import "../../../scss/settings/colors";
 
 .steps__steps {
-  //   background-color: $colorFormBackground;
   .container {
     @include mediumScreen {
       display: flex;
@@ -46,6 +45,7 @@
         }
       }
       &:nth-child(4) {
+        border-bottom: none;
         .setps__step-decoration {
           background-image: url(../../../assets/icon-4.svg);
         }

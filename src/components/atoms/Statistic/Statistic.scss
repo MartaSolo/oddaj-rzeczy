@@ -2,14 +2,14 @@
 @import "../../../scss/settings/mixins";
 
 .start__statistic {
-  border: 1px solid green;
-  padding: 2rem;
+  border-bottom: 1px solid $colorFontPrimary;
+  padding: 1rem;
   color: $colorFontPrimary;
   text-align: center;
   background-image: url(../../../assets/3-columns-background.png);
   @include mediumScreen {
-    width: 334px;
-    padding: 3rem 4rem;
+    border-bottom: none;
+    padding: 2rem;
     background-image: none;
   }
   .start__statistic-number {
@@ -28,8 +28,6 @@
   .start__statistic-description {
     font-size: 1rem;
     text-align: justify;
-    @include mediumScreen {
-      margin-bottom: 1rem;
-    }
+    margin-bottom: 1rem;
   }
 }

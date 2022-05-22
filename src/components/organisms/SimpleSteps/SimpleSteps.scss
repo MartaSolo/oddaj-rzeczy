@@ -2,19 +2,21 @@
 @import "../../../scss/settings/mixins";
 
 .steps {
-  // border: 2px solid green;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  padding: 2rem 0 2rem 0;
+  @include mediumScreen {
+    height: 100vh;
+    justify-content: space-evenly;
+    padding: 0;
+  }
   .steps__title {
     font-size: 1.8rem;
     padding: 1rem;
-    margin-top: 2rem;
     text-align: center;
     @include mediumScreen {
       font-size: 2.1rem;
-      margin-top: 2rem;
     }
   }
   .steps__container {

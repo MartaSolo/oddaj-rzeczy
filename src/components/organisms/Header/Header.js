@@ -1,5 +1,5 @@
-import NavBar from "../../molecules/NavBar";
 import Container from "../../atoms/Container";
+import NavBar from "../../molecules/NavBar";
 import HeaderAuth from "../../molecules/HeaderAuth";
 import "./Header.scss";
 
