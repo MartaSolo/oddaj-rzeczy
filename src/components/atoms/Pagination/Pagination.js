@@ -42,37 +42,3 @@ const Pagination = ({
 };
 
 export default Pagination;
-
-// --------------
-// import "./Pagination.scss";
-
-// const Pagination = ({ totalPages, currentPage, handlePageChange }) => {
-//   const pageNumbers = [...Array(totalPages).keys()].map((number) => number + 1);
-//   console.log("pageNumbers", pageNumbers);
-
-//   if (pageNumbers.length > 1) {
-//     return (
-//       <div className="organizations__list-pagination">
-//         {pageNumbers.map((number) => {
-//           return (
-//             <button
-//               className={
-//                 number === currentPage
-//                   ? "organizations__list-button active"
-//                   : "organizations__list-button"
-//               }
-//               key={number}
-//               onClick={() => handlePageChange(number)}
-//             >
-//               {number}
-//             </button>
-//           );
-//         })}
-//       </div>
-//     );
-//   } else {
-//     return null;
-//   }
-// };
-
-// export default Pagination;

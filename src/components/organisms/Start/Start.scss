@@ -18,6 +18,7 @@
 .start__content {
   @include mediumScreen {
     width: 50%;
+    max-width: 820px;
     display: flex;
     flex-direction: column;
     justify-content: center;

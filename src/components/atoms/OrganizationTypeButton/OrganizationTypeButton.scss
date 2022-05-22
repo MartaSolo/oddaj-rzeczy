@@ -10,7 +10,6 @@
     font-size: 0.8rem;
     line-height: 1.2;
     border: 1px solid $colorFontPrimary;
-    border: 1px solid red;
     border-radius: 2px;
     padding: 1rem 0;
     margin: 0.5rem;
@@ -21,7 +20,8 @@
     width: 100px;
     cursor: pointer;
     @include smallScreen {
-      margin: 0.5rem 1.5rem;
+      // margin: 0.5rem 1.5rem;
+      margin: 0 1.5rem;
       width: 150px;
     }
     @include mediumScreen {
