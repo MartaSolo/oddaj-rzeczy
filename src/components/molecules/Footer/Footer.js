@@ -9,14 +9,12 @@ const Footer = () => {
           <FooterIcon
             linkClassName="footer__icon-link"
             href="/"
-            imgClassName="footer__icon-img facebook"
-            alt="facebook icon"
+            divClassName="footer__icon-icon facebook"
           />
           <FooterIcon
             linkClassName="footer__icon-link"
             href="/"
-            imgClassName="footer__icon-img instagram"
-            alt="instagram icon"
+            divClassName="footer__icon-icon instagram"
           />
         </div>
       </div>
