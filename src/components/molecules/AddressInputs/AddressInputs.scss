@@ -4,7 +4,8 @@
 .address__inputs {
   padding: 1rem 1rem 0 1rem;
   @include mediumScreen {
-    padding: 1rem;
+    padding: 0 1rem 0 1rem;
+    // padding: 1rem;
   }
   .address__inputs-title {
     font-size: 1.2rem;
@@ -45,6 +46,7 @@
           @include mediumScreen {
             margin-bottom: 1.9rem;
             font-size: 1.5rem;
+            background-color: transparent;
           }
           &.error {
             margin-bottom: 0;

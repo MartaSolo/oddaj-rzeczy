@@ -20,25 +20,13 @@
   }
 }
 
-.header_auth-link {
+.header_auth-link.user {
   font-size: 1rem;
   padding: 1rem;
   margin: 0.5rem;
   color: $colorFontPrimary;
   border: 1px solid $colorAccent;
   border-radius: 2px;
-  @include mediumScreen {
-    border: 1px solid $colorBackgroundPrimary;
-    &:nth-child(2) {
-      border: 1px solid $colorAccent;
-    }
-    &:hover {
-      border: 1px solid $colorAccent;
-    }
-  }
-}
-
-.header_auth-link.user {
   @include mediumScreen {
     border: 1px solid $colorAccent;
     &:hover {

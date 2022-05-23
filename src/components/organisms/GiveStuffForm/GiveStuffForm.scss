@@ -7,20 +7,19 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-
   .givestuff__form-content {
     padding: 1rem;
     flex-grow: 1;
     background-color: $colorGiveStuffForm;
     @include mediumScreen {
+      height: calc(100vh - 130px);
       background-image: url(../../../assets/background-form.jpg);
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: 100%;
+      background-position: 80%;
     }
     .container {
       height: 100%;
-      border: 2px solid orange;
       .givestuff__form-form {
         height: 100%;
         display: flex;
@@ -28,7 +27,7 @@
         border: 2px solid blue;
         .givestuff__form-step {
           font-size: 1.1rem;
-          padding: 1rem;
+          padding: 0 1rem 1rem 1rem;
           @include mediumScreen {
             font-size: 1.5rem;
           }

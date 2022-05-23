@@ -9,12 +9,14 @@
     padding: 1rem;
   }
   .localizationspec__input-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
     padding: 0 0 1rem 0;
+    white-space: normal;
     @include mediumScreen {
-      padding: 1rem 0 1rem 0;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
+      padding: 0 0 0.5rem 0;
+      white-space: pre-line;
     }
   }
   .localizationspec__input-input {
@@ -23,6 +25,6 @@
     border: 1px solid $colorFontPrimary;
     border-radius: 2px;
     background-color: $colorGiveStuffForm;
-    max-width: 570px;
+    max-width: 470px;
   }
 }

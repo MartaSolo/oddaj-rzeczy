@@ -69,14 +69,14 @@ const DateInputs = ({ date, setDate, time, setTime, note, setNote }) => {
         </div>
         <div className="date__inputs-ipnut">
           <label className="date__input-label" htmlFor="note">
-            {`Uwagi\ndla kuriera`}
+            Uwagi dla kuriera
           </label>
           <div className="date__input">
             <textarea
               className="date__input-textarea"
               id="note"
               name="note"
-              rows={3}
+              // rows={2}
               value={note}
               onChange={(e) => setNote(e.target.value)}
             ></textarea>

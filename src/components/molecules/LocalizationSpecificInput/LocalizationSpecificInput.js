@@ -10,7 +10,7 @@ const LocalizationSpecificInput = ({
         className="localizationspec__input-title"
         name="localizationSpecific"
       >
-        Wpisz nazwę konkretnej organizacji (opcjonalnie)
+        {`Wpisz nazwę konkretnej organizacji\n(opcjonalnie)`}
       </label>
       <input
         className="localizationspec__input-input"

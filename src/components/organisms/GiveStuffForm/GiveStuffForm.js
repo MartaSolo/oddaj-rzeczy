@@ -70,9 +70,7 @@ const GiveStuffForm = () => {
 
   return (
     <section className="givestuff__form" id="form">
-      <Container>
-        <GiveStuffImportant step={step} />
-      </Container>
+      <GiveStuffImportant step={step} />
 
       <div className="givestuff__form-content">
         <Container>
