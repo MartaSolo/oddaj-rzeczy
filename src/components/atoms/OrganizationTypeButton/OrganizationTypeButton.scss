@@ -20,7 +20,6 @@
     width: 100px;
     cursor: pointer;
     @include smallScreen {
-      // margin: 0.5rem 1.5rem;
       margin: 0 1.5rem;
       width: 150px;
     }

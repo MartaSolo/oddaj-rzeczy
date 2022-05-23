@@ -3,15 +3,22 @@
 @import "../../../scss/settings/fonts";
 
 .organizations__listItem {
-  //   border: 1px solid green;
-  // padding: 2rem 2rem 0 2rem;
-  padding: 1rem 1rem 0 1rem;
+  padding: 0.5rem 1rem 0 1rem;
   font-family: $fontAlt;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 165px;
+  @include mediumScreen {
+    padding: 0.5rem 1rem 0 1rem;
+    height: 110px;
+  }
   .organizations__listItem-name {
     font-size: 1.3rem;
     margin-bottom: 0.7rem;
     @include mediumScreen {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
+      margin-bottom: 0;
     }
   }
   .organizations__listItem-content {
@@ -20,21 +27,19 @@
       gap: 2rem;
     }
     .organizations__listItem-description {
-      //   border: 1px solid green;
       font-size: 1rem;
       margin-bottom: 1rem;
       line-height: 1.3;
       @include mediumScreen {
         font-size: 1.1rem;
         flex-basis: 65%;
+        margin-bottom: 0;
       }
     }
     .organizations__listItem-items {
       @include mediumScreen {
-        // border: 1px solid blue;
         flex-basis: 35%;
         text-align: right;
-        // align-self: flex-end;
       }
       .organizations__listItem-item {
         display: inline;
@@ -57,7 +62,6 @@
   &::after {
     content: "";
     display: block;
-    margin-top: 1rem;
     width: 100%;
     height: 1px;
     background-color: $colorFontPrimary;

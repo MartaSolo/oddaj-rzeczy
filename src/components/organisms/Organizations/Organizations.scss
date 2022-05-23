@@ -9,10 +9,9 @@
   .container {
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     align-items: center;
     @include mediumScreen {
-      height: 100vh;
+      height: 100%;
     }
     .organizations__content-title {
       font-size: 1.8rem;
@@ -27,8 +26,7 @@
       text-align: center;
       line-height: 1.2;
       @include mediumScreen {
-        // font-size: 1.4rem;
-        // max-width: 900px;
+        max-width: 950px;
       }
     }
   }

@@ -1,10 +1,8 @@
 @import "../../../scss/settings/mixins";
 
 .organizations__list {
-  border: 2px solid green;
   width: 100%;
   @include mediumScreen {
     max-width: 1344px;
-    height: 50vh;
   }
 }
