@@ -62,7 +62,6 @@ const GiveStuffForm = () => {
         time: time,
         note: note,
       });
-      // console.log("submit");
       setStep((prev) => prev + 1);
     } catch (error) {
       console.log("addDoc error", error);
@@ -70,8 +69,10 @@ const GiveStuffForm = () => {
   };
 
   return (
-    <section className="givestuff__form">
-      <GiveStuffImportant step={step} />
+    <section className="givestuff__form" id="form">
+      <Container>
+        <GiveStuffImportant step={step} />
+      </Container>
 
       <div className="givestuff__form-content">
         <Container>

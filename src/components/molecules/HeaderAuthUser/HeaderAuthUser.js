@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import AuthLink from "../../atoms/AuthLink";
+import { HashLink } from "react-router-hash-link";
 import { useUserAuth } from "../../../context/UserAuthContext";
 import "./HeaderAuthUser.scss";
 
@@ -23,11 +23,14 @@ const HeaderAuthUser = () => {
         <p className="header__auth user-name">Cześć {user.email}</p>
       )}
       <div className="header_auth-links user">
-        <AuthLink
-          to="/oddaj-rzeczy"
+        <HashLink
+          smooth
+          to="/oddaj-rzeczy#form"
           className="header_auth-link user"
-          text="Oddaj rzeczy"
-        />
+        >
+          Oddaj rzeczy
+        </HashLink>
+
         <button className="header_auth-logout" onClick={handleLogOut}>
           Wyloguj
         </button>
