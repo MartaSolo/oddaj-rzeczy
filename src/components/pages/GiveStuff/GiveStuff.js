@@ -11,7 +11,7 @@ const GiveStuff = () => {
     <section className="givestuff">
       <div className="givestuff__hero">
         <div className="givestuff__hero-img">
-          <Container className="givestuff">
+          <Container>
             <div className="givestuff__hero-content">
               <HeaderUser />
               <div className="givestuff__hero-start">

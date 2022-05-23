@@ -9,3 +9,9 @@
     @content;
   }
 }
+
+@mixin largeScreen {
+  @media (min-width: 1350px) {
+    @content;
+  }
+}

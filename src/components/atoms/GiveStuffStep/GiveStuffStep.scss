@@ -7,11 +7,13 @@
   margin: 5px;
   border: 1px solid $colorFontPrimary;
   transform: rotate(45deg);
+  background-color: $colorFormSteps;
   position: relative;
   @include mediumScreen {
     height: 113px;
     width: 113px;
     margin: 15px;
+    background-color: transparent;
   }
   .givestuff__steps-number {
     font-size: 1.2rem;

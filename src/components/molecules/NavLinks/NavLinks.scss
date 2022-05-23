@@ -24,7 +24,7 @@
       margin: 0 0.5rem;
       border: none;
       font-size: 1.2rem;
-      border: 1px solid $colorBackgroundPrimary;
+      border: 1px solid transparent;
       &:hover {
         border: 1px solid $colorPaginationHover;
         border-radius: 2px;
