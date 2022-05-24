@@ -2,7 +2,6 @@
 @import "../../../scss/settings/colors";
 
 .givestuff__form {
-  border: 2px solid blue;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -24,7 +23,6 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        border: 2px solid blue;
         .givestuff__form-step {
           font-size: 1.1rem;
           padding: 0 1rem 1rem 1rem;
@@ -33,7 +31,6 @@
           }
         }
         .givestuff__form-inputs {
-          border: 1px solid red;
           flex-grow: 1;
         }
       }
@@ -46,6 +43,7 @@
     font-size: 1.2rem;
     font-weight: 700;
     padding: 0 1rem 0 1rem;
+    line-height: 1.2;
     @include mediumScreen {
       font-size: 1.7rem;
       padding: 1rem;

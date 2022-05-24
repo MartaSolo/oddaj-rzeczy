@@ -7,10 +7,10 @@
     font-weight: 700;
     padding: 1rem;
     white-space: normal;
+    line-height: 1.2;
     @include mediumScreen {
       font-size: 1.7rem;
       white-space: pre-line;
-      line-height: 1.2;
     }
     @include largeScreen {
       font-size: 2rem;
