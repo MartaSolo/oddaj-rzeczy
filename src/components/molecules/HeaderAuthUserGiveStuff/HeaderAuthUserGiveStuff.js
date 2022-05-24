@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { useUserAuth } from "../../../context/UserAuthContext";
-import "./HeaderAuthUser.scss";
+import "./HeaderAuthUserGiveStuff.scss";
 
-const HeaderAuthUser = () => {
+const HeaderAuthUserGiveStuff = () => {
   const { user, logOut } = useUserAuth();
   const navigate = useNavigate();
 
@@ -25,7 +25,7 @@ const HeaderAuthUser = () => {
       <div className="header_auth-links user">
         <HashLink
           smooth
-          to="/oddaj-rzeczy#top"
+          to="/oddaj-rzeczy#form"
           className="header_auth-form user"
         >
           Oddaj rzeczy
@@ -39,4 +39,4 @@ const HeaderAuthUser = () => {
   );
 };
 
-export default HeaderAuthUser;
+export default HeaderAuthUserGiveStuff;

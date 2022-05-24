@@ -2,6 +2,7 @@ import Container from "../../atoms/Container";
 import Decoration from "../../atoms/Decoration";
 import GiveStuffSteps from "../../molecules/GiveStuffSteps";
 import HeaderUser from "../../organisms/HeaderUser";
+import HeaderUserGiveStuff from "../../organisms/HeaderUserGiveStuff";
 import GiveStuffForm from "../../organisms/GiveStuffForm";
 import Contact from "../../organisms/Contact";
 import "./GiveStuff.scss";
@@ -13,7 +14,8 @@ const GiveStuff = () => {
         <div className="givestuff__hero-img">
           <Container>
             <div className="givestuff__hero-content">
-              <HeaderUser />
+              {/* <HeaderUser /> */}
+              <HeaderUserGiveStuff />
               <div className="givestuff__hero-start">
                 <h2 className="givestuff__hero-title">
                   Oddaj rzeczy, kórych już nie chcesz

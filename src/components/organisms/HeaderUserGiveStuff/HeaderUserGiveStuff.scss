@@ -1,0 +1,8 @@
+@import "../../../scss/settings/mixins";
+
+.header.user {
+  height: 60px;
+  .container {
+    height: 100%;
+  }
+}
