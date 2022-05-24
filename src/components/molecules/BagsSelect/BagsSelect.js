@@ -9,7 +9,7 @@ const BagsSelect = ({ bags, setBags }) => {
   return (
     <div className="bags__select">
       <h3 className="bags__select-title">
-        Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:
+        {`Podaj liczbę 60l worków,\nw które spakowałeś/aś rzeczy:`}
       </h3>
 
       <div className="bags__select-content">

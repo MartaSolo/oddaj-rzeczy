@@ -3,9 +3,6 @@
 
 .summary__form-give {
   padding: 0 1rem 0 1rem;
-  @include mediumScreen {
-    padding: 1rem 1rem 0 1rem;
-  }
   .summary__give-subtitle {
     font-size: 1.2rem;
     font-weight: 700;
@@ -16,6 +13,9 @@
   }
   .summary__give-content {
     padding: 1rem 0 0 0;
+    @include mediumScreen {
+      padding: 0;
+    }
     .summary__give-stuff {
       display: flex;
       align-items: center;

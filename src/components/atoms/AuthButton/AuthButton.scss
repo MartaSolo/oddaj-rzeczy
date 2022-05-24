@@ -1,8 +1,7 @@
 @import "../../../scss/settings/colors";
 @import "../../../scss/settings/mixins";
 
-.start__links-login,
-.steps__link {
+.start__links-login {
   white-space: pre-line;
   text-transform: uppercase;
   width: 130px;
@@ -18,15 +17,7 @@
     width: 210px;
     font-size: 1.5rem;
     &:hover {
-      box-shadow: 8px 8px 17px -11px $colorFontPrimary;
+      background-color: $colorFormBackground;
     }
-  }
-}
-
-.steps__link {
-  margin: 2rem 0 0 0;
-  @include mediumScreen {
-    width: 210px;
-    margin: 0;
   }
 }

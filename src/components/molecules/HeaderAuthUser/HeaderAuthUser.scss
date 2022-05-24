@@ -20,9 +20,13 @@
   }
 }
 
-.header_auth-link.user {
+.header_auth-links.user {
+  display: flex;
+}
+
+.header_auth-form.user {
   font-size: 1rem;
-  padding: 1rem;
+  padding: 1.1rem;
   margin: 0.5rem;
   color: $colorFontPrimary;
   border: 1px solid $colorAccent;

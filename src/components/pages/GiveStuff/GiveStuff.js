@@ -8,7 +8,7 @@ import "./GiveStuff.scss";
 
 const GiveStuff = () => {
   return (
-    <section className="givestuff">
+    <section className="givestuff" id="givestuff">
       <div className="givestuff__hero">
         <div className="givestuff__hero-img">
           <Container>

@@ -5,7 +5,6 @@
   padding: 0 1rem 0 1rem;
   @include mediumScreen {
     padding: 1rem;
-    padding-top: 2rem;
     max-width: 450px;
   }
   .summary__time-subtitle {
@@ -37,6 +36,8 @@
       .summary__details-value {
         font-size: 1.1rem;
         @include mediumScreen {
+          display: block;
+          max-width: 250px;
           font-size: 1.5rem;
         }
       }
@@ -45,6 +46,9 @@
         @include mediumScreen {
           display: block;
         }
+      }
+      &:last-child {
+        padding-bottom: 0;
       }
     }
   }

@@ -26,7 +26,7 @@ const HeaderAuthUser = () => {
         <HashLink
           smooth
           to="/oddaj-rzeczy#form"
-          className="header_auth-link user"
+          className="header_auth-form user"
         >
           Oddaj rzeczy
         </HashLink>

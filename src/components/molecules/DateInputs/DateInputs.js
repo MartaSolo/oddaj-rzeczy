@@ -76,7 +76,7 @@ const DateInputs = ({ date, setDate, time, setTime, note, setNote }) => {
               className="date__input-textarea"
               id="note"
               name="note"
-              // rows={2}
+              maxLength={80}
               value={note}
               onChange={(e) => setNote(e.target.value)}
             ></textarea>
