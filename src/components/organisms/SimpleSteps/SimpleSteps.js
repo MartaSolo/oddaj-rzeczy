@@ -1,6 +1,5 @@
 import { HashLink } from "react-router-hash-link";
 import Decoration from "../../atoms/Decoration";
-import AuthButton from "../../atoms/AuthButton";
 import Steps from "../../molecules/Steps";
 import { useUserAuth } from "../../../context/UserAuthContext";
 import "./SimpleSteps.scss";

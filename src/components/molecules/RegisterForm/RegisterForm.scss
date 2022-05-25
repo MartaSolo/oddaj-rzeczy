@@ -74,7 +74,7 @@
   display: flex;
   justify-content: space-between;
   @include mediumScreen {
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
   .register__button-register,
   .register__button-login {
@@ -112,7 +112,7 @@
       margin-right: 0;
       border: 1px solid $colorFontPrimary;
       &:hover {
-        box-shadow: 8px 8px 17px -11px $colorFontPrimary;
+        background-color: $colorFormBackground;
       }
       &:disabled {
         cursor: not-allowed;

@@ -13,7 +13,7 @@
     align-items: center;
     white-space: pre-line;
     &:hover input ~ .checkmark {
-      background-color: $colorPaginationHover;
+      background-color: $colorGiveStuffFormBtnHover;
     }
     @include mediumScreen {
       font-size: 1.5rem;

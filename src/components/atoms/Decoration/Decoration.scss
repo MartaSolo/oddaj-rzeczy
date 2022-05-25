@@ -35,8 +35,7 @@
   margin-bottom: 1rem;
 }
 
-.login__content-decoration,
-.register__content-decoration {
+.login__content-decoration {
   @include mediumScreen {
     margin-bottom: 2rem;
   }

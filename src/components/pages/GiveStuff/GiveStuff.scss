@@ -14,10 +14,10 @@
       background-image: url(../../../assets/form-hero-image.jpg);
       background-repeat: no-repeat;
       background-size: contain;
-      background-position: -250px;
+      background-position: -340px;
     }
     @include largeScreen {
-      background-position: 0;
+      background-position: -50px;
     }
     .container {
       height: inherit;

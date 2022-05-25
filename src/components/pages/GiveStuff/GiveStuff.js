@@ -12,8 +12,8 @@ const GiveStuff = () => {
       <div className="givestuff__hero">
         <div className="givestuff__hero-img">
           <Container>
+            <HeaderUserGiveStuff />
             <div className="givestuff__hero-content">
-              <HeaderUserGiveStuff />
               <div className="givestuff__hero-start">
                 <h2 className="givestuff__hero-title">
                   Oddaj rzeczy, kórych już nie chcesz

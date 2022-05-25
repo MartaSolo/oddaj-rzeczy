@@ -2,7 +2,7 @@
 @import "../../../scss/settings/mixins";
 
 .register {
-  height: calc(100vh - 70px);
+  height: calc(100vh - 60px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -23,7 +23,7 @@
       padding: 1rem 0 1rem 0;
       @include mediumScreen {
         font-size: 2.5rem;
-        padding-bottom: 2rem;
+        padding-top: 2rem;
       }
     }
   }
