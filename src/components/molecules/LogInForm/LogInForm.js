@@ -55,7 +55,6 @@ const LogInForm = () => {
       return false;
     }
   };
-  console.log("islogInFormValid", islogInFormValid());
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -128,9 +127,7 @@ const LogInForm = () => {
             </span>
           )}
         </div>
-        {/* ------------------------------ */}
         <span className="login__error-form">{logInFormError.firebaseAuth}</span>
-        {/* ------------------------------ */}
       </div>
       <div className="login__form-buttons">
         <AuthLink

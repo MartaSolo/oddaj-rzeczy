@@ -16,8 +16,6 @@ import { db } from "../../../firebase/firebaseConfig";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import "./GiveStuffForm.scss";
 
-// -------------------------------
-
 const GiveStuffForm = () => {
   const [step, setStep] = useState(1);
   const [type, setType] = useState("");

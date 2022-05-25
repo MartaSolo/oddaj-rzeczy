@@ -7,12 +7,12 @@
   margin: 5px;
   border: 1px solid $colorFontPrimary;
   transform: rotate(45deg);
-  background: rgb(159, 219, 216);
+  background: rgb(194, 236, 234);
   background: linear-gradient(
     90deg,
-    rgba(159, 219, 216, 1) 0%,
+    rgba(194, 236, 234, 1) 0%,
     rgba(201, 236, 237, 1) 58%,
-    rgba(144, 190, 190, 1) 100%
+    rgba(196, 222, 222, 1) 100%
   );
   position: relative;
   @include mediumScreen {

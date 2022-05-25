@@ -8,11 +8,9 @@ const Pagination = ({
   handlePageChange,
 }) => {
   const [pageNumbers, setPageNumbers] = useState(1);
-  // console.log("pageNumbers", pageNumbers);
 
   useEffect(() => {
     const pages = [...Array(totalPages).keys()].map((number) => number + 1);
-    // console.log(pages);
     setPageNumbers(pages);
   }, [totalPages, organizations]);
 

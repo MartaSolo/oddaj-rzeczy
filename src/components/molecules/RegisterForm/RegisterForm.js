@@ -174,11 +174,10 @@ const RegisterForm = () => {
             </span>
           )}
         </div>
-        {/* ------------------------------ */}
+
         <span className="register__error-form">
           {registerFormError.firebaseAuth}
         </span>
-        {/* ------------------------------ */}
       </div>
       <div className="register__form-buttons">
         <AuthLink

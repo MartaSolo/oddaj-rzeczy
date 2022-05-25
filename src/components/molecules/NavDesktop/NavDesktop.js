@@ -1,5 +1,4 @@
 import NavLinks from "../NavLinks";
-import "./NavDesktop.scss";
 
 const NavDesktop = () => {
   return (

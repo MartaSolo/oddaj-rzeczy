@@ -1,5 +1,3 @@
-import "./Select.scss";
-
 const Select = ({
   selectClassName,
   selectName,

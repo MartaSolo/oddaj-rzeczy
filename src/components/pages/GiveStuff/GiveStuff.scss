@@ -5,9 +5,7 @@
   @include mediumScreen {
   }
   .givestuff__hero-img {
-    border: 1px solid red;
     @include mediumScreen {
-      border: 1px solid red;
       display: block;
       height: 100vh;
       width: 100%;
@@ -31,7 +29,6 @@
           transform: translate(75%);
         }
         .givestuff__hero-start {
-          border: 1px solid blue;
           display: flex;
           flex-direction: column;
           align-items: center;

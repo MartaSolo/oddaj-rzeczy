@@ -6,10 +6,6 @@ const TypeInputs = ({ type, setType }) => {
     setType(e.target.value);
   };
 
-  // const className = () => {
-  //   type === inputValue ? "type__input-label checked" : "type__input-label";
-  // };
-
   return (
     <div className="type__inputs">
       <h3 className="type__inputs-title">Zaznacz co chcesz oddać:</h3>

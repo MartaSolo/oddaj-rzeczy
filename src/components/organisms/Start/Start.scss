@@ -2,15 +2,11 @@
 @import "../../../scss/settings/mixins";
 
 .start {
-  border: 2px solid orange;
   .start__hero {
     @include mediumScreen {
       display: flex;
       flex-direction: row-reverse;
       height: calc(100vh - 64px);
-    }
-    .container {
-      border: 2px solid orange;
     }
   }
 }
