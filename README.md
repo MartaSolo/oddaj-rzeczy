@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# oddaj-rzeczy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project description:
 
-## Available Scripts
+Oddaj-rzeczy (give away your stuff) is a responsive React application. It's aim is to connect users who want to give away stuff they don't use anymore with the organizations, fundations and local collections that help children, single mother, homeless or disabled.
+The user can register, browse list of organizations and fill the form choosing types of stuff to give away, target group and so on.
 
-In the project directory, you can run:
+If you want to test the app without registering you can login using these credentials:
+login: test@gmail.com,
+password: testtest.
 
-### `npm start`
+The app uses:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Firebase Authentication for user registration, login and logout.
+2. Firebase Firestore for fetching data about organizations, fundations, local collections and sending form data filled by the user.
+3. API provided by Coders Lab to send contact form.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Used technologies:
 
-### `npm test`
+HTML5, CSS3, Sass, JavaScript (ES6), React v18, React Router v6, React Router Hash Link, Context API, Firebase v9 (Authentication, Firestore).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## View Demo:
 
-### `npm run build`
+https://places-app-ms.netlify.app/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Instalation:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run the app in the development mode please provide your Firebase web app configuration.
+Put it into variables in .env file (look at .env_sample file).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. You have to have node.js installed.
+2. Download the project files.
+3. Open the console in the project folder.
+4. Command `npm install` installs all the dependencies.
+5. Command `npm start` runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### `npm run eject`
+## Preview
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Places-app](https://github.com/MartaSolo/places-app/blob/master/places-app.gif)
