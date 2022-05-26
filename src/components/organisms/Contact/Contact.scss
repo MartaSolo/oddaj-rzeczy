@@ -10,10 +10,10 @@
     background-size: cover;
     justify-content: flex-end;
     position: relative;
-    background-position: -200px;
+    background-position: -200px 50px;
   }
   @include largeScreen {
-    background-position: 0;
+    background-position: 0 0;
   }
   .contact__content {
     padding: 1rem;

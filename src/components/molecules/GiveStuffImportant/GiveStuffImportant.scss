@@ -4,7 +4,7 @@
 .givestuff__form-important {
   background-color: $colorAccent;
   @include mediumScreen {
-    min-height: 130px;
+    min-height: 120px;
   }
   .container {
     height: 100%;
@@ -14,14 +14,14 @@
     .form__important-title {
       font-size: 1.4rem;
       font-weight: 600;
-      padding: 1rem;
+      padding: 1rem 2rem 1rem 2rem;
       @include mediumScreen {
-        font-size: 2rem;
+        font-size: 1.7rem;
       }
     }
     .form__important-description {
       font-size: 1rem;
-      padding: 0 1rem 1rem 1rem;
+      padding: 0 2rem 1rem 2rem;
       @include mediumScreen {
         font-size: 1.4rem;
         max-height: 1200px;

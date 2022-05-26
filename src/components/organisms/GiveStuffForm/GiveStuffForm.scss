@@ -3,16 +3,16 @@
 
 .givestuff__form {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   .givestuff__form-content {
     padding: 1rem;
     flex-grow: 1;
     background-color: $colorGiveStuffForm;
+    display: flex;
+    flex-direction: column;
     @include mediumScreen {
-      flex-grow: 1;
-      height: calc(100vh - 130px);
       background-image: url(../../../assets/background-form.jpg);
       background-repeat: no-repeat;
       background-size: cover;
@@ -20,7 +20,11 @@
     }
     .container {
       height: 100%;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
       .givestuff__form-form {
+        flex-grow: 1;
         height: 100%;
         display: flex;
         flex-direction: column;

@@ -2,7 +2,7 @@
 @import "../../../scss/settings/colors";
 
 .organizations {
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   @include mediumScreen {
     min-height: 100vh;
   }
