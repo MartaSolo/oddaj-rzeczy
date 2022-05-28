@@ -17,7 +17,7 @@ The app uses:
 
 ## Used technologies:
 
-HTML5, CSS3, Sass, JavaScript (ES6), React v18, React Router v6, React Router Hash Link, Context API, Firebase v9 (Authentication, Firestore).
+HTML5, CSS3, Sass, JavaScript (ES6), React v18 (Context API, Lazy Loading, Hooks) React Router v6, React Router Hash Link, Firebase v9 (Authentication, Firestore).
 
 ## View Demo:
 
