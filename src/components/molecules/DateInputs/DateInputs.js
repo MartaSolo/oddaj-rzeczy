@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./DateInputs.scss";
 
 const DateInputs = ({ date, setDate, time, setTime, note, setNote }) => {
-  console.log(date);
   const [dateInputsErrors, setDateInputsErrors] = useState({
     date: "",
   });

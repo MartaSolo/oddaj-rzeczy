@@ -2,9 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AuthLink from "../../atoms/AuthLink";
 import regexEmail from "../../../utils/regexEmail";
-// ---------------------
 import { useUserAuth } from "../../../context/UserAuthContext";
-// ---------------------
 import "./LogInForm.scss";
 
 const LogInForm = () => {

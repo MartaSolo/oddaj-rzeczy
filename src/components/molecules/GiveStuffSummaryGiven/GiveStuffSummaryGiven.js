@@ -15,32 +15,33 @@ const GiveStuffSummaryGiven = ({ bags, type, helpGroup, localization }) => {
         return "ksiązki";
       case "others":
         return "inne";
+      default:
+        return "";
     }
   };
 
   const checkedHelpGroup = (object) => {
-    let result = [];
-    Object.entries(object).map((entry) => {
-      if (entry[1]) {
-        const entryEdited = () => {
-          switch (entry[0]) {
-            case "children":
-              return "dzieciom";
-            case "singleMothers":
-              return "samotnym matkom";
-            case "homelsess":
-              return "bezdomnym";
-            case "disabled":
-              return "niepełnosprawnym";
-            case "elderly":
-              return "osobom starszym";
-          }
-        };
-        result.push(entryEdited());
+    let checked = Object.entries(object).filter((arr) => arr[1] === true);
+
+    let result = checked.map((el) => {
+      switch (el[0]) {
+        case "children":
+          return "dzieciom";
+        case "singleMothers":
+          return "samotnym matkom";
+        case "homelsess":
+          return "bezdomnym";
+        case "disabled":
+          return "niepełnosprawnym";
+        case "elderly":
+          return "osobom starszym";
+        default:
+          return "";
       }
     });
     return result.join(", ");
   };
+
   return (
     <div className="summary__form-give">
       <h5 className="summary__give-subtitle">Oddajesz: </h5>
