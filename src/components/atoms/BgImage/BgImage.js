@@ -1,9 +1,9 @@
 import "./BgImage.scss";
 
-const BgImage = ({ divClassName, scr, alt, imgClassName }) => {
+const BgImage = ({ divClassName, imgClassName }) => {
   return (
     <div className={divClassName}>
-      <img src={scr} alt={alt} className={imgClassName} />
+      <div className={imgClassName}></div>
     </div>
   );
 };

@@ -19,8 +19,6 @@ const About = () => {
       </div>
       <BgImage
         divClassName="about__content-image"
-        scr={require("../../../assets/people.jpg")}
-        alt="group of people"
         imgClassName="about__image-img"
       />
     </section>

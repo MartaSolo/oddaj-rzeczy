@@ -21,8 +21,6 @@ const Start = () => {
 
         <BgImage
           divClassName="start__content-image"
-          scr={require("../../../assets/home-hero-image.jpg")}
-          alt="box with stuff"
           imgClassName="start__image-img"
         />
       </div>

@@ -12,14 +12,16 @@
     width: 50%;
     overflow: visible;
   }
-  .start__image-img,
-  .about__image-img {
+  .start__image-img {
+    background-image: url(../../../assets/home-hero-image.jpg);
     height: inherit;
-    object-fit: contain;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     @include mediumScreen {
-      width: 100%;
-      object-fit: cover;
-      object-position: 100%;
+      background-size: cover;
+      background-position: 100%;
     }
   }
 }
@@ -30,10 +32,10 @@
     height: inherit;
   }
   .about__image-img {
+    background-image: url(../../../assets/people.jpg);
+    background-size: cover;
     width: 100%;
-    object-fit: cover;
-    @include mediumScreen {
-      object-position: center;
-    }
+    height: 100%;
+    background-position: center;
   }
 }
