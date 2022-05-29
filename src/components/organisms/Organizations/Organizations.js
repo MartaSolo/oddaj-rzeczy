@@ -30,7 +30,7 @@ const Organizations = () => {
       }
     };
     getAllOrganizations();
-  }, [organizationType]);
+  }, [organizationType, organizationsColRef]);
 
   return (
     <section id="organizations" className="organizations">

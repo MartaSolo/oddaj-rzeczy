@@ -25,7 +25,7 @@ const OrganizationsList = ({
 
   useEffect(() => {
     setTotalpages(Math.ceil(organizations.length / itemsPerPage));
-  }, [organizations]);
+  }, [organizations, itemsPerPage]);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = currentPage * itemsPerPage;
@@ -34,7 +34,7 @@ const OrganizationsList = ({
     setSelectedOrganizations(() => {
       return organizations.slice(startIndex, endIndex);
     });
-  }, [organizations, currentPage]);
+  }, [organizations, currentPage, startIndex, endIndex]);
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
