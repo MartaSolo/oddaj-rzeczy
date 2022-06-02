@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Loader from "./components/atoms/Loader";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
 import "./scss/main.scss";
@@ -13,7 +13,7 @@ const GiveStuff = React.lazy(() => import("./components/pages/GiveStuff"));
 function App() {
   return (
     <UserAuthContextProvider>
-      <BrowserRouter>
+      <HashRouter>
         <Suspense fallback={<Loader />}>
           <Routes>
             <Route path="/" element={<Home />}></Route>
@@ -24,7 +24,7 @@ function App() {
             <Route path="*" element={<p>There's nothing here</p>} />
           </Routes>
         </Suspense>
-      </BrowserRouter>
+      </HashRouter>
     </UserAuthContextProvider>
   );
 }
