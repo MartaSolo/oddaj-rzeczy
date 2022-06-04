@@ -21,7 +21,7 @@ HTML5, CSS3, Sass, JavaScript (ES6), React v18 (Context API, Lazy Loading, Hooks
 
 ## View Demo:
 
-https://places-app-ms.netlify.app/
+https://martasolo.github.io/oddaj-rzeczy/
 
 ## Instalation:
 
@@ -36,4 +36,4 @@ Put it into variables in .env file (look at .env_sample file).
 
 ## Preview
 
-![Places-app](https://github.com/MartaSolo/places-app/blob/master/places-app.gif)
+![oddaj-rzeczy](https://github.com/MartaSolo/places-app/blob/master/places-app.gif)
