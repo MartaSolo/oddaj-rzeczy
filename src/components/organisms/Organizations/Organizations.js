@@ -12,12 +12,10 @@ const Organizations = () => {
   const [organizationsData, setOrganizationsData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const organizationsColRef = collection(db, "organizations");
-
   useEffect(() => {
     const getAllOrganizations = async () => {
       try {
-        const data = await getDocs(organizationsColRef);
+        const data = await getDocs(collection(db, "organizations"));
         const allOrganizations = data.docs.map((doc) => ({ ...doc.data() }));
         const getOragnization = (type) => {
           return allOrganizations.filter(
@@ -30,7 +28,7 @@ const Organizations = () => {
       }
     };
     getAllOrganizations();
-  }, [organizationType, organizationsColRef]);
+  }, [organizationType]);
 
   return (
     <section id="organizations" className="organizations">
