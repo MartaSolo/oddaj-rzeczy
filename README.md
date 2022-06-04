@@ -36,4 +36,4 @@ Put it into variables in .env file (look at .env_sample file).
 
 ## Preview
 
-![oddaj-rzeczy](https://github.com/MartaSolo/places-app/blob/master/places-app.gif)
+![oddaj-rzeczy](https://github.com/MartaSolo/oddaj-rzeczy/blob/main/oddaj-rzeczy.gif)
